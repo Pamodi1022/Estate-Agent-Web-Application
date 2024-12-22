@@ -13,7 +13,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo-img" />
+        <Link to="/" onClick={() => setMenuActive(false)}>
+          <img src={logo} alt="Logo" className="logo-img" />
+        </Link>
         <h1 className="logo-text">Ticket.lk</h1>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
