@@ -31,5 +31,90 @@
                 "day":14,
                 "year":2022
             }
+        },
+
+      {
+        "id":"prop3",
+        "type":"House",
+        "bedrooms":4,
+        "price":589995,
+        "tenure":"Freehold",
+        "description":"Stunning 4 bedroom duplex penthouse apartment - Prestigious mansion development - Private roof terrace - Secure parking, lift and communal landscaped garden - Completed to the finest standard throughout - Lighting controlled by Lutron homeworks system - Stunning living accommodation - Beautiful kitchen with Italian stone worktops and Miele appliances - Sumptuous bathroom suites with integrated televisions - Close to Hampstead Village and underground - Walking distance to Finchley Road underground - Council Tax: Camden band H",
+        "location":"Arkwright Road, Hampstead NW3",
+        "picture":"images/prop3pic1small.jpg",
+        "url":"properties/prop3.html",
+        "added": {
+          "month":"December",
+          "day":9,
+          "year":2024
         }
+      },
+
+      {
+        "id":"prop4",
+        "type":"Flat",
+        "bedrooms":1,
+        "price":299995,
+        "tenure":"Freehold",
+        "description":"A room available in This stylish and well proportioned 3 bedroom flat in a new contemporary development is superbly situated just a stone throw away from Swiss Cottage underground station (Jubilee line) and other transport links, a fantastic range of shops, restaurants and just a walk away from London's famous Regents Park.The apartment high quality fixtures and decor throughout with space to dine leading to a modern Kitchen with integrated appliances.",
+        "location":"Fellows Road, London, NW3",
+        "picture":"images/prop4pic1small.jpg",
+        "url":"properties/prop4.html",
+        "added": {
+          "month":"October",
+          "day":20,
+          "year":2024
+        }
+      },
+
+      {
+        "id":"prop5",
+        "type":"House",
+        "bedrooms":5,
+        "price":499995,
+        "tenure":"Freehold",
+        "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+        "location":"Crofton Road Orpington BR6",
+        "picture":"images/prop5pic1small.jpg",
+        "url":"properties/prop5.html",
+        "added": {
+          "month":"September",
+          "day":23,
+          "year":2024
+        }
+      },
+
+      {
+        "id":"prop6",
+        "type":"House",
+        "bedrooms":2,
+        "price":700,
+        "tenure":"Rent",
+        "description":"A fully furnished double bedroom within an elegant and beautifully presented four storey georgian townhouse. The entire home offers eleven well proportioned double rooms, and is perfectly suited to students. Devonshire Buildings is ideally situated off Wells Road in the sought after and convenient Bear Flat location. This lovely home also benefits from a private laid to lawn garden accessed opposite the house. Stepping through the front door through to the ground floor, the grand hallway will provide you with access to three bedrooms, a W/C and bathroom. Following the character staircase up to the first floor, there are a further two bedrooms, a kitchen, and living room which leads through to a bath/shower room. The second floor offers a further three bedrooms and more kitchen space. Ascending to the top floor, you are greeted by the final three bedrooms with far reaching views, and a final shower room.",
+        "location":"Crofton Road Orpington BR6",
+        "picture":"images/prop6pic1small.jpg",
+        "url":"properties/prop6.html",
+        "added": {
+          "month":"August",
+          "day":28,
+          "year":2023
+        }
+      },
+
+      {
+        "id":"prop7",
+        "type":"Flat",
+        "bedrooms":2,
+        "price":2405,
+        "tenure":"Rent",
+        "description":"Willmotts brings this for you, Smart and stylish 2 bedroom ground floor garden flat, this property has been completely refurbished to very good standard and benefits from new kitchen, new bathroom, new carpets and flooring, new decorations through out and private rear garden. The apartment is part of established period property on quiet residential tree lined street. Located close to Belsize Park and Hampstead Heath Tube, Royal free Hospital and many shops and amenities.",
+        "location":"Estelle Road, Hampstead, London, NW3",
+        "picture":"images/prop7pic1small.jpg",
+        "url":"properties/prop7.html",
+        "added": {
+          "month":"December",
+          "day":14,
+          "year":2024
+        }
+      }
 ]}
