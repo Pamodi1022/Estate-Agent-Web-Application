@@ -10,6 +10,7 @@ const SearchForm = () => {
         </h1>
         <p>with the UK's largest choice of homes</p>
         <div className="search-box">
+          <h3>Search Properties for Sale and Rent</h3>
           <input
             type="text"
             placeholder="e.g. Bath, NW3, or Leeds station"
