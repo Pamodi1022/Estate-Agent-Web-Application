@@ -5,11 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Signup from './Components/Signup';
 import Navbar from './Components/Navbar';
+import SearchForm from './Components/SearchForm';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <SearchForm />
       <div>
         <Routes>
           <Route path="/Signup" element={<Signup />} />
