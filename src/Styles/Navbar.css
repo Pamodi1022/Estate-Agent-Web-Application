@@ -1,0 +1,105 @@
+/* Content margin for the navbar */
+.content {
+  margin-top: 90px;
+}
+
+/* Logo container styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 100px;  /* Increase the size of the logo */
+  height: auto;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* Navbar container styles */
+.navbar {
+  background-color: #1D2228;  /* Use dark color for the navbar */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar unordered list (links) styling */
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin-right: 40px;
+}
+
+.navbar li {
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar links styling */
+.navbar li a {
+  text-decoration: none;
+  color: #E1E2E2;  /* Light color for link text */
+  font-size: 1rem;
+}
+
+/* Navbar link hover effect */
+.navbar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Menu toggle button (hamburger menu) styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #E1E2E2;  /* Light color for the menu icon */
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #1D2228;  /* Dark color for mobile menu */
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  /* Show the menu toggle button on smaller screens */
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar li {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar li a {
+    font-size: 1.2rem;
+    color: #E1E2E2;
+  }
+}
