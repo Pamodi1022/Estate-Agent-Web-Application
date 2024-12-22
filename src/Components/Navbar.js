@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link to="/" onClick={() => setMenuActive(false)}>
           <img src={logo} alt="Logo" className="logo-img" />
         </Link>
-        <h1 className="logo-text">Ticket.lk</h1>
+        <h1 className="logo-text">QuickNest</h1>
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
