@@ -1,0 +1,103 @@
+/* General Container Styling */
+.search-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 100px;
+    border-radius: 40px;
+    padding: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background: url('../Components/SearchBackground.jpg') no-repeat center center/cover;
+  }
+  
+  /* Banner Styling */
+  .search-banner {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 51, 0.8); /* Dark blue overlay */
+    border-radius: 12px;
+    max-width: 700px;
+  }
+  
+  /* Highlighted Text */
+  .highlight {
+    color: #2cc4a6;
+    font-weight: bold;
+  }
+  
+  /* Subtitle */
+  .search-banner p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  /* Search Box */
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: white;
+  }
+  
+  .search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button.for-sale {
+    background-color: #2cc4a6;
+    color: white;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .search-button.to-rent {
+    background-color: #00b4d8;
+    color: white;
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+  
+  .search-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-banner {
+      padding: 30px 15px;
+      max-width: 90%;
+    }
+  
+    .search-box {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-input {
+      border-radius: 4px;
+    }
+  
+    .search-button {
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+  
