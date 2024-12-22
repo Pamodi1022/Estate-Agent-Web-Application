@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 🏠 Estate Agent Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Estate Agent Web Application**! This is a client-side web application built with **ReactJS** to help users find and explore properties based on various search criteria, such as type, price, bedrooms, date added, and postcode area. 
 
-## Available Scripts
+With a rich set of features and a user-friendly interface, this app lets you search, view, save, and manage your favorite properties seamlessly.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📋 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Search Properties 🔍
+- **Type**: Search by property type (House, Flat, Any)
+- **Price**: Filter by minimum and maximum price
+- **Bedrooms**: Specify a minimum and maximum number of bedrooms
+- **Date Added**: Search for properties added after a specified date or within a date range
+- **Postcode Area**: Filter properties by postcode (e.g., BR1, NW1)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Property Display 🖼️
+- View a list of properties matching your search criteria
+- Each property displays a **short description**, **price**, and **main image**
+- Click to view detailed property information, including:
+  - Multiple images
+  - Property type, price, and location
+  - Long description, floor plan, and Google Maps integration using **React Tabs** 🌍
 
-### `npm test`
+### Favorite Properties ❤️
+- **Add properties to your favorites** by dragging them to the sidebar or clicking the "favorite" button
+- **Remove properties** from the favorites list via drag-and-drop or by pressing the delete button
+- **Clear all favorites** with a single click
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive Design 📱
+- Fully responsive layout using **media queries**, **Flexbox**, or **CSS Grid**
+- Two layouts: one for larger screens and another optimized for smaller devices (iPad landscape width and below)
 
-### `npm run build`
+### Enhanced Aesthetics 🎨
+- **Visual Clues**: Group related items, separate unrelated ones, and use appropriate font sizes, bold, and italics to create a visually pleasant experience
+- **Images & Icons**: Use high-quality images and custom icons for visual appeal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Technologies Used
+- **ReactJS**: Main framework for building the user interface
+- **CSS3**: For styling and creating a responsive layout
+- **JSON**: Static data storage for property information
+- **React Tabs**: For displaying property details in a tabbed interface
+- **Google Maps API**: For showing property locations on the map
+- **Drag-and-Drop**: For adding/removing properties to/from the favorites list
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Pamodi1022/Estate-Agent-Web-Application
