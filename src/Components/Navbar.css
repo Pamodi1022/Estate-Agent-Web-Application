@@ -1,44 +1,49 @@
-/* General Navbar Styling */
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1D2228;
-  padding: 10px 20px;
   color: #E1E2E2;
-  font-family: Arial, sans-serif;
+  padding: 10px 20px;
+  width: 100%;  /* Ensures the navbar takes the full width */
   position: relative;
+  font-family: Arial, sans-serif;
 }
 
-/* Logo Container Styling */
+/* Logo container */
 .logo-container {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
+/* Enlarge logo on smaller screens */
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
+  transition: width 0.3s ease, height 0.3s ease;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #E1E2E2;
+  transition: font-size 0.3s ease;
 }
 
-/* Menu Toggle Button */
+/* Menu toggle button */
 .menu-toggle {
   font-size: 24px;
   background: none;
   border: none;
   color: #E1E2E2;
   cursor: pointer;
-  display: none; /* Hidden by default */
+  display: none;
 }
 
-/* Navbar Links */
+/* Navbar links */
 ul {
   list-style-type: none;
   display: flex;
@@ -47,7 +52,7 @@ ul {
 }
 
 li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 li a {
@@ -58,17 +63,24 @@ li a {
 }
 
 li a:hover {
-  color: #FFD700; /* Optional hover effect for links */
+  color: #FFD700; /* Optional hover effect */
 }
 
-/* Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
-  /* Show toggle button on smaller screens */
+  .logo-img {
+    width: 70px;  /* Logo enlarges on small screens */
+    height: 70px;
+  }
+
+  .logo-text {
+    font-size: 2rem;  /* Logo text enlarges on small screens */
+  }
+
   .menu-toggle {
     display: block;
   }
 
-  /* Collapse navbar links */
   ul {
     position: absolute;
     top: 60px;
@@ -85,12 +97,10 @@ li a:hover {
     overflow: hidden;
   }
 
-  /* Active state for dropdown menu */
   ul.active {
     transform: scale(1);
   }
 
-  /* Adjust link styling for dropdown */
   li {
     margin: 10px 0;
     width: 100%;
@@ -100,6 +110,6 @@ li a:hover {
 
   li a {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;  /* Slightly bigger font size in the mobile menu */
   }
 }
