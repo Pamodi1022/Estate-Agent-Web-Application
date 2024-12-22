@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+// filepath: /c:/Users/ASUS/Desktop/ACS-cw/estate_agent_webapplication/src/App.js
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Signup from './Components/Signup';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <div>
+        <Routes>
+          <Route path="/Signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
