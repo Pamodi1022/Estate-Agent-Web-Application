@@ -1,30 +1,44 @@
-/* General Container Styling */
-.search-form-container {
+    /* General Container Styling */
+  .search-form-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
     margin-top: 100px;
     border-radius: 40px;
-    padding: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    background: url('../Components/SearchBackground.jpg') no-repeat center center/cover;
+    padding: 80px;
+    max-width: 700px;
+    margin: 100px auto;
+    background-image: url('../Components/SearchBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensure the overlay stays within the container */
+  }
+
+  .search-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(67, 66, 66, 0.5); /* Adjust the overlay color and opacity */
+    border-radius: 40px;
+    z-index: 1; /* Ensure the overlay is above the background image */
   }
   
   /* Banner Styling */
   .search-banner {
     text-align: center;
-    color: white;
+    color: rgb(73, 2, 2);
     padding: 40px 20px;
-    background-color: rgba(0, 0, 51, 0.8); /* Dark blue overlay */
     border-radius: 12px;
     max-width: 700px;
   }
   
   /* Highlighted Text */
   .highlight {
-    color: #2cc4a6;
+    color: #0f0f0f;
     font-weight: bold;
   }
   
