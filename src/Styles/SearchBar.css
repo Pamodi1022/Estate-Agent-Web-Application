@@ -1,0 +1,105 @@
+    /* General Container Styling */
+  .search-form-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    border-radius: 40px;
+    padding: 80px;
+    max-width: 700px;
+    margin: 100px auto;
+    background-image: url('../Components/SearchBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensure the overlay stays within the container */
+  }
+  
+  /* Banner Styling */
+  .search-banner {
+    text-align: center;
+    color: rgb(73, 2, 2);
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 700px;
+  }
+  
+  /* Highlighted Text */
+  .highlight {
+    color: #0f0f0f;
+    font-weight: bold;
+  }
+  
+  /* Subtitle */
+  .search-banner p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  /* Search Box */
+  .search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background-color: white;
+  }
+  
+  .search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button.for-sale {
+    background-color: #2cc4a6;
+    color: white;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  .search-button.to-rent {
+    background-color: #00b4d8;
+    color: white;
+    margin-left: 10px;
+    border-radius: 4px;
+  }
+  
+  .search-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .search-banner {
+      padding: 30px 15px;
+      max-width: 90%;
+    }
+  
+    .search-box {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-input {
+      border-radius: 4px;
+    }
+  
+    .search-button {
+      border-radius: 4px;
+      width: 100%;
+    }
+  }
+  
