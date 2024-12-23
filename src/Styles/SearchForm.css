@@ -1,117 +1,109 @@
-    /* General Container Styling */
-  .search-form-container {
-    position: relative;
+body {
+    font-family: Arial, sans-serif;
+    color: #E1E2E2; /* Light text color */
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    border-radius: 40px;
-    padding: 80px;
-    max-width: 700px;
-    margin: 100px auto;
-    background-image: url('../Components/SearchBackground.jpg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden; /* Ensure the overlay stays within the container */
+    height: 100vh;
   }
-
-  .search-form-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+  
+  .search-form {
+    background-color: #1D2228; /* Form container background */
+    border: 1px solid #FB8122; /* Orange border */
+    border-radius: 8px;
+    padding: 20px 30px;
+    max-width: 600px;
     width: 100%;
-    height: 100%;
-    background-color: rgba(67, 66, 66, 0.5); /* Adjust the overlay color and opacity */
-    border-radius: 40px;
-    z-index: 1; /* Ensure the overlay is above the background image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
-  /* Banner Styling */
-  .search-banner {
+  .search-form h2 {
+    color: #FB8122; /* Orange heading */
+    margin-bottom: 20px;
     text-align: center;
-    color: rgb(73, 2, 2);
-    padding: 40px 20px;
-    border-radius: 12px;
-    max-width: 700px;
   }
   
-  /* Highlighted Text */
-  .highlight {
-    color: #0f0f0f;
-    font-weight: bold;
-  }
-  
-  /* Subtitle */
-  .search-banner p {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 400;
-  }
-  
-  /* Search Box */
-  .search-box {
+  .price-range {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
+    justify-content: space-between;
+    gap: 10px;
   }
   
-  .search-input {
+  .price-range input {
     flex: 1;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  .search-button {
-    padding: 12px 20px;
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #E1E2E2;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    background-color: #E1E2E2;
+    border: 1px solid #FB8122;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: #1D2228;
+  }
+  
+  .form-group input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .form-group span {
+    margin: 0 10px;
+    color: #E1E2E2;
+    align-self: center;
+  }
+  
+  .error {
+    color: #FB8122; /* Orange error text */
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .search-btn {
+    background-color: #FB8122;
+    color: #1D2228;
+    font-weight: bold;
     font-size: 16px;
-    font-weight: 500;
     border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
+    text-align: center;
     transition: background-color 0.3s ease;
   }
   
-  .search-button.for-sale {
-    background-color: #2cc4a6;
-    color: white;
-    border-radius: 0 4px 4px 0;
+  .search-btn:hover {
+    background-color: #E1E2E2;
+    color: #FB8122;
   }
   
-  .search-button.to-rent {
-    background-color: #00b4d8;
-    color: white;
-    margin-left: 10px;
-    border-radius: 4px;
-  }
-  
-  .search-button:hover {
-    opacity: 0.9;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .search-banner {
-      padding: 30px 15px;
-      max-width: 90%;
-    }
-  
-    .search-box {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .search-input {
-      border-radius: 4px;
-    }
-  
-    .search-button {
-      border-radius: 4px;
-      width: 100%;
-    }
+  .search-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #FB8122;
   }
   
