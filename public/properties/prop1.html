@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing</title>
+    <link rel="stylesheet" href="/properties/props.css">
+</head>
+<body>
+    <div class="property-card">
+        <div class="image-carousel">
+            <div class="images">
+                <!-- Images will be dynamically populated here -->
+            </div>
+            <button class="carousel-btn left-btn" onclick="prevImage()">&#x2039;</button>
+            <button class="carousel-btn right-btn" onclick="nextImage()">&#x203A;</button>
+        </div>
+        <div class="property-details">
+            <h2 id="property-location"></h2> <!-- Dynamically populated -->
+            <h3 id="property-type"></h3> <!-- Dynamically populated -->
+            <p id="property-description"></p> <!-- Dynamically populated -->
+            <p class="price">
+                <strong id="property-price"></strong> <span id="property-weekly-price"></span>
+            </p>
+            <div class="actions">
+                <button class="contact-btn">Contact</button>
+                <button class="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Variables and functions are defined globally
+        let currentImageIndex = 0;
+        let images;
+
+        // Function to display the current image
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        // Function to show the next image
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to show the previous image
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        // Function to fetch and display property data from the JSON file
+        function loadPropertyData() {
+            fetch('/properties.json')
+                .then(response => response.json())
+                .then(data => {
+                    const property = data.properties[0]; // Retrieve the first property
+                    
+                    // Set the property details dynamically
+                    document.getElementById('property-location').innerText = property.location;
+                    document.getElementById('property-type').innerHTML = `${property.type} &nbsp; <span>&#x1F6CF; ${property.bedrooms}</span>`;
+                    document.getElementById('property-description').innerHTML = property.description; // Ensure HTML content in description
+                    document.getElementById('property-price').innerText = `£${property.price.toLocaleString()} pcm`;
+                    document.getElementById('property-weekly-price').innerText = `£${(property.price / 4).toFixed(2)} pw`; // Assuming weekly price is 1/4 of the monthly price
+
+                    // Load the property images dynamically
+                    const imagesContainer = document.querySelector('.image-carousel .images');
+                    const imageElement = document.createElement('img');
+                    imageElement.src = property.picture;
+                    imageElement.alt = `Property Image 1`;
+                    imagesContainer.appendChild(imageElement);
+
+                    // Initialize carousel images
+                    images = document.querySelectorAll('.image-carousel img');
+                    showImage(currentImageIndex);
+                })
+                .catch(error => console.error('Error loading property data:', error));
+        }
+
+        // Initialize carousel when the DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            loadPropertyData();
+        });
+    </script>
+</body>
+</html>
