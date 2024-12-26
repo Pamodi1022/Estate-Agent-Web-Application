@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link to="/search" onClick={() => setMenuActive(false)}>Search</Link>
         </li>
         <li>
-          <Link to="/advertisements" onClick={() => setMenuActive(false)}>Advertisements</Link>
+          <Link to="/ads" onClick={() => setMenuActive(false)}>Advertisements</Link>
         </li>
         <li>
           <Link to="/signup" onClick={() => setMenuActive(false)}>Sign up</Link>
