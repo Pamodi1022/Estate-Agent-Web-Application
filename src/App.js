@@ -7,19 +7,18 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import SearchBar from './Components/SearchBar';
 import SearchForm from './Components/SearchForm';
-import Advertisements from './Components/Advertisements';
+import PropertiesList from './Components/PropertiesList';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Advertisements />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/search" element={<SearchBar />} />
-          <Route path="/ads" element={<Advertisements />} />
+          <Route path="/ads" element={<PropertiesList />} />
           <Route path="/searchform" element={<SearchForm />} />
         </Routes>
       </div>
