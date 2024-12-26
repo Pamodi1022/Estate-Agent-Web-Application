@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - Arkwright Road</title>
+    <link rel="stylesheet" href="./property.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="/" onclick="closeMenu()">
+                <img src="../images/logo.png" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="navbar-links">
+            <li><a href="/search" onclick="closeMenu()">Search</a></li>
+            <li><a href="/ads" onclick="closeMenu()">Advertisements</a></li>
+            <li><a href="/signup" onclick="closeMenu()">Sign up</a></li>
+        </ul>
+    </div>
+
+    <!-- Property Details -->
+    <div class="property-details">
+        <h1>Property Details: Arkwright Road, Hampstead NW3</h1>
+        <img src="../images/prop3pic1small.jpg" alt="House" class="property-image">
+        <div class="property-info">
+            <h2>Property Type: House</h2>
+            <p><strong>Price:</strong> £589,995</p>
+            <p><strong>Bedrooms:</strong> 4</p>
+            <p><strong>Tenure:</strong> Freehold</p>
+            <p><strong>Description:</strong> Stunning 4 bedroom duplex penthouse apartment - Prestigious mansion development - Private roof terrace - Secure parking, lift and communal landscaped garden...</p>
+            <p><strong>Location:</strong> Arkwright Road, Hampstead NW3</p>
+            <p><strong>Added on:</strong> December 9, 2024</p>
+        </div>
+    </div>
+
+    <!-- Navbar Script -->
+    <script>
+        let menuActive = false;
+
+        function toggleMenu() {
+            menuActive = !menuActive;
+            const navbarLinks = document.getElementById('navbar-links');
+            if (menuActive) {
+                navbarLinks.classList.add('active');
+            } else {
+                navbarLinks.classList.remove('active');
+            }
+        }
+
+        function closeMenu() {
+            menuActive = false;
+            document.getElementById('navbar-links').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
