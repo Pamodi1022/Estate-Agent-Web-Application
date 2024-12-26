@@ -1,0 +1,15 @@
+/* This is an example of what the main.css file might look like after being bundled by the build process */
+/* Note: This is a simplified example and the actual content will be minified and obfuscated */
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+  
+  /* Additional styles for your application */
