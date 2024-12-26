@@ -12,7 +12,7 @@ function PropertyList() {
             <h3>{property.location}</h3>
             <p>Price: £{property.price.toLocaleString()}</p>
             <p>Type: {property.type}</p>
-            <a href={property.url} target="_blank" rel="noopener noreferrer" className="view-details">
+            <a href={property.url} className="view-details">
               View Details
             </a>
           </div>
