@@ -48,6 +48,7 @@
 
 /* Navbar links styling */
 .navbar li a {
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   color: #E1E2E2;  /* Light color for link text */
   font-size: 1rem;
@@ -103,3 +104,4 @@
     color: #E1E2E2;
   }
 }
+
