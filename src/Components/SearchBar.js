@@ -9,14 +9,14 @@ const SearchBar = () => {
   const handleRentClick = (e) => {
     e.preventDefault();
     if (searchTerm) {
-      navigate(`/search?type=rent&location=${searchTerm}`);
+      navigate(`/searchform?type=rent&location=${searchTerm}`);
     }
   };
 
   const handleSaleClick = (e) => {
     e.preventDefault();
     if (searchTerm) {
-      navigate(`/search?type=sale&location=${searchTerm}`);
+      navigate(`/searchform?type=sale&location=${searchTerm}`);
     }
   };
 
