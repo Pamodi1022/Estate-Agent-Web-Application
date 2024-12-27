@@ -283,3 +283,62 @@ body {
   color: white;
   cursor: pointer;
 }
+
+/* Letting details container */
+.letting-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap if the screen size is small */
+  gap: 20px; /* Add space between items */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border for structure */
+  border-radius: 8px; /* Rounded corners */
+  font-family: Arial, sans-serif;
+  font-size: 0.5rem;
+  
+}
+
+.property-detail {
+  display: flex;
+  align-items: center; /* Vertically align icon and text */
+  gap: 10px; /* Space between icon and text */
+  flex: 1 1 200px; /* Allow items to grow and wrap, setting a minimum width */
+}
+
+.property-detail img {
+  width: 24px; /* Size the icon */
+  height: 24px;
+  object-fit: cover; /* Ensure the icon retains its aspect ratio */
+  filter: grayscale(1); /* Default icon color */
+  transition: transform 0.3s, filter 0.3s; /* Smooth hover effects */
+}
+
+.property-detail span {
+  font-size: 0.9rem; /* Set font size for the description (e.g., "Semi-Detached House") */
+  color: #333; /* Darker text color */
+}
+
+.property-detail strong {
+  display: block; /* Ensures "PROPERTY TYPE" is on its own line */
+  font-weight: bold;
+  color: #555; /* Subtle emphasis for labels */
+  font-size: 0.8rem; /* Set font size for the label (e.g., "PROPERTY TYPE") */
+}
+
+/* Hover effect for icons */
+.property-detail:hover img {
+  transform: scale(1.2); /* Enlarge icon slightly */
+  filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .letting-details {
+      gap: 15px; /* Adjust spacing for smaller screens */
+  }
+  .property-detail {
+      flex: 1 1 100%; /* Stack items vertically */
+  }
+}
+
