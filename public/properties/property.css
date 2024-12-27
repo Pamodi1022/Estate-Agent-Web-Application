@@ -296,10 +296,6 @@ body {
   display: flex; 
   gap: 20px; /* Add space between items */
   margin-top: 20px;
-  padding: 10px;
-  background-color: #f9f9f9; /* Light background for contrast */
-  border: 1px solid #ddd; /* Subtle border for structure */
-  border-radius: 8px; /* Rounded corners */
   font-family: Arial, sans-serif;
   
 }
