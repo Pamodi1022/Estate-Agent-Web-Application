@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Details - Arkwright Road</title>
     <link rel="stylesheet" href="./property.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -22,38 +25,93 @@
         </ul>
     </div>
 
-    <!-- Property Details -->
-    <div class="property-details">
-        <h1>Property Details: Arkwright Road, Hampstead NW3</h1>
-        <img src="../images/prop3pic1small.jpg" alt="House" class="property-image">
-        <div class="property-info">
-            <h2>Property Type: House</h2>
-            <p><strong>Price:</strong> £589,995</p>
-            <p><strong>Bedrooms:</strong> 4</p>
-            <p><strong>Tenure:</strong> Freehold</p>
-            <p><strong>Description:</strong> Stunning 4 bedroom duplex penthouse apartment - Prestigious mansion development - Private roof terrace - Secure parking, lift and communal landscaped garden...</p>
-            <p><strong>Location:</strong> Arkwright Road, Hampstead NW3</p>
-            <p><strong>Added on:</strong> December 9, 2024</p>
+    <div class="content-container">
+        <!-- Property Details -->
+        <div class="property-details">
+            <!-- Gallery -->
+            <div class="gallery-container">
+                <div class="icons-container">
+                    <button id="share-btn"><i class="fas fa-share-alt"></i></button>
+                    <button id="favorite-btn" onclick="toggleFavorite()"><i class="far fa-heart" id="favorite-icon"></i></button>
+                </div>
+                <div class="main-image">
+                    <img id="current-image" src="../images/prop1pic1small.jpeg" alt="House">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="../images/prop1pic1small.jpeg" alt="House" onclick="changeImage(this)">
+                    <img src="../images/prop1pic2.jpeg" alt="Living room" onclick="changeImage(this)">
+                    <img src="../images/prop1pic3.jpeg" alt="Kitchen" onclick="changeImage(this)">
+                    <img src="../images/prop1pic4.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop1pic5.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop1pic6.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop1pic7.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop1pic8.jpeg" alt="Garden" onclick="changeImage(this)">
+                </div>
+            </div>
+    
+            <!-- Remaining Property Details -->
+            <div class="container">
+                <div class="header">
+                    <h1>Arkwright Road, Hampstead NW3</h1>
+                    <div class="price">£589,995<span style="font-size: 14px; font-weight: normal; color: #666;">(600 pw)</span></div>
+                </div>
+                <div class="letting-details">
+                    <div>
+                        <strong>Let available date:</strong> Now<br>
+                        <strong>Let type:</strong> Long term<br>
+                        <strong>Furnish type:</strong> Unfurnished
+                    </div>
+                    <div>
+                        <strong>Bedrooms:</strong> 4<br>
+                        <strong>Bathrooms:</strong> 1
+                    </div>
+                </div>
+        
+                <div class="key-features">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li>Semi-Detached House</li>
+                        <li>Four Bedrooms</li>
+                        <li>Two Reception Rooms</li>
+                        <li>Recently Redecorated</li>
+                        <li>Council Tax Band G</li>
+                    </ul>
+                </div>
+        
+                <div class="description">
+                    <h2>Description</h2>
+                    <p>Stunning 4 bedroom duplex penthouse apartment - Prestigious mansion development - Private roof terrace - Secure parking, lift and communal landscaped garden. Call now to arrange your viewing.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Map -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.1853911147969798!3d51.550671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5f5c39cabb%3A0x5e703aba29936b72!2sArkwright%20Rd%2C%20London%20NW3%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
-
-    <!-- Navbar Script -->
+    
+    <!-- JavaScript -->
     <script>
-        let menuActive = false;
-
-        function toggleMenu() {
-            menuActive = !menuActive;
-            const navbarLinks = document.getElementById('navbar-links');
-            if (menuActive) {
-                navbarLinks.classList.add('active');
-            } else {
-                navbarLinks.classList.remove('active');
-            }
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('current-image');
+            mainImage.src = thumbnail.src;
         }
 
-        function closeMenu() {
-            menuActive = false;
-            document.getElementById('navbar-links').classList.remove('active');
+        function toggleFavorite() {
+            const favoriteIcon = document.getElementById('favorite-icon');
+            if (favoriteIcon.classList.contains('far')) {
+                favoriteIcon.classList.remove('far');
+                favoriteIcon.classList.add('fas');
+            } else {
+                favoriteIcon.classList.remove('fas');
+                favoriteIcon.classList.add('far');
+            }
         }
     </script>
 </body>
