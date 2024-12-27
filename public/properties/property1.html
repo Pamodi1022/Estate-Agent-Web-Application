@@ -35,7 +35,7 @@
                     <button id="favorite-btn" onclick="toggleFavorite()"><i class="far fa-heart" id="favorite-icon"></i></button>
                 </div>
                 <div class="main-image">
-                    <img id="current-image" src="../images/prop1pic1small.jpeg" alt="House">
+                    <img id="current-image" src="../images/prop1pic1small.jpeg" alt="House" onclick="openImageViewer()">
                 </div>
                 <div class="thumbnail-container">
                     <img src="../images/prop1pic1small.jpeg" alt="House" onclick="changeImage(this)">
@@ -47,6 +47,14 @@
                     <img src="../images/prop1pic7.jpeg" alt="Garden" onclick="changeImage(this)">
                     <img src="../images/prop1pic8.jpeg" alt="Garden" onclick="changeImage(this)">
                 </div>
+            </div>
+
+            <!-- Fullscreen Image Viewer -->
+            <div id="image-viewer">
+                <i class="fas fa-times close-btn" onclick="closeImageViewer()"></i>
+                <i class="fas fa-chevron-left arrow left" onclick="navigateImage(-1)"></i>
+                <img id="viewer-image" src="" alt="Fullscreen Image">
+                <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
             </div>
     
             <!-- Remaining Property Details -->
@@ -102,6 +110,43 @@
             const mainImage = document.getElementById('current-image');
             mainImage.src = thumbnail.src;
         }
+
+        const images = [
+            "../images/prop1pic1small.jpeg",
+            "../images/prop1pic2.jpeg",
+            "../images/prop1pic3.jpeg",
+            "../images/prop1pic4.jpeg",
+            "../images/prop1pic5.jpeg",
+            "../images/prop1pic6.jpeg",
+            "../images/prop1pic7.jpeg",
+            "../images/prop1pic8.jpeg"
+        ];
+        let currentIndex = 0;
+
+        function openImageViewer() {
+            const imageViewer = document.getElementById('image-viewer');
+            const viewerImage = document.getElementById('viewer-image');
+            viewerImage.src = images[currentIndex];
+            imageViewer.style.display = 'flex';
+        }
+
+        function closeImageViewer() {
+            const imageViewer = document.getElementById('image-viewer');
+            imageViewer.style.display = 'none';
+        }
+
+        function navigateImage(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            const viewerImage = document.getElementById('viewer-image');
+            viewerImage.src = images[currentIndex];
+        }
+
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('current-image');
+            mainImage.src = thumbnail.src;
+            currentIndex = Array.from(thumbnail.parentNode.children).indexOf(thumbnail);
+        }
+
 
         function toggleFavorite() {
             const favoriteIcon = document.getElementById('favorite-icon');
