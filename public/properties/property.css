@@ -1,4 +1,3 @@
-
 /* Content margin for the navbar */
 body {
   font-family: Arial, sans-serif;
@@ -149,6 +148,17 @@ body {
   position: relative;
 }
 
+.separator {
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.price{
+  font-size: 25px; 
+  font-weight: bold; 
+  color: #303030;
+}
+
 /* Styling for the icons container */
 .icons {
   display: flex;
@@ -171,17 +181,17 @@ body {
 
 /* Style for the share icon */
 #share-icon {
-  color: #4caf50; /* Initial color for share icon */
+  color: #000000; /* Initial color for share icon */
 }
 
 /* Style for the favorite icon */
 #favorite-icon {
-  color: #e74c3c; /* Initial color for heart icon */
+  color: #cd0202; /* Initial color for heart icon */
 }
 
 /* Hover effect for favorite icon */
 #favorite-icon:hover {
-  color: #c0392b; /* Change color on hover */
+  color: #870e00; /* Change color on hover */
 }
 
 
