@@ -79,16 +79,14 @@
                         <span><strong>BATHROOMS</strong> 2</span>
                     </div>
                     <div class="property-detail">
-                        <img src="path/to/reception-icon.png" alt="Reception Icon">
+                        <img src="../images/livingroom.png" alt="Reception Icon">
                         <span><strong>RECEPTIONS</strong> 2</span>
                     </div>
                     <div class="property-detail">
-                        <img src="path/to/tenure-icon.png" alt="Tenure Icon">
+                        <img src="../images/tenure.png" alt="Tenure Icon">
                         <span><strong>TENURE</strong> Freehold</span>
                     </div>
                 </div>
-                
-                
                 
                 <div class="separator"></div>
         
@@ -107,7 +105,46 @@
         
                 <div class="description">
                     <h2>Description</h2>
-                    <p>Stunning 4 bedroom duplex penthouse apartment - Prestigious mansion development - Private roof terrace - Secure parking, lift and communal landscaped garden. Call now to arrange your viewing.</p>
+                    <p id="short-description">
+                        New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
+                    </p>
+                    <div id="full-description" style="display: none;">
+                        <p>
+                            The ground floor features an impressive entrance hall which leads through to a 24' drawing room with a ceiling height approaching 4 metres, with floor to ceiling French windows leading out to a beautifully established garden.
+                            
+                            At the lower level with separate access to the garden, is a 'Plain English' bespoke country style kitchen/dining room, guest cloakroom and large utility room.
+                        </p>
+                        <p>
+                            The principal bedroom suite occupies the first floor, with over 3 metres ceilings heights plus an additional bedroom/study with views over towards The Heath. While the second floor offers a further two/three bedrooms and a family bathroom. A spiral staircase leads to the top floor which offers extensive storage within a summer room and access to the roof terrace with exceptional views.
+                        </p>
+                        <p>
+                            Upper Terrace is within walking distance to both the village with its extensive array of boutiques, eateries, coffee shops, and transport links and the open expanses of Hampstead Heath.
+                        </p>
+                    </div>
+                    <button id="toggle-button" onclick="toggleDescription()">Read Full Description</button>
+                </div>  
+                
+                <div class="letting-details">
+                    <div class="property-detail">
+                        <img src="../images/home.png" alt="Property Icon">
+                        <span><strong>PROPERTY TYPE</strong> Semi-Detached House</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/bedrooms.png" alt="Bedroom Icon">
+                        <span><strong>BEDROOMS</strong> 5</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/bathrooms.png" alt="Bathroom Icon">
+                        <span><strong>BATHROOMS</strong> 2</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/livingroom.png" alt="Reception Icon">
+                        <span><strong>RECEPTIONS</strong> 2</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/tenure.png" alt="Tenure Icon">
+                        <span><strong>TENURE</strong> Freehold</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,6 +237,21 @@
                 alert('URL copied to clipboard');
             }
         }
+
+        function toggleDescription() {
+        var fullDescription = document.getElementById("full-description");
+        var button = document.getElementById("toggle-button");
+        
+        // Check if the full description is currently hidden
+        if (fullDescription.style.display === "none") {
+            fullDescription.style.display = "block";  // Show the full description
+            button.innerHTML = "Read Less";  // Change the button text
+        } else {
+            fullDescription.style.display = "none";  // Hide the full description
+            button.innerHTML = "Read Full Description";  // Change the button text back
+        }
+    }
+
     </script>
 </body>
 </html>
