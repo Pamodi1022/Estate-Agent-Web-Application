@@ -142,7 +142,40 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-    </div>
+
+        <div class="agent-card">
+            <div class="marketed-by">MARKETED BY</div>
+            <h2>Parkheath, Belsize Park</h2>
+            <p>208 Haverstock Hill, London,<br>NW3 2AG</p>
+            <a href="#" class="more-properties">More properties from this agent</a>
+            <div class="logo-container">
+              <img src="your-logo.png" alt="Parkheath Logo">
+            </div>
+            
+
+            <div class="buttons">
+                <button class="call-agent" onclick="toggleCallAgent()">Call agent</button>
+                <button class="request-details">Request details</button>
+              </div>
+              
+              <script>
+                function toggleCallAgent() {
+                  var button = document.querySelector('.call-agent');
+                  
+                  // Check if the button currently shows the text "Call agent"
+                  if (button.innerHTML === 'Call agent') {
+                    // Change to mobile number and add a link to initiate the call
+                    button.innerHTML = '<a href="tel:0764022934" style="color: inherit; text-decoration: none;">0764022934</a>';
+                  } else {
+                    // Change back to "Call agent"
+                    button.innerHTML = 'Call agent';
+                  }
+                }
+              </script>
+              
+              
+              
+              
     
     <!-- JavaScript -->
     <script>
