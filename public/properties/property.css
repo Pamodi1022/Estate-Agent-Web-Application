@@ -503,3 +503,19 @@ button:hover {
 }
 
 
+/* Styling for the logo container */
+.logo-container {
+  margin-top: 15px;
+}
+
+/* Increased size for the logo image */
+.logo-container img {
+  width: 120px;  /* Adjusted size for the logo */
+  height: auto;  /* Maintains aspect ratio */
+  transition: transform 0.3s ease;  /* Adds smooth transition for hover effect */
+}
+
+/* Optional hover effect for logo */
+.logo-container img:hover {
+  transform: scale(1.1);  /* Slightly enlarge the logo on hover */
+}
