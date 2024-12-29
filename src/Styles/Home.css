@@ -9,18 +9,25 @@
     background-size: cover; /* Ensure the image covers the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; 
+    background-color: rgb(245, 249, 192);
   }
   
   .image-container {
-    position: relative;
-    width: 100%;
+    position: fixed; /* Keeps the container fixed to the right side */
+    width: 60%; /* Takes up half the page width */
+    height: 100%; /* Covers the full height of the viewport */
+    margin-top: 75px;
+    right: 0; /* Aligns to the right side */
   }
   
   .home-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Make sure the image covers the entire area */
+    width: 100%; /* Ensures the image fits within the container's width */
+    height: 100%; /* Ensures the image stretches to fill the container */
+    margin-left: 120px;
+    object-fit: cover; /* Maintains the image aspect ratio while covering the container */
+    
   }
+  
   
   .arrow-container {
     position: absolute;
