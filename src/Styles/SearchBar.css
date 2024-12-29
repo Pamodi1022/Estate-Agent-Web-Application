@@ -4,31 +4,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../Components/homeback.png");
+  background-color: #413726;
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100vw;
   position: relative;
   overflow: hidden; /* Prevent any overflow issues */
-}
-
-/* Overlay to darken the background */
-.container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(49, 66, 88, 0.7); /* Brownish tint with 70% opacity */
-  z-index: 1;
-}
-
-/* Content inside the container */
-.container > * {
-  position: relative;
-  z-index: 2; /* Ensure content is above the overlay */
 }
 
 
