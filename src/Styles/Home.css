@@ -1,5 +1,8 @@
-body{
-  background-color: rgb(245, 249, 192);
+body {
+  background-color: rgb(245, 249, 192); /* Default background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  position: fixed; /* Position the body relative to the viewport */
 }
 
 /* HomePage.css */
@@ -12,7 +15,7 @@ body{
   background-size: cover; /* Ensure the image covers the entire area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  background-color: transparent; /* Transparent background */
+  background-color: transparent;
 }
 
   /* Circle container animation */
@@ -31,7 +34,7 @@ body{
   position: fixed; /* Keeps the container fixed to the right side */
   width: 60%; /* Takes up half the page width */
   height: 100%; /* Covers the full height of the viewport */
-  margin-top: 75px;
+  margin-top: 45px;
   right: 0; /* Aligns to the right side */
   animation: slideRight 1.5s ease-out; /* Slide-in from the right */
 }
@@ -82,9 +85,9 @@ body{
   height: 100%; /* Ensures the image stretches to fill the container */
   margin-left: 120px;
   object-fit: cover; /* Maintains the image aspect ratio while covering the container */
-  opacity: 0;
   animation: fadeInImage 2s ease-out forwards; /* Fade-in for the image */
 }
+
 
 /* Keyframes for animations */
 
@@ -217,30 +220,58 @@ body{
   }
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    background-color: rgb(245, 249, 192); /* Lighter background color for mobile */
+  }
 
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .home-page-container {
-      height: 80vh; /* Adjust the height for smaller screens */
-      margin-top: 20px; /* Adjust top margin for smaller screens */
-    }
-  
-    .arrow-container {
-      right: 10px; /* Reduce distance from the right edge */
-      font-size: 1.5rem; /* Reduce arrow size for smaller screens */
-      padding: 8px; /* Reduce padding for smaller screens */
-    }
+  .home-page-container {
+    height: auto; /* Adjust for smaller screens */
+    flex-direction: column; /* Stack items vertically */
   }
-  
-  @media (max-width: 480px) {
-    .home-page-container {
-      height: 70vh; /* Further adjust height for very small screens */
-    }
-  
-    .arrow-container {
-      font-size: 1.2rem; /* Further reduce arrow size */
-      padding: 6px; /* Further reduce padding */
-    }
+
+  .text-container {
+    max-width: 85%; /* Reduce width */
+    margin-top: 180px;
+    position: relative; /* Change to relative positioning */
+    margin-left: 30px;
   }
-  
+
+  .circle-container {
+    padding: 200px; /* Reduce size for smaller screens */
+    margin-top: 20px;
+    top: 70%;
+    left: 48%;
+  }
+
+  .image-container {
+    position: relative; /* Change from fixed to relative for better flow */
+    width: 80%; /* Full width on small screens */
+    margin-top: 50px; /* Reduce margin for smaller screens */
+    min-height: 385px;
+    min-width: 300px;
+    margin-bottom: 5px;
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .home-title {
+    font-size: 3rem; /* Reduce font size */
+  }
+
+  .home {
+    font-size: 2.5rem; /* Reduce font size */
+  }
+
+  .home-description {
+    font-size: 1rem; /* Reduce font size for smaller screens */
+  }
+
+  .arrow-container {
+    right: -65px; /* Reduce distance from the right edge */
+    font-size: 1.5rem; /* Reduce arrow size for smaller screens */
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
