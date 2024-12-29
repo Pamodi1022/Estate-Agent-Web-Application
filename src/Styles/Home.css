@@ -1,3 +1,7 @@
+body{
+  background-color: rgb(245, 249, 192);
+}
+
 /* HomePage.css */
 .home-page-container {
   position: relative;
@@ -8,7 +12,7 @@
   background-size: cover; /* Ensure the image covers the entire area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  background-color: rgb(245, 249, 192);
+  background-color: transparent; /* Transparent background */
 }
 
   /* Circle container animation */
