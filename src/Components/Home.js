@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Home.css'; // Add your CSS file for styling
-import back from '../Components/back.png'; // Import the image
+import back from '../Components/background.png'; // Import the image
 
 const HomePage = () => {
   const navigate = useNavigate();
