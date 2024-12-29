@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(245, 249, 192); /* Default background color */
+  background-color: #f5f9c0; /* Default background color */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   position: fixed; /* Position the body relative to the viewport */
