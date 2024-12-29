@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - Arkwright Road</title>
+    <link rel="stylesheet" href="./property.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="/" onclick="closeMenu()">
+                <img src="../images/logo.png" alt="Logo" class="logo-img" />
+            </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="navbar-links">
+            <li><a href="/search" onclick="closeMenu()">Search</a></li>
+            <li><a href="/ads" onclick="closeMenu()">Advertisements</a></li>
+            <li><a href="/signup" onclick="closeMenu()">Sign up</a></li>
+        </ul>
+    </div>
+
+    <div class="content-container">
+        <!-- Property Details -->
+        <div class="property-details">
+            <!-- Gallery -->
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="current-image" src="../images/prop4pic1small.jpeg" alt="House" onclick="openImageViewer()">
+                </div>
+                <div class="thumbnail-container">
+                    <img src="../images/prop4pic1small.jpeg" alt="House" onclick="changeImage(this)">
+                    <img src="../images/prop4pic2.jpeg" alt="Living room" onclick="changeImage(this)">
+                    <img src="../images/prop4pic3.jpeg" alt="Kitchen" onclick="changeImage(this)">
+                    <img src="../images/prop4pic4.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop4pic5.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop4pic6.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop4pic7.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop4pic8.jpeg" alt="Garden" onclick="changeImage(this)">
+                    <img src="../images/prop4pic9.jpeg" alt="Living room" onclick="changeImage(this)">
+                    <img src="../images/prop4pic10.jpeg" alt="Kitchen" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <!-- Fullscreen Image Viewer -->
+            <div id="image-viewer">
+                <i class="fas fa-times close-btn" onclick="closeImageViewer()"></i>
+                <i class="fas fa-chevron-left arrow left" onclick="navigateImage(-1)"></i>
+                <img id="viewer-image" src="" alt="Fullscreen Image">
+                <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
+            </div>
+    
+            <!-- Remaining Property Details -->
+            <div class="container">
+                <div class="header">
+                    <h1>Arkwright Road, Hampstead NW3</h1>
+                    <div class="icons">
+                        <i class="fas fa-share-alt" id="share-icon" onclick="shareProperty()"></i>
+                        <i class="far fa-heart" id="favorite-icon" onclick="toggleFavorite()"></i>
+                    </div>
+                </div>
+                <div class="price">£589,995</div>
+                <div class="separator"></div>
+                
+                <div class="letting-details">
+                    <div class="property-detail">
+                        <img src="../images/home.png" alt="Property Icon">
+                        <span><strong>PROPERTY TYPE</strong> Semi-Detached House</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/bedrooms.png" alt="Bedroom Icon">
+                        <span><strong>BEDROOMS</strong> 5</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/bathrooms.png" alt="Bathroom Icon">
+                        <span><strong>BATHROOMS</strong> 2</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/livingroom.png" alt="Reception Icon">
+                        <span><strong>RECEPTIONS</strong> 2</span>
+                    </div>
+                    <div class="property-detail">
+                        <img src="../images/tenure.png" alt="Tenure Icon">
+                        <span><strong>TENURE</strong> Freehold</span>
+                    </div>
+                </div>
+                
+                <div class="separator"></div>
+
+                <div class="thumbnail-container">
+                    <img src="../images/prop4pic1small.jpeg" alt="House" onclick="openImageViewer(0)">
+                    <img src="../images/prop4pic2.jpeg" alt="Living room" onclick="openImageViewer(1)">
+                    <img src="../images/prop4pic3.jpeg" alt="Kitchen" onclick="openImageViewer(2)">
+                    <img src="../images/prop4pic4.jpeg" alt="Garden" onclick="openImageViewer(3)">
+                    <img src="../images/prop4pic5.jpeg" alt="Garden" onclick="openImageViewer(4)">
+                    <img src="../images/prop4pic6.jpeg" alt="Garden" onclick="openImageViewer(5)">
+                    <img src="../images/prop4pic7.jpeg" alt="Garden" onclick="openImageViewer(6)">
+                    <img src="../images/prop4pic8.jpeg" alt="Garden" onclick="openImageViewer(7)">
+                    <img src="../images/prop4pic9.jpeg" alt="House" onclick="openImageViewer(8)">
+                    <img src="../images/prop4pic10.jpeg" alt="Living room" onclick="openImageViewer(9)">
+                  </div>
+                  
+                  <div id="image-viewer">
+                    <i class="fas fa-times close-btn" onclick="closeImageViewer()"></i>
+                    <i class="fas fa-chevron-left arrow left" onclick="navigateImage(-1)"></i>
+                    <img id="viewer-image" src="" alt="Fullscreen Image">
+                    <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
+                  </div>
+                  
+    
+                <div class="description">
+                    <h2>Description</h2>
+                    <p id="short-description">
+                        New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
+                    </p>
+                    <div id="full-description" style="display: none;">
+                        <p>
+                            The ground floor features an impressive entrance hall which leads through to a 24' drawing room with a ceiling height approaching 4 metres, with floor to ceiling French windows leading out to a beautifully established garden.
+                            
+                            At the lower level with separate access to the garden, is a 'Plain English' bespoke country style kitchen/dining room, guest cloakroom and large utility room.
+                        </p>
+                        <p>
+                            The principal bedroom suite occupies the first floor, with over 3 metres ceilings heights plus an additional bedroom/study with views over towards The Heath. While the second floor offers a further two/three bedrooms and a family bathroom. A spiral staircase leads to the top floor which offers extensive storage within a summer room and access to the roof terrace with exceptional views.
+                        </p>
+                        <p>
+                            Upper Terrace is within walking distance to both the village with its extensive array of boutiques, eateries, coffee shops, and transport links and the open expanses of Hampstead Heath.
+                        </p>
+                    </div>
+                    <button id="toggle-button" onclick="toggleDescription()">Read Full Description</button>
+                </div>  
+
+                <div class="separator"></div>
+                
+                <div class="letting-details">
+                    <div class="property-detail">
+                        <span><strong>COUNCIL TAX</strong> Band: D</span>
+                    </div>
+                    <div class="property-detail">
+                        <span><strong>PARKING</strong> Yes</span>
+                    </div>
+                    <div class="property-detail">
+                        <span><strong>GARDEN</strong> Ask agent</span>
+                    </div>
+                    <div class="property-detail">
+                        <span><strong>ACCESSIBILITY</strong> Ask agent</span>
+                    </div>
+                    <div class="property-detail">
+                        <span><strong>SIZE</strong> 3500sqrt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Map -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.1853911147969798!3d51.550671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5f5c39cabb%3A0x5e703aba29936b72!2sArkwright%20Rd%2C%20London%20NW3%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div class="agent-card">
+            <div class="marketed-by">MARKETED BY</div>
+            <h2>Parkheath, Belsize Park</h2>
+            <p>208 Haverstock Hill, London,<br>NW3 2AG</p>
+            <a href="#" class="more-properties">More properties from this agent</a>
+            <div class="logo-container">
+              <img src="../images/agent.jpg" alt="Parkheath Logo">
+            </div>
+            
+
+            <div class="buttons">
+                <button class="call-agent" onclick="toggleCallAgent()">Call agent</button>
+                <button class="request-details">Request details</button>
+              </div>
+              
+              <script>
+                function toggleCallAgent() {
+                  var button = document.querySelector('.call-agent');
+                  
+                  // Check if the button currently shows the text "Call agent"
+                  if (button.innerHTML === 'Call agent') {
+                    // Change to mobile number and add a link to initiate the call
+                    button.innerHTML = '<a href="tel:0764022934" style="color: inherit; text-decoration: none;">0764022934</a>';
+                  } else {
+                    // Change back to "Call agent"
+                    button.innerHTML = 'Call agent';
+                  }
+                }
+              </script>
+              
+              
+              
+              
+    
+    <!-- JavaScript -->
+    <script>
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('current-image');
+            mainImage.src = thumbnail.src;
+        }
+
+        // Image Modal Viewer Functionality
+        const imagesArray = [
+        "../images/prop4pic1small.jpeg",
+        "../images/prop4pic2.jpeg",
+        "../images/prop4pic3.jpeg",
+        "../images/prop4pic4.jpeg",
+        "../images/prop4pic5.jpeg",
+        "../images/prop4pic6.jpeg",
+        "../images/prop4pic7.jpeg",
+        "../images/prop4pic8.jpeg",
+        "../images/prop4pic9.jpeg",
+        "../images/prop4pic10.jpeg",
+        ];
+
+        let currentModalIndex = 0;
+
+        function openImageViewer(index = 0) {
+        const imageViewer = document.getElementById('image-viewer');
+        const viewerImage = document.getElementById('viewer-image');
+        currentModalIndex = index;
+        viewerImage.src = imagesArray[currentModalIndex];
+        imageViewer.style.display = 'flex';
+        }
+
+        function closeImageViewer() {
+        const imageViewer = document.getElementById('image-viewer');
+        imageViewer.style.display = 'none';
+        }
+
+        function navigateImage(direction) {
+        currentModalIndex = (currentModalIndex + direction + imagesArray.length) % imagesArray.length;
+        const viewerImage = document.getElementById('viewer-image');
+        viewerImage.src = imagesArray[currentModalIndex];
+        }
+
+
+
+        // JavaScript for toggling favorite icon
+        function toggleFavorite() {
+            const favoriteIcon = document.getElementById('favorite-icon');
+            if (favoriteIcon.classList.contains('far')) {
+                favoriteIcon.classList.remove('far');
+                favoriteIcon.classList.add('fas');
+            } else {
+                favoriteIcon.classList.remove('fas');
+                favoriteIcon.classList.add('far');
+            }
+        }
+
+        // JavaScript for sharing property
+        function shareProperty() {
+            const shareUrl = window.location.href;
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: shareUrl
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(console.error);
+            } else {
+                // Fallback for browsers that do not support the Web Share API
+                const tempInput = document.createElement('input');
+                document.body.appendChild(tempInput);
+                tempInput.value = shareUrl;
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                alert('URL copied to clipboard');
+            }
+        }
+
+        function toggleDescription() {
+        var fullDescription = document.getElementById("full-description");
+        var button = document.getElementById("toggle-button");
+        
+        // Check if the full description is currently hidden
+        if (fullDescription.style.display === "none") {
+            fullDescription.style.display = "block";  // Show the full description
+            button.innerHTML = "Read Less";  // Change the button text
+        } else {
+            fullDescription.style.display = "none";  // Hide the full description
+            button.innerHTML = "Read Full Description";  // Change the button text back
+        }
+    }
+
+    </script>
+</body>
+</html>
