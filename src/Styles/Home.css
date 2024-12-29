@@ -1,50 +1,219 @@
 /* HomePage.css */
 .home-page-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; 
-    background-color: rgb(245, 249, 192);
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Aligns content (text-container) to the left */
+  height: 100vh;
+  width: 100vw;
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+  background-color: rgb(245, 249, 192);
+}
+
+  /* Circle container animation */
+.circle-container {
+  background-color: #613a1d;
+  border-radius: 50%;
+  padding: 500px;
+  position: fixed;
+  top: 40%;
+  left: 55%;
+  animation: fadeInScale 2s ease-out; /* Fade-in and scale effect */
+}
+
+/* Image container animation */
+.image-container {
+  position: fixed; /* Keeps the container fixed to the right side */
+  width: 60%; /* Takes up half the page width */
+  height: 100%; /* Covers the full height of the viewport */
+  margin-top: 75px;
+  right: 0; /* Aligns to the right side */
+  animation: slideRight 1.5s ease-out; /* Slide-in from the right */
+}
+
+/* Text container animation */
+.text-container {
+  text-align: left; /* Align text inside the container to the left */
+  max-width: 650px; /* Limit the width of the text block */
+  margin-top: 140px; /* Add margin from the top */
+  background-color: transparent; /* Background color for the text container */
+  margin-left: 100px; /* Add margin to push the container slightly from the edge */
+  max-height: 450px;
+  position: fixed;
+  overflow: hidden;
+  animation: fadeInLeft 2s ease-out; /* Fade-in from the left */
+}
+
+/* Home title animation */
+.home-title {
+  font-size: 6rem; /* Large font size */
+  color: #021f41; /* Custom color for 'home-title' */
+  margin: 0; /* Remove margin for better spacing */
+  animation: bounce 1s infinite alternate; /* Bouncing animation */
+}
+
+/* Home text animation */
+.home {
+  font-size: 5rem; /* Same size as 'home-title' */
+  color: #770020; /* Different color for 'home' */
+  margin: 0; /* Remove margin for better spacing */
+  animation: slideUp 1.5s ease-out; /* Slide-up animation */
+}
+
+/* Home description animation */
+.home-description {
+  font-size: 1.3rem; /* Same font size for descriptions */
+  line-height: 1.6; /* Line spacing for readability */
+  color: #3d3c3c; /* Gray color for descriptions */
+  margin: 5px 0; /* Small margin for separation */
+  text-align: justify;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards; /* Fade-in description */
+}
+
+/* Home image animation */
+.home-image {
+  width: 100%; /* Ensures the image fits within the container's width */
+  height: 100%; /* Ensures the image stretches to fill the container */
+  margin-left: 120px;
+  object-fit: cover; /* Maintains the image aspect ratio while covering the container */
+  opacity: 0;
+  animation: fadeInImage 2s ease-out forwards; /* Fade-in for the image */
+}
+
+/* Keyframes for animations */
+
+/* Fade-in and scale effect for circle container */
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: scale(0.5);
   }
-  
-  .image-container {
-    position: fixed; /* Keeps the container fixed to the right side */
-    width: 60%; /* Takes up half the page width */
-    height: 100%; /* Covers the full height of the viewport */
-    margin-top: 75px;
-    right: 0; /* Aligns to the right side */
+  100% {
+      opacity: 1;
+      transform: scale(1);
   }
-  
-  .home-image {
-    width: 100%; /* Ensures the image fits within the container's width */
-    height: 100%; /* Ensures the image stretches to fill the container */
-    margin-left: 120px;
-    object-fit: cover; /* Maintains the image aspect ratio while covering the container */
-    
+}
+
+/* Slide-in from the right for image container */
+@keyframes slideRight {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
   }
-  
-  
-  .arrow-container {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a background behind the arrow */
-    padding: 10px;
-    border-radius: 50%;
-    color: white;
+  100% {
+      transform: translateX(0);
+      opacity: 1;
   }
-  
-  .arrow-container:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: adds hover effect */
+}
+
+/* Fade-in from the left for text container */
+@keyframes fadeInLeft {
+  0% {
+      transform: translateX(-50px);
+      opacity: 0;
   }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Bounce effect for home title */
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Slide-up effect for home */
+@keyframes slideUp {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Fade-in effect for home description */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Fade-in effect for home image */
+@keyframes fadeInImage {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+  
+ /* Arrow container styling */
+.arrow-container {
+  position: absolute;
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers the arrow horizontally */
+  align-items: center; /* Centers the arrow vertically */
+  right: 20px;
+  top: 38%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5); /* Background behind the arrow */
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  opacity: 0;
+  animation: fadeInArrow 1s ease-out forwards, slideUpDown 2s ease-in-out infinite; /* Fade-in animation and continuous slide up/down */
+}
+
+/* Hover effect for the arrow */
+.arrow-container:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darkens the background on hover */
+  transform: scale(1.1); /* Slightly enlarges the arrow when hovered */
+}
+
+/* Keyframe for arrow fade-in animation */
+@keyframes fadeInArrow {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) translateY(-50%); /* Starts slightly to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(-50%); /* Moves to the center */
+  }
+}
+
+/* Keyframe for slide-up and slide-down animation */
+@keyframes slideUpDown {
+  0%, 100% {
+    transform: translateY(-70%); /* Initial position */
+  }
+  50% {
+    transform: translateY(-50%); /* Moves down slightly */
+  }
+}
+
+
   
   /* Responsive styles */
   @media (max-width: 768px) {
