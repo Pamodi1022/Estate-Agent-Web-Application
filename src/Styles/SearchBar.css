@@ -4,84 +4,111 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #413726;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100vw;
+  height: 70vh;
+  width: 70vw;
+  margin-top: -20px;
   position: relative;
-  overflow: hidden; /* Prevent any overflow issues */
 }
 
-
-/* House Shape */
-.house-shape {
-  position: fixed;
-  background-color: #f6f3c8;
-  width: 450px;
-  height: 550px;
-  clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
 
 .title {
-  font-size: 2.2rem;
+  position: fixed;
+  font-size: 3rem;
   font-weight: bold;
-  margin-top: -60px;
-  padding: 0;
+  margin-top: -250px;
   color: #02254d;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.subtitle {
+  position: fixed;
+  text-wrap: wrap;
+  font-size: 0.8rem;
+  color: black;
+  font-weight: lighter;
+  margin-top: -10px;
+  margin-left: 102px;
+  margin-right: 102px;
+  padding: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem; /* Reduce font size */
+    margin-top: -320px; /* Adjust margin to fit smaller screens */
+  }
+
+  .subtitle {
+    font-size: 0.7rem; /* Reduce font size */
+    margin-top: 2px; /* Adjust spacing */
+    margin-left: 10px; /* Ensure no overflow on smaller screens */
+    margin-right: 10px;
+  }
+
+  .search-bar {
+    max-width: 450px; /* Use a percentage-based width for flexibility */
+    margin-top: 30px;/* Adjust margin for smaller screens */
+  }
+
+  .search-input {
+    font-size: 12px; /* Slightly reduce font size */
+    padding: 10px 15px; /* Adjust padding */
+    
+  }
+}
+
+
 .highlight {
-  color: #b2092f;
+  color: #82041f;
 }
 
 
 /* Search Bar */
 .search-bar {
   position: fixed;
-  margin-top: 130px;
-  width: 550px;
+  margin-top: 180px;
+  width: 620px;
   display: flex;
   align-items: center;
-  border-radius: 30px; /* Smoothly curve the entire search bar edges */
-  overflow: hidden; /* Prevent content from spilling out of rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  background-color: #fff; /* Ensure a solid background color */
+  border-style:dotted;
+  border-color: #413726;
+  border-radius: 25px; /* Smoothly curve the entire search bar edges */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 /* Search Input */
 .search-input {
   flex: 1;
   height: 25px;
-  padding: 10px 15px;
+  padding: 15px 20px;
   font-size: 14px;
-  border: none; /* Remove the default border */
-  border-radius: 0; /* Remove conflicting radius from individual input */
-  outline: none; /* Remove outline on focus */
+  border-radius: 25px;
 }
-
 
 
 /* Buttons */
 .buttons {
-  margin-top: 20px;
+  position:fixed;
+  margin-top: 120px;
   display: flex;
-  gap: 80px; /* Adjust this value to increase/decrease the gap */
+  gap: 150px; /* Adjust this value to increase/decrease the gap */
   justify-content: center;
 }
 
 .btn {
   font-size: 16px;
-  padding: 8px 16px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 5px;
-  margin-top: 280px;
+  border-radius: 20px;
+  margin-top: 300px;
   opacity: 0.9;
+  width: 120px;
   cursor: pointer;
 }
 
@@ -91,6 +118,6 @@
 }
 
 .for-rent {
-  background-color: #830823;
+  background-color: #7e011c;
   color: #fff;
 }
