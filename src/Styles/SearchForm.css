@@ -1,110 +1,104 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #E1E2E2; /* Light text color */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    height: 100vh;
-    
-  }
-  
-  .search-form {
-    background-color: #1D2228; /* Form container background */
-    border: 1px solid #FB8122; /* Orange border */
-    border-radius: 8px;
-    padding: 20px 30px;
-    max-width: 600px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .search-form h2 {
-    color: #FB8122; /* Orange heading */
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .price-range {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .price-range input {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group label {
-    font-weight: bold;
-    color: #E1E2E2;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input,
-  .form-group select {
-    background-color: #E1E2E2;
-    border: 1px solid #FB8122;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 14px;
-    color: #1D2228;
-  }
-  
-  .form-group input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .form-group span {
-    margin: 0 10px;
-    color: #E1E2E2;
-    align-self: center;
-  }
-  
-  .error {
-    color: #FB8122; /* Orange error text */
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .search-btn {
-    background-color: #FB8122;
-    color: #1D2228;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-btn:hover {
-    background-color: #E1E2E2;
-    color: #FB8122;
-  }
-  
-  .search-btn:focus {
-    outline: none;
-    box-shadow: 0 0 5px 2px #FB8122;
-  }
-  
+.container {
+  max-width: 800px;
+  padding: 25px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 120px;
+}
+
+.container h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  color: #021f41;
+  text-align: center;
+}
+
+.container p {
+  font-size: 0.9rem;
+  color: #1b1a1a;
+  margin-top: -10px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #021f41;
+}
+
+select,
+input[type="number"],
+input[type="checkbox"] {
+  padding: 10px;
+  font-size: 0.7rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 100%;
+}
+
+select:focus,
+input[type="number"]:focus {
+  border-color: #3d3c3c;
+  outline: none;
+  box-shadow: 0 0 5px #3d3c3c;
+}
+
+.bedrooms-range {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bedrooms-range input {
+  flex: 1;
+}
+
+.price-range {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #770020;
+  color: #ffffff;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #021f41;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #93000f;
+  margin-top: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+
