@@ -10,9 +10,10 @@
   width: 70vw;
   margin-top: -20px;
   position: relative;
+  animation: fadeIn 2s ease-out; /* Fade-in animation for container */
 }
 
-
+/* Title */
 .title {
   position: fixed;
   font-size: 3rem;
@@ -21,8 +22,11 @@
   color: #02254d;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0; /* Initial opacity */
+  animation: slideInFromTop 1.5s forwards; /* Slide-in animation for title */
 }
 
+/* Subtitle */
 .subtitle {
   position: fixed;
   text-wrap: wrap;
@@ -35,39 +39,38 @@
   padding: 0;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards; /* Fade-in animation with delay */
 }
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .title {
-    font-size: 2rem; /* Reduce font size */
-    margin-top: -320px; /* Adjust margin to fit smaller screens */
+    font-size: 2rem;
+    margin-top: -320px;
   }
 
   .subtitle {
-    font-size: 0.7rem; /* Reduce font size */
-    margin-top: 2px; /* Adjust spacing */
-    margin-left: 10px; /* Ensure no overflow on smaller screens */
+    font-size: 0.7rem;
+    margin-top: 2px;
+    margin-left: 10px;
     margin-right: 10px;
   }
 
   .search-bar {
-    max-width: 450px; /* Use a percentage-based width for flexibility */
-    margin-top: 30px;/* Adjust margin for smaller screens */
+    max-width: 450px;
+    margin-top: 30px;
   }
 
   .search-input {
-    font-size: 12px; /* Slightly reduce font size */
-    padding: 10px 15px; /* Adjust padding */
-    
+    font-size: 12px;
+    padding: 10px 15px;
   }
 }
-
 
 .highlight {
   color: #82041f;
 }
-
 
 /* Search Bar */
 .search-bar {
@@ -76,10 +79,12 @@
   width: 620px;
   display: flex;
   align-items: center;
-  border-style:dotted;
+  border-style: dotted;
   border-color: #413726;
-  border-radius: 25px; /* Smoothly curve the entire search bar edges */
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  border-radius: 25px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: slideInFromLeft 1s 1.5s forwards; /* Slide-in animation for search bar */
 }
 
 /* Search Input */
@@ -91,14 +96,15 @@
   border-radius: 25px;
 }
 
-
 /* Buttons */
 .buttons {
-  position:fixed;
+  position: fixed;
   margin-top: 120px;
   display: flex;
-  gap: 150px; /* Adjust this value to increase/decrease the gap */
+  gap: 150px;
   justify-content: center;
+  opacity: 0;
+  animation: fadeIn 2s 2s forwards; /* Fade-in animation for buttons */
 }
 
 .btn {
@@ -120,4 +126,36 @@
 .for-rent {
   background-color: #7e011c;
   color: #fff;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
