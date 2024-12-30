@@ -56,7 +56,7 @@
             <!-- Remaining Property Details -->
             <div class="container">
                 <div class="header">
-                    <h1>Arkwright Road, Hampstead NW3</h1>
+                    <h2>Arkwright Road, Hampstead NW3</h2>
                     <div class="icons">
                         <i class="fas fa-share-alt" id="share-icon" onclick="shareProperty()"></i>
                         <i class="far fa-heart" id="favorite-icon" onclick="toggleFavorite()"></i>
@@ -107,10 +107,12 @@
                     <img id="viewer-image" src="" alt="Fullscreen Image">
                     <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
                   </div>
+
+                <div class="separator"></div>
                   
     
                 <div class="description">
-                    <h2>Description</h2>
+                    <h3>Description</h3>
                     <p id="short-description">
                         New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
                     </p>
@@ -250,26 +252,32 @@
             }
         }
 
-        // JavaScript for sharing property
-        function shareProperty() {
-            const shareUrl = window.location.href;
-            if (navigator.share) {
-                navigator.share({
-                    title: document.title,
-                    url: shareUrl
-                }).then(() => {
-                    console.log('Thanks for sharing!');
-                }).catch(console.error);
-            } else {
-                // Fallback for browsers that do not support the Web Share API
-                const tempInput = document.createElement('input');
-                document.body.appendChild(tempInput);
-                tempInput.value = shareUrl;
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-                alert('URL copied to clipboard');
-            }
+        // Function to handle sharing the property URL
+        function shareProperty(propertyUrl) {
+        const shareUrl = propertyUrl || window.location.href; // Use provided URL or current page URL
+        if (navigator.share) {
+            // Web Share API
+            navigator
+            .share({
+                title: document.title,
+                url: shareUrl
+            })
+            .then(() => {
+                console.log("Thanks for sharing!");
+            })
+            .catch((error) => {
+                console.error("Error sharing", error);
+            });
+        } else {
+            // Fallback for browsers that don't support Web Share API
+            const tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = shareUrl;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("URL copied to clipboard");
+        }
         }
 
         function toggleDescription() {
