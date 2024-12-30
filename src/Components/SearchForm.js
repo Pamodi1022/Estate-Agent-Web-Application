@@ -108,97 +108,105 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
+    <div className="container">
       <h2>Properties to {type === 'rent' ? 'rent' : 'buy'} in Bathgate, West Lothian</h2>
+      <p>Find your perfect property by adjusting the search filters below:</p>
+      {errors.form && <span className="error">{errors.form}</span>}
+    
+      <form onSubmit={handleSubmit} className="search-form">
 
-      <div className="form-group">
-        <label>Search radius</label>
-        <select name="searchRadius" value={formData.searchRadius} onChange={handleChange}>
-          <option value="This area only">This area only</option>
-          <option value="Within 1 mile">Within 1 mile</option>
-          <option value="Within 5 miles">Within 5 miles</option>
-          <option value="Within 10 miles">Within 10 miles</option>
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label>Property types</label>
-        <select name="propertyType" value={formData.propertyType} onChange={handleChange}>
-          <option value="Any">Any</option>
-          <option value="Houses">Houses</option>
-          <option value="Flats">Flats</option>
-          <option value="Bungalows">Bungalows</option>
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label>Price range (€)</label>
-        <div className="price-range">
-          <select
-            name="priceMin"
-            value={formData.priceMin}
-            onChange={handleChange}
-          >
-            <option value="">Min Price</option>
-            {generatePriceOptions()}
+        <div className="form-group">
+          <label>Search radius</label>
+          <select name="searchRadius" value={formData.searchRadius} onChange={handleChange}>
+            <option value="This area only">This area only</option>
+            <option value="Within 1 mile">Within 1 mile</option>
+            <option value="Within 5 miles">Within 5 miles</option>
+            <option value="Within 10 miles">Within 10 miles</option>
           </select>
-          <select
-            name="priceMax"
-            value={formData.priceMax}
-            onChange={handleChange}
-          >
-            <option value="">Max Price</option>
-            {generatePriceOptions()}
-          </select>
-          {errors.priceRange && <span className="error">{errors.priceRange}</span>}
         </div>
-      </div>
 
-      <div className="form-group">
-        <label>No. of bedrooms</label>
-        <input
-          type="number"
-          name="bedroomsMin"
-          placeholder="No min"
-          value={formData.bedroomsMin}
-          onChange={handleChange}
-        />
-        <span> - </span>
-        <input
-          type="number"
-          name="bedroomsMax"
-          placeholder="No max"
-          value={formData.bedroomsMax}
-          onChange={handleChange}
-        />
-        {errors.bedrooms && <span className="error">{errors.bedrooms}</span>}
-      </div>
+        <div className="form-group">
+          <label>Property types</label>
+          <select name="propertyType" value={formData.propertyType} onChange={handleChange}>
+            <option value="Any">Any</option>
+            <option value="Houses">Houses</option>
+            <option value="Flats">Flats</option>
+            <option value="Bungalows">Bungalows</option>
+          </select>
+        </div>
 
-      <div className="form-group">
-        <label>Added to site</label>
-        <select name="addedToSite" value={formData.addedToSite} onChange={handleChange}>
-          <option value="Anytime">Anytime</option>
-          <option value="Last 24 hours">Last 24 hours</option>
-          <option value="Last 3 days">Last 3 days</option>
-          <option value="Last 7 days">Last 7 days</option>
-          <option value="Last 14 days">Last 14 days</option>
-        </select>
-      </div>
+        <div className="form-group">
+          <label>Price range (€)</label>
+          <div className="price-range">
+            <select
+              name="priceMin"
+              value={formData.priceMin}
+              onChange={handleChange}
+            >
+              <option value="">Min Price</option>
+              {generatePriceOptions()}
+            </select>
+            <select
+              name="priceMax"
+              value={formData.priceMax}
+              onChange={handleChange}
+            >
+              <option value="">Max Price</option>
+              {generatePriceOptions()}
+            </select>
+            {errors.priceRange && <span className="error">{errors.priceRange}</span>}
+          </div>
+        </div>
 
-      <div className="form-group">
-        <label>
-          <input
-            type="checkbox"
-            name="includeLetAgreed"
-            checked={formData.includeLetAgreed}
-            onChange={handleChange}
-          />
-          Include Let Agreed
-        </label>
-      </div>
+        <div className="form-group">
+          <label>No. of bedrooms</label>
+          <div className="bedrooms-range">
+            <input
+              type="number"
+              name="bedroomsMin"
+              placeholder="Min No"
+              value={formData.bedroomsMin}
+              onChange={handleChange}
+            />
+            <span> - </span>
+            <input
+              type="number"
+              name="bedroomsMax"
+              placeholder="Max No"
+              value={formData.bedroomsMax}
+              onChange={handleChange}
+            />
+            {errors.bedrooms && <span className="error">{errors.bedrooms}</span>}
+          </div>
+        </div>
 
-      <button type="submit">Search</button>
-    </form>
+
+        <div className="form-group">
+          <label>Added to site</label>
+          <select name="addedToSite" value={formData.addedToSite} onChange={handleChange}>
+            <option value="Anytime">Anytime</option>
+            <option value="Last 24 hours">Last 24 hours</option>
+            <option value="Last 3 days">Last 3 days</option>
+            <option value="Last 7 days">Last 7 days</option>
+            <option value="Last 14 days">Last 14 days</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label>
+            <input
+              type="checkbox"
+              name="includeLetAgreed"
+              checked={formData.includeLetAgreed}
+              onChange={handleChange}
+            />
+            Include Let Agreed
+          </label>
+        </div>
+
+        <button type="submit">Search</button>
+      </form>
+    </div>
   );
 };
 
