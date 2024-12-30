@@ -30,7 +30,7 @@ const SearchBar = () => {
 
   
   return (
-    <div className="container">
+    <div className="barcontainer">
       <h1 className="title">
         DREAMING OF YOUR PERFECT HOME ?<span className="highlight"><br></br>START YOUR SEARCH HERE!</span>
       </h1>
