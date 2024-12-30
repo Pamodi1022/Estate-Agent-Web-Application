@@ -2,12 +2,13 @@ body{
     position: relative;
     background-color: #f5f9c0;
 }
+
 .property-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    margin-top: 300px;
+    margin-top: 350px;
     justify-content: center;
     
   }
@@ -64,6 +65,40 @@ body{
   
   .property-details p {
     margin: 5px 0;
+}
+
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.favourite-icon,
+.share-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.favourite-icon {
+  color: #d3d3d3; /* Default color */
+  transition: color 0.3s;
+}
+
+.favourite-icon.active {
+  color: #ff6347; /* Red when active */
+}
+
+.favourite-icon:hover {
+  color: #ff4500;
+}
+
+.share-icon {
+  color: #007bff; /* Blue color */
+}
+
+.share-icon:hover {
+  color: #0056b3;
 }
 
   
