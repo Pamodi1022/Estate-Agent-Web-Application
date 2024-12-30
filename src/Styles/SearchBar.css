@@ -1,15 +1,15 @@
 /* Container */
-.container {
+.barcontainer {
   display: flex;
+  position: fixed;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
-  height: 70vh;
-  width: 70vw;
+  height: 100vh;
+  width: 100vw;
   margin-top: -20px;
-  position: relative;
   animation: fadeIn 2s ease-out; /* Fade-in animation for container */
 }
 
