@@ -1,5 +1,6 @@
-.body{
+body{
     position: relative;
+    background-color: #f5f9c0;
 }
 .property-list {
     display: flex;
