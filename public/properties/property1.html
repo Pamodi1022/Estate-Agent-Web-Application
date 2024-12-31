@@ -18,7 +18,7 @@
             </a>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <ul id="navbar-links">
+        <ul id="navbar-links" class="">
             <li><a href="/search" onclick="closeMenu()">Search</a></li>
             <li><a href="/ads" onclick="closeMenu()">Advertisements</a></li>
             <li><a href="/signup" onclick="closeMenu()">Sign up</a></li>
@@ -56,13 +56,13 @@
             <!-- Remaining Property Details -->
             <div class="container">
                 <div class="header">
-                    <h2>Arkwright Road, Hampstead NW3</h2>
+                    <h2>Petts Wood Road, Petts Wood, Orpington BR5</h2>
                     <div class="icons">
                         <i class="fas fa-share-alt" id="share-icon" onclick="shareProperty()"></i>
                         <i class="far fa-heart" id="favorite-icon" onclick="toggleFavorite()"></i>
                     </div>
                 </div>
-                <div class="price">£589,995</div>
+                <div class="price">£750,000</div>
                 <div class="separator"></div>
                 
                 <div class="letting-details">
@@ -72,7 +72,7 @@
                     </div>
                     <div class="property-detail">
                         <img src="../images/bedrooms.png" alt="Bedroom Icon">
-                        <span><strong>BEDROOMS</strong> 5</span>
+                        <span><strong>BEDROOMS</strong> 3</span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/bathrooms.png" alt="Bathroom Icon">
@@ -114,20 +114,18 @@
                 <div class="description">
                     <h3>Description</h3>
                     <p id="short-description">
-                        New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
+                        This charming three-bedroom semi-detached family home is the perfect blend of convenience, comfort, and character. Located just 0.5 miles from Petts Wood station, it offers swift connections to London, making it ideal for commuters. Nestled within a vibrant community, it’s also within a leisurely stroll of local shops, highly-rated schools, reliable bus routes, and serene National Trust woodlands—perfect for weekend adventures.
                     </p>
                     <div id="full-description" style="display: none;">
                         <p>
-                            The ground floor features an impressive entrance hall which leads through to a 24' drawing room with a ceiling height approaching 4 metres, with floor to ceiling French windows leading out to a beautifully established garden.
-                            
-                            At the lower level with separate access to the garden, is a 'Plain English' bespoke country style kitchen/dining room, guest cloakroom and large utility room.
+                            Step inside, and you'll find a thoughtfully designed layout that caters to modern family living. The home boasts two welcoming reception rooms—ideal for hosting or relaxing—and an expansive 18'9 x 10'1 kitchen/breakfast room that inspires culinary creativity. A bright conservatory invites you to unwind while enjoying views of the garden, while the utility room and cloakroom add practicality and convenience.
+                        </p>
+
+                        <p>
+                            Upstairs, three spacious bedrooms provide restful retreats, complemented by a family bathroom with a separate WC for added functionality. Modern comforts such as double glazing and gas central heating are seamlessly integrated, ensuring the home is warm and energy-efficient year-round.
                         </p>
                         <p>
-                            The principal bedroom suite occupies the first floor, with over 3 metres ceilings heights plus an additional bedroom/study with views over towards The Heath. While the second floor offers a further two/three bedrooms and a family bathroom. A spiral staircase leads to the top floor which offers extensive storage within a summer room and access to the roof terrace with exceptional views.
-                        </p>
-                        <p>
-                            Upper Terrace is within walking distance to both the village with its extensive array of boutiques, eateries, coffee shops, and transport links and the open expanses of Hampstead Heath.
-                        </p>
+                            The interior is tastefully presented, exuding a sense of warmth and style. Whether you're savoring the tranquility of the woodland nearby or enjoying the ease of urban connectivity, this home offers a lifestyle of balance and beauty—a haven ready to welcome its next family.
                     </div>
                     <button id="toggle-button" onclick="toggleDescription()">Read Full Description</button>
                 </div>  
@@ -148,7 +146,7 @@
                         <span><strong>ACCESSIBILITY</strong> Ask agent</span>
                     </div>
                     <div class="property-detail">
-                        <span><strong>SIZE</strong> 3500sqrt</span>
+                        <span><strong>SIZE</strong> 3,500 sq ft</span>
                     </div>
                 </div>
             </div>
@@ -157,12 +155,13 @@
         <!-- Map -->
         <div class="map-container">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.1853911147969798!3d51.550671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5f5c39cabb%3A0x5e703aba29936b72!2sArkwright%20Rd%2C%20London%20NW3%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d0.08904545618127474!3d51.40278523448509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ad9a68053f3b%3A0x2c3c3efbcba1f5b7!2sPetts%20Wood%20Road%2C%20Petts%20Wood%2C%20Orpington%20BR5!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+
 
         <div class="agent-card">
             <div class="marketed-by">MARKETED BY</div>
@@ -176,124 +175,153 @@
 
             <div class="buttons">
                 <button class="call-agent" onclick="toggleCallAgent()">Call agent</button>
-                <button class="request-details">Request details</button>
-              </div>
-              
-              <script>
-                function toggleCallAgent() {
-                  var button = document.querySelector('.call-agent');
-                  
-                  // Check if the button currently shows the text "Call agent"
-                  if (button.innerHTML === 'Call agent') {
-                    // Change to mobile number and add a link to initiate the call
-                    button.innerHTML = '<a href="tel:0764022934" style="color: inherit; text-decoration: none;">0764022934</a>';
-                  } else {
-                    // Change back to "Call agent"
-                    button.innerHTML = 'Call agent';
-                  }
+                <button class="request-details" onclick="requestDetails()">Request details</button>
+            </div>
+            
+            <script>
+
+                // Toggle the visibility of the navbar links
+                function toggleMenu() {
+                    const navbarLinks = document.getElementById("navbar-links");
+                    if (navbarLinks.style.display === "block") {
+                        navbarLinks.style.display = "none";
+                    } else {
+                        navbarLinks.style.display = "block";
+                    }
                 }
-              </script>
-              
-              
-              
-              
-    
-    <!-- JavaScript -->
-    <script>
-        function changeImage(thumbnail) {
-            const mainImage = document.getElementById('current-image');
-            mainImage.src = thumbnail.src;
-        }
 
-        // Image Modal Viewer Functionality
-        const imagesArray = [
-        "../images/prop1pic1small.jpeg",
-        "../images/prop1pic2.jpeg",
-        "../images/prop1pic3.jpeg",
-        "../images/prop1pic4.jpeg",
-        "../images/prop1pic5.jpeg",
-        "../images/prop1pic6.jpeg",
-        "../images/prop1pic7.jpeg",
-        "../images/prop1pic8.jpeg",
-        ];
+                function closeMenu() {
+                    const navbarLinks = document.getElementById("navbar-links");
+                    navbarLinks.style.display = "none";
+                }
 
-        let currentModalIndex = 0;
+                // Optional: Ensure the menu is reset when resizing the window
+                window.onresize = function () {
+                    const navbarLinks = document.getElementById("navbar-links");
+                    if (window.innerWidth > 768) {
+                        navbarLinks.style.display = "flex"; // Adjust as per your default style
+                    } else {
+                        navbarLinks.style.display = "none";
+                    }
+                };
 
-        function openImageViewer(index = 0) {
-        const imageViewer = document.getElementById('image-viewer');
-        const viewerImage = document.getElementById('viewer-image');
-        currentModalIndex = index;
-        viewerImage.src = imagesArray[currentModalIndex];
-        imageViewer.style.display = 'flex';
-        }
-
-        function closeImageViewer() {
-        const imageViewer = document.getElementById('image-viewer');
-        imageViewer.style.display = 'none';
-        }
-
-        function navigateImage(direction) {
-        currentModalIndex = (currentModalIndex + direction + imagesArray.length) % imagesArray.length;
-        const viewerImage = document.getElementById('viewer-image');
-        viewerImage.src = imagesArray[currentModalIndex];
-        }
+                // Toggle "Call agent" button between phone number and text
+                function toggleCallAgent() {
+                    var button = document.querySelector('.call-agent');
+                    
+                    // Check if the button currently shows the text "Call agent"
+                    if (button.innerHTML === 'Call agent') {
+                        // Change to mobile number and add a link to initiate the call
+                        button.innerHTML = '<a href="tel:0764022934" style="color: inherit; text-decoration: none;">0764022934</a>';
+                    } else {
+                        // Change back to "Call agent"
+                        button.innerHTML = 'Call agent';
+                    }
+                }
+            
+                // Function to handle "Request details" button click
+                function requestDetails() {
+                    alert("Thank you for your interest! We will send the property details to your email shortly.");
+                    // You can replace the alert with any other desired action (e.g., opening a modal, sending data to the server, etc.)
+                }
 
 
+                function changeImage(thumbnail) {
+                    const mainImage = document.getElementById('current-image');
+                    mainImage.src = thumbnail.src;
+                }
 
-        // JavaScript for toggling favorite icon
-        function toggleFavorite() {
-            const favoriteIcon = document.getElementById('favorite-icon');
-            if (favoriteIcon.classList.contains('far')) {
-                favoriteIcon.classList.remove('far');
-                favoriteIcon.classList.add('fas');
-            } else {
-                favoriteIcon.classList.remove('fas');
-                favoriteIcon.classList.add('far');
+                // Image Modal Viewer Functionality
+                const imagesArray = [
+                "../images/prop1pic1small.jpeg",
+                "../images/prop1pic2.jpeg",
+                "../images/prop1pic3.jpeg",
+                "../images/prop1pic4.jpeg",
+                "../images/prop1pic5.jpeg",
+                "../images/prop1pic6.jpeg",
+                "../images/prop1pic7.jpeg",
+                "../images/prop1pic8.jpeg",
+                ];
+
+                let currentModalIndex = 0;
+
+                function openImageViewer(index = 0) {
+                const imageViewer = document.getElementById('image-viewer');
+                const viewerImage = document.getElementById('viewer-image');
+                currentModalIndex = index;
+                viewerImage.src = imagesArray[currentModalIndex];
+                imageViewer.style.display = 'flex';
+                }
+
+                function closeImageViewer() {
+                const imageViewer = document.getElementById('image-viewer');
+                imageViewer.style.display = 'none';
+                }
+
+                function navigateImage(direction) {
+                currentModalIndex = (currentModalIndex + direction + imagesArray.length) % imagesArray.length;
+                const viewerImage = document.getElementById('viewer-image');
+                viewerImage.src = imagesArray[currentModalIndex];
+                }
+
+
+
+                // JavaScript for toggling favorite icon
+                function toggleFavorite() {
+                    const favoriteIcon = document.getElementById('favorite-icon');
+                    if (favoriteIcon.classList.contains('far')) {
+                        favoriteIcon.classList.remove('far');
+                        favoriteIcon.classList.add('fas');
+                    } else {
+                        favoriteIcon.classList.remove('fas');
+                        favoriteIcon.classList.add('far');
+                    }
+                }
+
+                // Function to handle sharing the property URL
+                function shareProperty(propertyUrl) {
+                const shareUrl = propertyUrl || window.location.href; // Use provided URL or current page URL
+                if (navigator.share) {
+                    // Web Share API
+                    navigator
+                    .share({
+                        title: document.title,
+                        url: shareUrl
+                    })
+                    .then(() => {
+                        console.log("Thanks for sharing!");
+                    })
+                    .catch((error) => {
+                        console.error("Error sharing", error);
+                    });
+                } else {
+                    // Fallback for browsers that don't support Web Share API
+                    const tempInput = document.createElement("input");
+                    document.body.appendChild(tempInput);
+                    tempInput.value = shareUrl;
+                    tempInput.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(tempInput);
+                    alert("URL copied to clipboard");
+                }
+                }
+
+                function toggleDescription() {
+                var fullDescription = document.getElementById("full-description");
+                var button = document.getElementById("toggle-button");
+                
+                // Check if the full description is currently hidden
+                if (fullDescription.style.display === "none") {
+                    fullDescription.style.display = "block";  // Show the full description
+                    button.innerHTML = "Read Less";  // Change the button text
+                } else {
+                    fullDescription.style.display = "none";  // Hide the full description
+                    button.innerHTML = "Read Full Description";  // Change the button text back
+                }
             }
-        }
-
-        // Function to handle sharing the property URL
-        function shareProperty(propertyUrl) {
-        const shareUrl = propertyUrl || window.location.href; // Use provided URL or current page URL
-        if (navigator.share) {
-            // Web Share API
-            navigator
-            .share({
-                title: document.title,
-                url: shareUrl
-            })
-            .then(() => {
-                console.log("Thanks for sharing!");
-            })
-            .catch((error) => {
-                console.error("Error sharing", error);
-            });
-        } else {
-            // Fallback for browsers that don't support Web Share API
-            const tempInput = document.createElement("input");
-            document.body.appendChild(tempInput);
-            tempInput.value = shareUrl;
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            alert("URL copied to clipboard");
-        }
-        }
-
-        function toggleDescription() {
-        var fullDescription = document.getElementById("full-description");
-        var button = document.getElementById("toggle-button");
-        
-        // Check if the full description is currently hidden
-        if (fullDescription.style.display === "none") {
-            fullDescription.style.display = "block";  // Show the full description
-            button.innerHTML = "Read Less";  // Change the button text
-        } else {
-            fullDescription.style.display = "none";  // Hide the full description
-            button.innerHTML = "Read Full Description";  // Change the button text back
-        }
-    }
-
-    </script>
+            
+            </script>
+        </div>
+    </div>
 </body>
 </html>
