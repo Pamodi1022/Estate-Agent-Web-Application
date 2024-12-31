@@ -1,8 +1,8 @@
-.body {
+body {
   background-color: #f5f9c0; /* Default background color */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  position: fixed; /* Position the body relative to the viewport */
+  position: relative; /* Position the body relative to the viewport */
 }
 
 /* HomePage.css */
