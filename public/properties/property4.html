@@ -202,6 +202,31 @@
     
     <!-- JavaScript -->
     <script>
+        // Toggle the visibility of the navbar links
+        function toggleMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (navbarLinks.style.display === "block") {
+                navbarLinks.style.display = "none";
+            } else {
+                navbarLinks.style.display = "block";
+            }
+        }
+
+        function closeMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            navbarLinks.style.display = "none";
+        }
+
+        // Optional: Ensure the menu is reset when resizing the window
+        window.onresize = function () {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (window.innerWidth > 768) {
+                navbarLinks.style.display = "flex"; // Adjust as per your default style
+            } else {
+                navbarLinks.style.display = "none";
+            }
+        };
+
         function changeImage(thumbnail) {
             const mainImage = document.getElementById('current-image');
             mainImage.src = thumbnail.src;

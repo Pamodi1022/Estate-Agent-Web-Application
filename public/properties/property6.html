@@ -52,31 +52,31 @@
             <!-- Remaining Property Details -->
             <div class="container">
                 <div class="header">
-                    <h1>Arkwright Road, Hampstead NW3</h1>
+                    <h2>Skinner Lane, Leeds, West Yorkshire, LS7</h2>
                     <div class="icons">
                         <i class="fas fa-share-alt" id="share-icon" onclick="shareProperty()"></i>
                         <i class="far fa-heart" id="favorite-icon" onclick="toggleFavorite()"></i>
                     </div>
                 </div>
-                <div class="price">£589,995</div>
+                <div class="price">£800</div>
                 <div class="separator"></div>
                 
                 <div class="letting-details">
                     <div class="property-detail">
                         <img src="../images/home.png" alt="Property Icon">
-                        <span><strong>PROPERTY TYPE</strong> Semi-Detached House</span>
+                        <span><strong>PROPERTY TYPE</strong> Flat </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/bedrooms.png" alt="Bedroom Icon">
-                        <span><strong>BEDROOMS</strong> 5</span>
+                        <span><strong>BEDROOMS</strong> 1 </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/bathrooms.png" alt="Bathroom Icon">
-                        <span><strong>BATHROOMS</strong> 2</span>
+                        <span><strong>BATHROOMS</strong> 1 </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/livingroom.png" alt="Reception Icon">
-                        <span><strong>RECEPTIONS</strong> 2</span>
+                        <span><strong>FURNISH TYPE</strong> Furnished </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/tenure.png" alt="Tenure Icon">
@@ -100,24 +100,22 @@
                     <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
                   </div>
                   
+                  <div class="separator"></div>
     
                 <div class="description">
-                    <h2>Description</h2>
+                    <h3>Description</h3>
                     <p id="short-description">
-                        New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
+                        Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House. This development is just off Regent Street, close to the city centre & the new Victoria Gate with all the new shops and bars.
                     </p>
                     <div id="full-description" style="display: none;">
                         <p>
-                            The ground floor features an impressive entrance hall which leads through to a 24' drawing room with a ceiling height approaching 4 metres, with floor to ceiling French windows leading out to a beautifully established garden.
-                            
-                            At the lower level with separate access to the garden, is a 'Plain English' bespoke country style kitchen/dining room, guest cloakroom and large utility room.
+                            Victoria House is conveniently located to St James' Hospital and the Universities and also benefits from having an Aldi and Gym across the road.                            
                         </p>
                         <p>
-                            The principal bedroom suite occupies the first floor, with over 3 metres ceilings heights plus an additional bedroom/study with views over towards The Heath. While the second floor offers a further two/three bedrooms and a family bathroom. A spiral staircase leads to the top floor which offers extensive storage within a summer room and access to the roof terrace with exceptional views.
+                            This modern 1 bed, 1 bathroom boasts a double bedroom, house bathroom and an open plan kitchen/lounge.
                         </p>
                         <p>
-                            Upper Terrace is within walking distance to both the village with its extensive array of boutiques, eateries, coffee shops, and transport links and the open expanses of Hampstead Heath.
-                        </p>
+                            The flat is fitted out to a very high specification. The apartment is fitted with a neutral decor and has a lovely, contemporary feel. The modern, open plan kitchen /living room is fitted with high quality appliances and fridge/freezer.                        </p>
                     </div>
                     <button id="toggle-button" onclick="toggleDescription()">Read Full Description</button>
                 </div>  
@@ -126,16 +124,16 @@
                 
                 <div class="letting-details">
                     <div class="property-detail">
-                        <span><strong>COUNCIL TAX</strong> Band: D</span>
+                        <span><strong>COUNCIL TAX</strong> Band: B</span>
                     </div>
                     <div class="property-detail">
-                        <span><strong>PARKING</strong> Yes</span>
+                        <span><strong>PARKING</strong> Ask agent </span>
                     </div>
                     <div class="property-detail">
                         <span><strong>GARDEN</strong> Ask agent</span>
                     </div>
                     <div class="property-detail">
-                        <span><strong>ACCESSIBILITY</strong> Ask agent</span>
+                        <span><strong>ACCESSIBILITY</strong> Lift access </span>
                     </div>
                     <div class="property-detail">
                         <span><strong>SIZE</strong> 3500sqrt</span>
@@ -191,6 +189,32 @@
     
     <!-- JavaScript -->
     <script>
+        // Toggle the visibility of the navbar links
+        function toggleMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (navbarLinks.style.display === "block") {
+                navbarLinks.style.display = "none";
+            } else {
+                navbarLinks.style.display = "block";
+            }
+        }
+
+        function closeMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            navbarLinks.style.display = "none";
+        }
+
+        // Optional: Ensure the menu is reset when resizing the window
+        window.onresize = function () {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (window.innerWidth > 768) {
+                navbarLinks.style.display = "flex"; // Adjust as per your default style
+            } else {
+                navbarLinks.style.display = "none";
+            }
+        };
+
+
         function changeImage(thumbnail) {
             const mainImage = document.getElementById('current-image');
             mainImage.src = thumbnail.src;

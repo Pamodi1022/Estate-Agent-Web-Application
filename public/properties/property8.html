@@ -56,35 +56,35 @@
             <!-- Remaining Property Details -->
             <div class="container">
                 <div class="header">
-                    <h1>Arkwright Road, Hampstead NW3</h1>
+                    <h2>Perryfield Way, Hendon, London, NW9 7DL</h2>
                     <div class="icons">
                         <i class="fas fa-share-alt" id="share-icon" onclick="shareProperty()"></i>
                         <i class="far fa-heart" id="favorite-icon" onclick="toggleFavorite()"></i>
                     </div>
                 </div>
-                <div class="price">£589,995</div>
+                <div class="price">£136,875</div>
                 <div class="separator"></div>
                 
                 <div class="letting-details">
                     <div class="property-detail">
                         <img src="../images/home.png" alt="Property Icon">
-                        <span><strong>PROPERTY TYPE</strong> Semi-Detached House</span>
+                        <span><strong>PROPERTY TYPE</strong> Flat </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/bedrooms.png" alt="Bedroom Icon">
-                        <span><strong>BEDROOMS</strong> 5</span>
+                        <span><strong>BEDROOMS</strong> 2 </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/bathrooms.png" alt="Bathroom Icon">
-                        <span><strong>BATHROOMS</strong> 2</span>
+                        <span><strong>BATHROOMS</strong> 2 </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/livingroom.png" alt="Reception Icon">
-                        <span><strong>RECEPTIONS</strong> 2</span>
+                        <span><strong>RECEPTIONS</strong> 1 </span>
                     </div>
                     <div class="property-detail">
                         <img src="../images/tenure.png" alt="Tenure Icon">
-                        <span><strong>TENURE</strong> Freehold</span>
+                        <span><strong>TENURE</strong> Ask agent </span>
                     </div>
                 </div>
                 
@@ -107,24 +107,24 @@
                     <img id="viewer-image" src="" alt="Fullscreen Image">
                     <i class="fas fa-chevron-right arrow right" onclick="navigateImage(1)"></i>
                   </div>
+
+                  <div class="separator"></div>
                   
     
                 <div class="description">
-                    <h2>Description</h2>
+                    <h3>Description</h3>
                     <p id="short-description">
-                        New Instruction! On the market for the first time in almost 25 years, this stunning five storey, bay fronted Grade II Listed Georgian home, built circa 1740, featuring a delightful 40' southerly facing walled garden and 18' roof terrace with far reaching panoramic views. Located in one of Hampstead's most desirable enclaves at the peak of the village, this charming four/five-bedroom property has unusually large volumes and ceiling heights for a house of this period, and retains a wealth of original features, including the stunning staircase.
+                        This well-appointed 2-bedroom, 2-bathroom flat is located in the sought-after area of Perryfield Way, Hendon, London, NW9 7DL. Offering a perfect balance of city living and natural beauty, the property provides an ideal home for those looking to enjoy all the benefits of London, with acres of green space and serene water features nearby.
                     </p>
                     <div id="full-description" style="display: none;">
                         <p>
-                            The ground floor features an impressive entrance hall which leads through to a 24' drawing room with a ceiling height approaching 4 metres, with floor to ceiling French windows leading out to a beautifully established garden.
-                            
-                            At the lower level with separate access to the garden, is a 'Plain English' bespoke country style kitchen/dining room, guest cloakroom and large utility room.
+                            Inside, the flat boasts a spacious living area, perfect for relaxing and entertaining. The modern design ensures a comfortable and stylish living experience, with thoughtfully designed spaces that cater to your needs.
                         </p>
                         <p>
-                            The principal bedroom suite occupies the first floor, with over 3 metres ceilings heights plus an additional bedroom/study with views over towards The Heath. While the second floor offers a further two/three bedrooms and a family bathroom. A spiral staircase leads to the top floor which offers extensive storage within a summer room and access to the roof terrace with exceptional views.
+                            Both bedrooms are generously sized, providing ample space for rest and relaxation, while the two bathrooms offer convenience and privacy. This flat is perfect for anyone seeking a peaceful retreat without sacrificing access to the best amenities the capital has to offer.
                         </p>
                         <p>
-                            Upper Terrace is within walking distance to both the village with its extensive array of boutiques, eateries, coffee shops, and transport links and the open expanses of Hampstead Heath.
+                            The location provides excellent transport links to central London, ensuring easy access to work, leisure, and entertainment, while the surrounding green spaces and tranquil waters offer a serene environment to unwind after a busy day.
                         </p>
                     </div>
                     <button id="toggle-button" onclick="toggleDescription()">Read Full Description</button>
@@ -146,7 +146,7 @@
                         <span><strong>ACCESSIBILITY</strong> Ask agent</span>
                     </div>
                     <div class="property-detail">
-                        <span><strong>SIZE</strong> 3500sqrt</span>
+                        <span><strong>SIZE</strong> 753 sq ft</span>
                     </div>
                 </div>
             </div>
@@ -199,6 +199,32 @@
     
     <!-- JavaScript -->
     <script>
+        // Toggle the visibility of the navbar links
+        function toggleMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (navbarLinks.style.display === "block") {
+                navbarLinks.style.display = "none";
+            } else {
+                navbarLinks.style.display = "block";
+            }
+        }
+
+        function closeMenu() {
+            const navbarLinks = document.getElementById("navbar-links");
+            navbarLinks.style.display = "none";
+        }
+
+        // Optional: Ensure the menu is reset when resizing the window
+        window.onresize = function () {
+            const navbarLinks = document.getElementById("navbar-links");
+            if (window.innerWidth > 768) {
+                navbarLinks.style.display = "flex"; // Adjust as per your default style
+            } else {
+                navbarLinks.style.display = "none";
+            }
+        };
+
+
         function changeImage(thumbnail) {
             const mainImage = document.getElementById('current-image');
             mainImage.src = thumbnail.src;
