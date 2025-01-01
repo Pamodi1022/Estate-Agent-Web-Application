@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import properties from '../properties.json';
 import '../Styles/SearchForm.css';
 
 const SearchForm = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const type = queryParams.get('type');
 
@@ -21,17 +23,10 @@ const SearchForm = () => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    // Adjust form data based on the type (rent or sale)
     if (type === 'rent') {
-      setFormData((prevData) => ({
-        ...prevData,
-        propertyType: 'Rent',
-      }));
+      setFormData((prevData) => ({ ...prevData, propertyType: 'Rent' }));
     } else if (type === 'sale') {
-      setFormData((prevData) => ({
-        ...prevData,
-        propertyType: 'Sale',
-      }));
+      setFormData((prevData) => ({ ...prevData, propertyType: 'Sale' }));
     }
   }, [type]);
 
@@ -68,70 +63,100 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+  
     if (validate()) {
-      // Submit form data
-      console.log('Form submitted:', formData);
+      const filteredProperties = properties.properties.filter((property) => {
+        // Skip filtering by property type if "Any" is entered
+        const matchesType = 
+          formData.propertyType === 'Any' || formData.propertyType === '' || true; 
+    
+        const matchesSearchType = 
+          type === 'any' || property.search === type;
+  
+        const matchesPrice =
+          (!formData.priceMin || property.price >= Number(formData.priceMin)) &&
+          (!formData.priceMax || property.price <= Number(formData.priceMax));
+  
+        const matchesBedrooms =
+          (!formData.bedroomsMin || property.bedrooms >= Number(formData.bedroomsMin)) &&
+          (!formData.bedroomsMax || property.bedrooms <= Number(formData.bedroomsMax));
+  
+        const matchesAddedToSite = 
+          formData.addedToSite === 'Anytime' || checkDateMatch(property.added);
+  
+        // Return true only if all conditions are met
+        return (
+          matchesType &&
+          matchesSearchType &&
+          matchesPrice &&
+          matchesBedrooms &&
+          matchesAddedToSite
+        );
+      });
+  
+      // Navigate to the result page with filtered properties
+      navigate('/result', { state: { results: filteredProperties } });
     }
   };
+  
+  
+  
 
-  const generatePriceOptions = () => {
-    const rentOptions = [
-      { value: '500', label: 'Below 500 €' },
-      { value: '1000', label: 'Below 1000 €' },
-      { value: '2000', label: 'Below 2000 €' },
-      { value: '5000', label: 'Below 5000 €' },
-      { value: '5001', label: 'Above 5000 €' },
-    ];
 
-    const saleOptions = [
-      { value: '100000', label: 'Below 100,000 €' },
-      { value: '500000', label: 'Below 500,000 €' },
-      { value: '1000000', label: 'Below 1,000,000 €' },
-      { value: '1000001', label: 'Above 1,000,000 €' },
-    ];
+  const checkDateMatch = (added) => {
+    const currentDate = new Date();
+    const propertyDate = new Date(`${added.month} ${added.day}, ${added.year}`);
+    const timeDiff = (currentDate - propertyDate) / (1000 * 3600 * 24); // Convert to days
 
-    const options = type === 'rent' ? rentOptions : saleOptions;
-
-    return options.map((option) => (
-      <option key={option.value} value={option.value}>
-        {option.label}
-      </option>
-    ));
+    switch (formData.addedToSite) {
+      case 'Last 24 hours':
+        return timeDiff <= 1;
+      case 'Last 3 days':
+        return timeDiff <= 3;
+      case 'Last 7 days':
+        return timeDiff <= 7;
+      case 'Last 14 days':
+        return timeDiff <= 14;
+      default:
+        return true;
+    }
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
 
+  const generatePriceOptions = () => {
+    const options = [];
+    for (let i = 500; i <= 10000; i += 500) {
+      options.push(<option key={i} value={i}>€{i.toLocaleString()}</option>);
+    }
+    return options;
+  };
+
+  
   return (
     <div className="container">
       <h2>Properties to {type === 'rent' ? 'rent' : 'buy'} in Bathgate, West Lothian</h2>
-      <p>Find your perfect property by adjusting the search filters below:</p>
-      {errors.form && <span className="error">{errors.form}</span>}
-    
       <form onSubmit={handleSubmit} className="search-form">
-
         <div className="form-group">
-          <label>Search radius</label>
-          <select name="searchRadius" value={formData.searchRadius} onChange={handleChange}>
+          <label htmlFor="searchRadius">Search Radius:</label>
+          <select name="searchRadius" id="searchRadius" value={formData.searchRadius} onChange={handleChange}>
             <option value="This area only">This area only</option>
-            <option value="Within 1 mile">Within 1 mile</option>
-            <option value="Within 5 miles">Within 5 miles</option>
-            <option value="Within 10 miles">Within 10 miles</option>
+            <option value="1 mile">1 mile</option>
+            <option value="5 miles">5 miles</option>
+            <option value="10 miles">10 miles</option>
           </select>
         </div>
 
         <div className="form-group">
-          <label>Property types</label>
-          <select name="propertyType" value={formData.propertyType} onChange={handleChange}>
+          <label htmlFor="propertyType">Property Type:</label>
+          <select name="propertyType" id="propertyType" value={formData.propertyType} onChange={handleChange}>
             <option value="Any">Any</option>
-            <option value="Houses">Houses</option>
-            <option value="Flats">Flats</option>
-            <option value="Bungalows">Bungalows</option>
+            <option value="House">House</option>
+            <option value="Flat">Flat</option>
+            <option value="Bungalow">Bungalow</option>
           </select>
         </div>
 
@@ -204,7 +229,13 @@ const SearchForm = () => {
           </label>
         </div>
 
-        <button type="submit">Search</button>
+        {errors.priceRange && <p className="error">{errors.priceRange}</p>}
+        {errors.bedrooms && <p className="error">{errors.bedrooms}</p>}
+
+        <button type="submit" className="btn btn-primary">
+          Search
+        </button>
+
       </form>
     </div>
   );
