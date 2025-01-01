@@ -1,0 +1,15 @@
+.results-container {
+    padding: 20px;
+  }
+  
+  .property-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .property-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
