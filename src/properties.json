@@ -65,8 +65,8 @@
         "picture":"images/prop4pic1small.jpeg",
         "url":"properties/property4.html",
         "added": {
-          "month":"October",
-          "day":20,
+          "month":"December",
+          "day":30,
           "year":2024
         }
       },
@@ -83,9 +83,9 @@
         "picture":"images/prop5pic1small.jpeg",
         "url":"properties/property5.html",
         "added": {
-          "month":"September",
-          "day":23,
-          "year":2024
+          "month":"January",
+          "day":1,
+          "year":2025
         }
       },
 
@@ -102,7 +102,7 @@
         "url":"properties/property6.html",
         "added": {
           "month":"December",
-          "day":26,
+          "day":29,
           "year":2024
         }
       },
@@ -120,7 +120,7 @@
         "url":"properties/property7.html",
         "added": {
           "month":"December",
-          "day":14,
+          "day":24,
           "year":2024
         }
       },
