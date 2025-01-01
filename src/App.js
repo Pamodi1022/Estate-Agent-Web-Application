@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import SearchBar from './Components/SearchBar';
 import SearchForm from './Components/SearchForm';
 import PropertiesList from './Components/PropertiesList';
+import ResultsPage from './Components/ResultsPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/search" element={<SearchBar />} />
           <Route path="/ads" element={<PropertiesList />} />
           <Route path="/searchform" element={<SearchForm />} />
+          <Route path="/result" element={<ResultsPage />} />
         </Routes>
       </div>
     </Router>
