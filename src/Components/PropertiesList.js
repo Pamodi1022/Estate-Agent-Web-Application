@@ -59,6 +59,7 @@ function PropertyList() {
           />
           <div className="property-info">
             <h3>{property.location}</h3>
+            <p className="property-description">{property.description}</p> {/* Added description */}
             <p>Price: £{property.price.toLocaleString()}</p>
             <p>Type: {property.type}</p>
             <a href={property.url} className="view-details">
