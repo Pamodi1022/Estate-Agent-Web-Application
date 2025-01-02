@@ -74,7 +74,7 @@ input[type="number"]:focus {
   gap: 10px;
 }
 
-button {
+.btnt {
   background-color: #770020;
   color: #ffffff;
   padding: 10px 25px;
@@ -83,11 +83,11 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 20px;
   transition: background-color 0.2s ease;
 }
 
-button:hover {
+.btnt:hover {
   background-color: #021f41;
 }
 
