@@ -64,27 +64,31 @@ const SearchForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (validate()) {
       const furtherFiltered = filteredProperties.filter((property) => {
         const matchesSearchType = type === 'any' || property.search === type;
+        const matchesPropertyType =
+          formData.propertyType === 'Any' || property.type === formData.propertyType;
+  
         const matchesPrice =
           (!formData.priceMin || property.price >= Number(formData.priceMin)) &&
           (!formData.priceMax || property.price <= Number(formData.priceMax));
-
+  
         const matchesBedrooms =
           (!formData.bedroomsMin || property.bedrooms >= Number(formData.bedroomsMin)) &&
           (!formData.bedroomsMax || property.bedrooms <= Number(formData.bedroomsMax));
-
+  
         const matchesAddedToSite =
           formData.addedToSite === 'Anytime' || checkDateMatch(property.added);
-
-        return matchesPrice && matchesBedrooms && matchesAddedToSite;
+  
+        return matchesSearchType && matchesPropertyType && matchesPrice && matchesBedrooms && matchesAddedToSite;
       });
-
+  
       navigate('/result', { state: { results: furtherFiltered } });
     }
   };
+  
 
   const checkDateMatch = (added) => {
     const currentDate = new Date();
