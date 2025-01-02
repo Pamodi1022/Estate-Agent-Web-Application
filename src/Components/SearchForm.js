@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import properties from '../properties.json';
+import propertiesData from '../properties.json';
 import '../Styles/SearchForm.css';
 
 const SearchForm = () => {
@@ -8,6 +8,7 @@ const SearchForm = () => {
   const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const type = queryParams.get('type');
+  const area = queryParams.get('Area');
 
   const [formData, setFormData] = useState({
     searchRadius: 'This area only',
@@ -20,15 +21,23 @@ const SearchForm = () => {
     includeLetAgreed: false,
   });
 
+  const [filteredProperties, setFilteredProperties] = useState([]);
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    if (type === 'rent') {
-      setFormData((prevData) => ({ ...prevData, propertyType: 'Rent' }));
-    } else if (type === 'sale') {
-      setFormData((prevData) => ({ ...prevData, propertyType: 'Sale' }));
-    }
-  }, [type]);
+    // Initial filtering based on `type` and `Area`
+    const initialFilteredProperties = propertiesData.properties.filter((property) => {
+      const matchesType =
+        !type || (property.search && property.search.toLowerCase() === type.toLowerCase());
+      const matchesArea =
+        !area || (property.Area && property.Area.toLowerCase() === area.toLowerCase());
+  
+      return matchesType && matchesArea;
+    });
+  
+    setFilteredProperties(initialFilteredProperties);
+  }, [type, area]);
+  
 
   const validate = () => {
     const newErrors = {};
@@ -49,59 +58,33 @@ const SearchForm = () => {
       newErrors.bedrooms = 'Minimum bedrooms cannot be greater than maximum bedrooms.';
     }
 
-    if (formData.bedroomsMin && Number(formData.bedroomsMin) <= 0) {
-      newErrors.bedroomsMin = 'Minimum bedrooms must be greater than 0.';
-    }
-
-    if (formData.bedroomsMax && Number(formData.bedroomsMax) <= 0) {
-      newErrors.bedroomsMax = 'Maximum bedrooms must be greater than 0.';
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     if (validate()) {
-      const filteredProperties = properties.properties.filter((property) => {
-        // Skip filtering by property type if "Any" is entered
-        const matchesType = 
-          formData.propertyType === 'Any' || formData.propertyType === '' || true; 
-    
-        const matchesSearchType = 
-          type === 'any' || property.search === type;
-  
+      const furtherFiltered = filteredProperties.filter((property) => {
+        const matchesSearchType = type === 'any' || property.search === type;
         const matchesPrice =
           (!formData.priceMin || property.price >= Number(formData.priceMin)) &&
           (!formData.priceMax || property.price <= Number(formData.priceMax));
-  
+
         const matchesBedrooms =
           (!formData.bedroomsMin || property.bedrooms >= Number(formData.bedroomsMin)) &&
           (!formData.bedroomsMax || property.bedrooms <= Number(formData.bedroomsMax));
-  
-        const matchesAddedToSite = 
+
+        const matchesAddedToSite =
           formData.addedToSite === 'Anytime' || checkDateMatch(property.added);
-  
-        // Return true only if all conditions are met
-        return (
-          matchesType &&
-          matchesSearchType &&
-          matchesPrice &&
-          matchesBedrooms &&
-          matchesAddedToSite
-        );
+
+        return matchesPrice && matchesBedrooms && matchesAddedToSite;
       });
-  
-      // Navigate to the result page with filtered properties
-      navigate('/result', { state: { results: filteredProperties } });
+
+      navigate('/result', { state: { results: furtherFiltered } });
     }
   };
-  
-  
-  
-
 
   const checkDateMatch = (added) => {
     const currentDate = new Date();
@@ -135,7 +118,6 @@ const SearchForm = () => {
     return options;
   };
 
-  
   return (
     <div className="container">
       <h2>Properties to {type === 'rent' ? 'rent' : 'buy'} in Bathgate, West Lothian</h2>
@@ -205,7 +187,6 @@ const SearchForm = () => {
           </div>
         </div>
 
-
         <div className="form-group">
           <label>Added to site</label>
           <select name="addedToSite" value={formData.addedToSite} onChange={handleChange}>
@@ -232,10 +213,9 @@ const SearchForm = () => {
         {errors.priceRange && <p className="error">{errors.priceRange}</p>}
         {errors.bedrooms && <p className="error">{errors.bedrooms}</p>}
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btnt">
           Search
         </button>
-
       </form>
     </div>
   );
