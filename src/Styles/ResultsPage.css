@@ -1,6 +1,9 @@
 /* CSS for property cards styled as a horizontal bar */
 
 .results-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 120px;
@@ -127,3 +130,22 @@
     justify-content: flex-start;
   }
 }
+
+
+.property-list {
+  flex: 3;
+}
+
+.favourites-sidebar {
+  flex: 1;
+  border-left: 2px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+
+.fav-list-container.highlight {
+  background-color: #f0f8ff;
+}
+
+
+
