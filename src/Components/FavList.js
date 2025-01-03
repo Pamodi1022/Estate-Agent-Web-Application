@@ -12,11 +12,9 @@ const FavList = () => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "PROPERTY",  // Accept properties
     drop: (item) => {
-      // If the item is already in the favourites, remove it. Otherwise, add it to favourites
-      if (favourites.some((fav) => fav.id === item.property.id)) {
-        removeFromFavourites(item.property.id);  // Remove from favourites
-      } else {
-        addToFavourites(item.property);  // Add to favourites
+      // Prevent duplicates by checking if the property is already in the favourites list
+      if (!favourites.some((fav) => fav.id === item.property.id)) {
+        addToFavourites(item.property);  // Add to favourites if not already present
       }
     },
     collect: (monitor) => ({
@@ -34,6 +32,16 @@ const FavList = () => {
       }),
     }));
 
+    // Toggle favourite status when the heart icon is clicked
+    const toggleFavourite = () => {
+      // Prevent duplicates by checking if the property is already in the favourites list
+      if (!favourites.some((fav) => fav.id === property.id)) {
+        addToFavourites(property);  // Add to favourites if not already present
+      } else {
+        removeFromFavourites(property.id);  // Remove from favourites if already there
+      }
+    };
+
     return (
       <div
         ref={drag}
@@ -49,7 +57,11 @@ const FavList = () => {
           <h3>{property.location}</h3>
           <p className="property-description">{property.description}</p>
           <p><strong>Price:</strong> €{property.price}</p>
-          <FontAwesomeIcon icon={faHeart} className="favourite-icon active" />
+          <FontAwesomeIcon
+            icon={faHeart}
+            className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
+            onClick={toggleFavourite}  // Toggle favourite on heart click
+          />
         </div>
       </div>
     );
