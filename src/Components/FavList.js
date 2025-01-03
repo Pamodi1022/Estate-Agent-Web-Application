@@ -6,15 +6,13 @@ import { useFavourites } from "../Context/FavouritesContext";
 import "../Styles/FavList.css";
 
 const FavList = () => {
-  const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
+  const { favourites, addToFavourites, removeFromFavourites, clearFavourites } = useFavourites();
 
-  // Use one drop function to handle both adding and removing
   const [{ isOver }, drop] = useDrop(() => ({
-    accept: "PROPERTY",  // Accept properties
+    accept: "PROPERTY",
     drop: (item) => {
-      // Prevent duplicates by checking if the property is already in the favourites list
       if (!favourites.some((fav) => fav.id === item.property.id)) {
-        addToFavourites(item.property);  // Add to favourites if not already present
+        addToFavourites(item.property);
       }
     },
     collect: (monitor) => ({
@@ -22,23 +20,20 @@ const FavList = () => {
     }),
   }));
 
-  // Draggable functionality for each property in the favourites
   const DraggableProperty = ({ property }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
       type: "PROPERTY",
-      item: { property },  // Property being dragged
+      item: { property },
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
     }));
 
-    // Toggle favourite status when the heart icon is clicked
     const toggleFavourite = () => {
-      // Prevent duplicates by checking if the property is already in the favourites list
       if (!favourites.some((fav) => fav.id === property.id)) {
-        addToFavourites(property);  // Add to favourites if not already present
+        addToFavourites(property);
       } else {
-        removeFromFavourites(property.id);  // Remove from favourites if already there
+        removeFromFavourites(property.id);
       }
     };
 
@@ -60,7 +55,7 @@ const FavList = () => {
           <FontAwesomeIcon
             icon={faHeart}
             className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
-            onClick={toggleFavourite}  // Toggle favourite on heart click
+            onClick={toggleFavourite}
           />
         </div>
       </div>
@@ -69,10 +64,13 @@ const FavList = () => {
 
   return (
     <div
-      ref={drop}  // Attach drop functionality here
+      ref={drop}
       className={`fav-list-container ${isOver ? "highlight" : ""}`}
     >
       <h2>Favourite Properties</h2>
+      <button className="clear-button" onClick={clearFavourites}>
+        Clear All
+      </button>
       {favourites.length > 0 ? (
         <div className="property-list">
           {favourites.map((property) => (
