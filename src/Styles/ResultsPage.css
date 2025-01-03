@@ -1,15 +1,129 @@
+/* CSS for property cards styled as a horizontal bar */
+
 .results-container {
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+  flex-wrap: wrap; /* Allows property cards to wrap if they overflow */
+  justify-content: flex-start; /* Aligns property cards to the left */
+  font-family: Arial, sans-serif;
+}
+
+.property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.property-card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+  width: 1200px; /* Set a width for the property card */
+}
+
+
+.property-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.property-image {
+  width: 40%;
+  object-fit: cover;
+  display: block;
+  height: 100%;
+}
+
+.property-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+}
+
+.property-info h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.property-description {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.property-details {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.property-details p {
+  margin: 5px 0;
+}
+
+
+.icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: 600px;;
+}
+
+.favourite-icon {
+  font-size: 1.5rem;
+  color: #f78f7d;
+  cursor: pointer;
+}
+
+.favourite-icon.active {
+  color: #e74c3c;
+}
+
+.share-icon {
+  font-size: 1.5rem;
+  color: #3498db;
+  cursor: pointer;
+}
+
+.view-details {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-details:hover {
+  color: #2c81ba;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .property-cards {
+    flex-direction: column;
   }
-  
-  .property-list {
-    display: grid;
-    gap: 20px;
+
+  .property-image {
+    width: 100%;
+    height: auto;
   }
-  
-  .property-card {
-    border: 1px solid #ccc;
+
+  .property-info {
     padding: 10px;
-    border-radius: 5px;
   }
-  
+
+  .icon {
+    justify-content: flex-start;
+  }
+}
