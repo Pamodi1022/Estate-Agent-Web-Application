@@ -1,151 +1,113 @@
-/* CSS for property cards styled as a horizontal bar */
+.results-page {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
 
 .results-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  flex: 3; /* Takes up three times as much space as the sidebar */
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 120px;
-  flex-wrap: wrap; /* Allows property cards to wrap if they overflow */
-  justify-content: flex-start; /* Aligns property cards to the left */
-  font-family: Arial, sans-serif;
+  overflow-y: auto; /* Enable scrolling for content overflow */
 }
 
-.property-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.property-card {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  background-color: #fff;
-  width: 1200px; /* Set a width for the property card */
-}
-
-
-.property-card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.property-image {
-  width: 40%;
-  object-fit: cover;
-  display: block;
-  height: 100%;
-}
-
-.property-info {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5px;
-
-}
-
-.property-info h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
+.results-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
   color: #333;
 }
 
-.property-description {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: #555;
-  line-height: 1.5;
+.property-list {
+  display: flex;
+  flex-direction: column; /* Keep the list vertically aligned */
+  gap: 20px; /* Space between property cards */
+  margin-top: 10px;
 }
 
-.property-details {
-  margin-bottom: 15px;
-  font-size: 14px;
+.property-card {
+  display: flex; /* Align image and content side by side */
+  align-items: center; /* Vertically center content */
+  border: 1px solid   #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px; /* Add some padding for spacing */
+}
+
+.property-card:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+  width: 300px; /* Fixed width for the image */
+  height: 240px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image is contained within its box */
+  margin-right: 15px; /* Space between the image and content */
+  border-radius: 4px; /* Slight rounding on the image edges */
+}
+
+.property-info {
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  flex: 1; /* Allow the content to take the remaining space */
+}
+
+.property-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.property-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
   color: #666;
 }
 
-.property-details p {
-  margin: 5px 0;
+.property-info p strong {
+  font-weight: bold;
 }
 
-
-.icons {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-top: -50px;
-  margin-left: 600px;;
-}
-
-.favourite-icon {
-  font-size: 1.5rem;
-  color: #f78f7d;
-  cursor: pointer;
-}
-
-.favourite-icon.active {
-  color: #e74c3c;
-}
-
-.share-icon {
-  font-size: 1.5rem;
-  color: #3498db;
-  cursor: pointer;
-}
-
-.view-details {
+.property-info .icons {
   margin-top: 10px;
-  font-size: 1rem;
-  color: #3498db;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  display: flex;
+  gap: 10px;
 }
 
-.view-details:hover {
-  color: #2c81ba;
+.property-info .icons .favourite-icon,
+.property-info .icons .share-icon {
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
 }
 
-/* Responsive design */
+.property-info .icons .favourite-icon.active {
+  color: #e63946; /* Active favourite icon color */
+}
+
+.property-info .icons .favourite-icon:hover,
+.property-info .icons .share-icon:hover {
+  color: #000;
+}
+
 @media (max-width: 768px) {
-  .property-cards {
-    flex-direction: column;
+  .property-card {
+    flex-direction: column; /* Stack image and content on smaller screens */
+    text-align: center;
   }
 
-  .property-image {
-    width: 100%;
-    height: auto;
+  .property-card img {
+    margin-right: 0; /* Remove right margin for stacked layout */
+    margin-bottom: 10px;
+    width: 100%; /* Make the image full width */
+    height: auto; /* Adjust height proportionally */
   }
 
   .property-info {
-    padding: 10px;
-  }
-
-  .icon {
-    justify-content: flex-start;
+    text-align: left;
   }
 }
-
-
-.property-list {
-  flex: 3;
-}
-
-.favourites-sidebar {
-  flex: 1;
-  border-left: 2px solid #ddd;
-  padding: 10px;
-  background: #fff;
-}
-
-.fav-list-container.highlight {
-  background-color: #f0f8ff;
-}
-
-
-
