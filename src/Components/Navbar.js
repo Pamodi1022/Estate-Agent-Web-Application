@@ -30,6 +30,9 @@ const Navbar = () => {
         <li>
           <Link to="/signup" onClick={() => setMenuActive(false)}>Sign up</Link>
         </li>
+        <li>
+          <Link to="/favlist" onClick={() => setMenuActive(false)}>Favourites</Link>
+        </li>
       </ul>
     </div>
   );
