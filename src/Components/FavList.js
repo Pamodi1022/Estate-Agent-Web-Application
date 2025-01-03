@@ -29,35 +29,31 @@ const FavList = () => {
       }),
     }));
 
-    const toggleFavourite = () => {
-      if (!favourites.some((fav) => fav.id === property.id)) {
-        addToFavourites(property);
-      } else {
-        removeFromFavourites(property.id);
-      }
-    };
 
     return (
       <div
         ref={drag}
-        className="property-card"
+        className="fav-property-cards"
         style={{ opacity: isDragging ? 0.5 : 1 }}
       >
         <img
-          src={property.picture}
-          alt={property.description || property.location}
-          className="property-image"
-        />
-        <div className="property-info">
-          <h3>{property.location}</h3>
-          <p className="property-description">{property.description}</p>
-          <p><strong>Price:</strong> €{property.price}</p>
-          <FontAwesomeIcon
-            icon={faHeart}
-            className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
-            onClick={toggleFavourite}
-          />
-        </div>
+                src={property.picture}
+                alt={property.description || property.location}
+                className="fav-property-image"
+              />
+        <div className="fav-property-info">
+                <h4>{property.location}</h4>
+                <p><strong>Price:</strong> €{property.price}</p>
+                <p>Type: {property.type}</p>
+                <a href={property.url} className="view-detail">
+                    View Details
+                  </a>
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  className="fav-icon"
+                  onClick={() => removeFromFavourites(property.id)}
+                />
+              </div>
       </div>
     );
   };
