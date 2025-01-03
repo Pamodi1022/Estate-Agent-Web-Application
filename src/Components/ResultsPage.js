@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { useDrag } from "react-dnd";
+import { useDrag, useDrop } from "react-dnd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { useFavourites } from "../Context/FavouritesContext";
@@ -11,7 +11,7 @@ import "../Styles/ResultsPage.css";
 const ResultsPage = () => {
   const location = useLocation();
   const { results } = location.state || { results: [] };
-  const { favourites, addToFavourites } = useFavourites();
+  const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
 
   const displayResults = results.length > 0 ? results : propertiesData;
 
@@ -24,13 +24,20 @@ const ResultsPage = () => {
     }
   };
 
-  const DraggableProperty = ({ property, shareProperty }) => {
-    const isFavourite = favourites.some((fav) => fav.id === property.id);
+  const [{ isOver }, drop] = useDrop(() => ({
+    accept: "PROPERTY",
+    drop: (item) => {
+      removeFromFavourites(item.property.id); // Remove from favourites when dropped
+    },
+    collect: (monitor) => ({
+      isOver: monitor.isOver(),
+    }),
+  }));
 
+  const DraggableProperty = ({ property }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
-      type: "PROPERTY",
+      type: "PROPERTY", // Make sure this matches the type in FavList.js
       item: { property },
-      canDrag: !isFavourite,  // Prevent dragging if the property is already in favourites
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
@@ -55,8 +62,8 @@ const ResultsPage = () => {
           <div className="icons">
             <FontAwesomeIcon
               icon={faHeart}
-              className={`favourite-icon ${isFavourite ? "active" : ""}`}
-              onClick={() => !isFavourite && addToFavourites(property)} // Only add to favourites if not already there
+              className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
+              onClick={() => addToFavourites(property)}
             />
             <FontAwesomeIcon
               icon={faShareAlt}
@@ -73,12 +80,11 @@ const ResultsPage = () => {
     <div className="results-container">
       <h2>Search Results</h2>
       {displayResults.length > 0 ? (
-        <div className="property-list">
+        <div className="property-list" ref={drop} style={{ background: isOver ? "#f0f0f0" : "" }}>
           {displayResults.map((property) => (
             <DraggableProperty
               key={property.id}
               property={property}
-              shareProperty={shareProperty}  // Pass shareProperty here
             />
           ))}
         </div>
