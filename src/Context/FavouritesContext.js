@@ -9,21 +9,23 @@ export const useFavourites = () => {
 export const FavouritesProvider = ({ children }) => {
   const [favourites, setFavourites] = useState([]);
 
-  // Add a property to favourites, but only if it's not already in the list
   const addToFavourites = (property) => {
     if (!favourites.some((fav) => fav.id === property.id)) {
       setFavourites((prev) => [...prev, property]);
     }
   };
 
-  // Remove a property from favourites
   const removeFromFavourites = (propertyId) => {
     setFavourites((prev) => prev.filter((fav) => fav.id !== propertyId));
   };
 
+  const clearFavourites = () => {
+    setFavourites([]); // Clear all properties
+  };
+
   return (
     <FavouritesContext.Provider
-      value={{ favourites, addToFavourites, removeFromFavourites }}
+      value={{ favourites, addToFavourites, removeFromFavourites, clearFavourites }}
     >
       {children}
     </FavouritesContext.Provider>
