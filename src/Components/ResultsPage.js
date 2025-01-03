@@ -43,6 +43,15 @@ const ResultsPage = () => {
       }),
     }));
 
+    const handleFavouriteToggle = (property) => {
+      // Check if the property already exists in favourites
+      if (favourites.some((fav) => fav.id === property.id)) {
+        removeFromFavourites(property.id); // Remove from favourites if already there
+      } else {
+        addToFavourites(property); // Add to favourites if not already present
+      }
+    };
+
     return (
       <div
         ref={drag}
@@ -63,7 +72,7 @@ const ResultsPage = () => {
             <FontAwesomeIcon
               icon={faHeart}
               className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
-              onClick={() => addToFavourites(property)}
+              onClick={() => handleFavouriteToggle(property)}  // Toggle favourite on click
             />
             <FontAwesomeIcon
               icon={faShareAlt}
