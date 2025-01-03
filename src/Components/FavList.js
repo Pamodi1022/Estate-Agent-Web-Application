@@ -8,13 +8,15 @@ import "../Styles/FavList.css";
 const FavList = () => {
   const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
 
-  // Use one drop function to handle adding and removing
+  // Use one drop function to handle both adding and removing
   const [{ isOver }, drop] = useDrop(() => ({
-    accept: "PROPERTY",
+    accept: "PROPERTY",  // Accept properties
     drop: (item) => {
-      // Prevent adding duplicates to the favourites list
-      if (!favourites.some((fav) => fav.id === item.property.id)) {
-        addToFavourites(item.property);  // Only add if not already in favourites
+      // If the item is already in the favourites, remove it. Otherwise, add it to favourites
+      if (favourites.some((fav) => fav.id === item.property.id)) {
+        removeFromFavourites(item.property.id);  // Remove from favourites
+      } else {
+        addToFavourites(item.property);  // Add to favourites
       }
     },
     collect: (monitor) => ({
@@ -26,7 +28,7 @@ const FavList = () => {
   const DraggableProperty = ({ property }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
       type: "PROPERTY",
-      item: { property },
+      item: { property },  // Property being dragged
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
       }),
@@ -55,7 +57,7 @@ const FavList = () => {
 
   return (
     <div
-      ref={drop}
+      ref={drop}  // Attach drop functionality here
       className={`fav-list-container ${isOver ? "highlight" : ""}`}
     >
       <h2>Favourite Properties</h2>
