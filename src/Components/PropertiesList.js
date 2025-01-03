@@ -49,9 +49,9 @@ function PropertyList() {
   };
 
   return (
-    <div className="property-list">
+    <div className="property-lists">
       {propertiesData.properties.map((property) => (
-        <div key={property.id} className="property-card">
+        <div key={property.id} className="property-cards">
           <img
             src={property.picture}
             alt={property.type}
@@ -62,10 +62,10 @@ function PropertyList() {
             <p className="property-description">{property.description}</p> {/* Added description */}
             <p>Price: £{property.price.toLocaleString()}</p>
             <p>Type: {property.type}</p>
-            <a href={property.url} className="view-details">
+            <a href={property.url} className="view-detail">
               View Details
             </a>
-            <div className="icons">
+            <div className="icon">
               <FontAwesomeIcon
                 icon={faHeart}
                 className={`favourite-icon ${favourites.includes(property.id) ? "active" : ""}`}
