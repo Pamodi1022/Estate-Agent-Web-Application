@@ -27,7 +27,7 @@ const ResultsPage = () => {
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "PROPERTY",
     drop: (item) => {
-      removeFromFavourites(item.property.id); // Remove from favourites when dropped
+      removeFromFavourites(item.property.id);
     },
     collect: (monitor) => ({
       isOver: monitor.isOver(),
@@ -36,7 +36,7 @@ const ResultsPage = () => {
 
   const DraggableProperty = ({ property }) => {
     const [{ isDragging }, drag] = useDrag(() => ({
-      type: "PROPERTY", // Make sure this matches the type in FavList.js
+      type: "PROPERTY",
       item: { property },
       collect: (monitor) => ({
         isDragging: monitor.isDragging(),
@@ -44,13 +44,13 @@ const ResultsPage = () => {
     }));
 
     const handleFavouriteToggle = (property) => {
-      // Check if the property already exists in favourites
       if (favourites.some((fav) => fav.id === property.id)) {
-        removeFromFavourites(property.id); // Remove from favourites if already there
+        removeFromFavourites(property.id);
       } else {
-        addToFavourites(property); // Add to favourites if not already present
+        addToFavourites(property);
       }
     };
+    
 
     return (
       <div
@@ -68,11 +68,14 @@ const ResultsPage = () => {
           <p className="property-description">{property.description}</p>
           <p><strong>Price:</strong> €{property.price}</p>
           <p>Type: {property.type}</p>
+          <a href={property.url} className="view-detail">
+              View Details
+            </a>
           <div className="icons">
             <FontAwesomeIcon
               icon={faHeart}
               className={`favourite-icon ${favourites.some((fav) => fav.id === property.id) ? "active" : ""}`}
-              onClick={() => handleFavouriteToggle(property)}  // Toggle favourite on click
+              onClick={() => handleFavouriteToggle(property)}
             />
             <FontAwesomeIcon
               icon={faShareAlt}
@@ -86,23 +89,23 @@ const ResultsPage = () => {
   };
 
   return (
-    <div className="results-container">
-      <h2>Search Results</h2>
-      {displayResults.length > 0 ? (
-        <div className="property-list" ref={drop} style={{ background: isOver ? "#f0f0f0" : "" }}>
-          {displayResults.map((property) => (
-            <DraggableProperty
-              key={property.id}
-              property={property}
-            />
-          ))}
-        </div>
-      ) : (
-        <p>No properties match your search criteria.</p>
-      )}
-      <div className="favourites-sidebar">
-        <FavList />
+    <div className="results-page">
+      <div className="results-container">
+        <h2>Search Results</h2>
+        {displayResults.length > 0 ? (
+          <div className="property-list" ref={drop} style={{ background: isOver ? "#f0f0f0" : "" }}>
+            {displayResults.map((property) => (
+              <DraggableProperty
+                key={property.id}
+                property={property}
+              />
+            ))}
+          </div>
+        ) : (
+          <p>No properties match your search criteria.</p>
+        )}
       </div>
+      <FavList />
     </div>
   );
 };
