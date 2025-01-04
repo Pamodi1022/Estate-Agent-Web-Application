@@ -1,3 +1,4 @@
+/* Base styles for the page */
 .results-page {
   display: flex;
   height: 100vh; /* Full viewport height */
@@ -7,53 +8,54 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  flex: 3; /* Takes up three times as much space as the sidebar */
+  flex: 3;
   padding: 20px;
-  overflow-y: auto; /* Enable scrolling for content overflow */
+  overflow-y: auto;
 }
 
 .results-container h2 {
   margin-bottom: 20px;
+  margin-top: 80px;
   font-size: 1.8rem;
   color: #333;
 }
 
 .property-list {
   display: flex;
-  flex-direction: column; /* Keep the list vertically aligned */
-  gap: 20px; /* Space between property cards */
+  flex-direction: column;
+  gap: 20px;
   margin-top: 10px;
 }
 
 .property-card {
-  display: flex; /* Align image and content side by side */
-  align-items: center; /* Vertically center content */
-  border: 1px solid   #ffffff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   overflow: hidden;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px; /* Add some padding for spacing */
+  padding: 10px;
 }
 
 .property-card:hover {
-  transform: scale(1.03); /* Slight zoom on hover */
+  transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .property-card img {
-  width: 300px; /* Fixed width for the image */
-  height: 240px; /* Fixed height for the image */
-  object-fit: cover; /* Ensures the image is contained within its box */
-  margin-right: 15px; /* Space between the image and content */
-  border-radius: 4px; /* Slight rounding on the image edges */
+  width: 300px;
+  height: 240px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 4px;
 }
 
 .property-info {
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  flex: 1; /* Allow the content to take the remaining space */
+  flex-direction: column;
+  flex: 1;
 }
 
 .property-info h3 {
@@ -73,7 +75,9 @@
 }
 
 .property-info .icons {
-  margin-top: 10px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  margin-left: 570px;
   display: flex;
   gap: 10px;
 }
@@ -86,7 +90,7 @@
 }
 
 .property-info .icons .favourite-icon.active {
-  color: #e63946; /* Active favourite icon color */
+  color: #e63946;
 }
 
 .property-info .icons .favourite-icon:hover,
@@ -94,20 +98,80 @@
   color: #000;
 }
 
+.view-detail {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-right: 40px;
+  padding: 6px 10px;
+  max-width: 75px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  background: #007bff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.view-detail:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Media Queries */
+
+/* For tablets and small screens: max-width 768px */
 @media (max-width: 768px) {
+  .results-page {
+    flex-direction: column; /* Stack sections vertically */
+    height: auto;
+  }
+
+  .results-container {
+    padding: 15px;
+  }
+
   .property-card {
-    flex-direction: column; /* Stack image and content on smaller screens */
+    flex-direction: column;
     text-align: center;
+    margin-bottom: 15px;
   }
 
   .property-card img {
-    margin-right: 0; /* Remove right margin for stacked layout */
+    margin-right: 0;
     margin-bottom: 10px;
-    width: 100%; /* Make the image full width */
-    height: auto; /* Adjust height proportionally */
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .property-info {
     text-align: left;
+    padding: 10px;
+  }
+
+  .property-info .icons {
+    margin-left: 0;
+    justify-content: center; /* Center icons */
+  }
+
+  .view-detail {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-top: 15px;
+    max-width: 80px;
+  }
+
+  .property-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .property-info p {
+    font-size: 0.9rem;
+  }
+
+  .property-info .icons {
+    margin-top: -40px;
+    margin-left: 300px;
+    margin-bottom: 10px;
   }
 }
+
