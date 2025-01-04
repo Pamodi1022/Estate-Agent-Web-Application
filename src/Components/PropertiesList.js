@@ -3,12 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { useFavourites } from "../Context/FavouritesContext";
 import propertiesData from "../properties.json";
+import { Link } from "react-router-dom"; // Use Link for navigation
 import "../Styles/Properties.css";
 
 function PropertyList() {
   const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
 
-  const isFavourite = (propertyId) => favourites.some((fav) => fav.id === propertyId);
+  const isFavourite = (propertyId) =>
+    favourites.some((fav) => fav.id === propertyId);
 
   const handleToggleFavourite = (property) => {
     if (isFavourite(property.id)) {
@@ -48,13 +50,16 @@ function PropertyList() {
             <p className="property-description">{property.description}</p>
             <p>Price: £{property.price.toLocaleString()}</p>
             <p>Type: {property.type}</p>
-            <a href={property.url} className="view-detail">
+            {/* Use Link to navigate to property details */}
+            <Link to={property.url} className="view-detail">
               View Details
-            </a>
+            </Link>
             <div className="icon">
               <FontAwesomeIcon
                 icon={faHeart}
-                className={`favourite-icon ${isFavourite(property.id) ? "active" : ""}`}
+                className={`favourite-icon ${
+                  isFavourite(property.id) ? "active" : ""
+                }`}
                 onClick={() => handleToggleFavourite(property)}
               />
               <FontAwesomeIcon
