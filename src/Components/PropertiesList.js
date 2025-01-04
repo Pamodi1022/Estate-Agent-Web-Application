@@ -1,49 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { useFavourites } from "../Context/FavouritesContext";
 import propertiesData from "../properties.json";
 import "../Styles/Properties.css";
 
 function PropertyList() {
-  const [favourites, setFavourites] = useState([]);
+  const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
 
-  // Function to handle adding/removing from favourites
-  const handleAddToFavourites = (propertyId) => {
-    setFavourites((prevFavourites) => {
-      if (prevFavourites.includes(propertyId)) {
-        // Remove from favourites if already added
-        return prevFavourites.filter((id) => id !== propertyId);
-      } else {
-        // Add to favourites
-        return [...prevFavourites, propertyId];
-      }
-    });
+  const isFavourite = (propertyId) => favourites.some((fav) => fav.id === propertyId);
+
+  const handleToggleFavourite = (property) => {
+    if (isFavourite(property.id)) {
+      removeFromFavourites(property.id);
+    } else {
+      addToFavourites(property);
+    }
   };
 
-  // Function to handle sharing the property URL
   const shareProperty = (propertyUrl) => {
-    const shareUrl = propertyUrl || window.location.href; // Use provided URL or current page URL
+    const shareUrl = propertyUrl || window.location.href;
     if (navigator.share) {
-      // Web Share API
       navigator
         .share({
           title: document.title,
           url: shareUrl,
         })
-        .then(() => {
-          console.log("Thanks for sharing!");
-        })
-        .catch((error) => {
-          console.error("Error sharing", error);
-        });
+        .then(() => console.log("Shared successfully"))
+        .catch((error) => console.error("Error sharing", error));
     } else {
-      // Fallback for browsers that don't support Web Share API
-      const tempInput = document.createElement("input");
-      document.body.appendChild(tempInput);
-      tempInput.value = shareUrl;
-      tempInput.select();
-      document.execCommand("copy");
-      document.body.removeChild(tempInput);
+      navigator.clipboard.writeText(shareUrl);
       alert("URL copied to clipboard");
     }
   };
@@ -59,7 +45,7 @@ function PropertyList() {
           />
           <div className="property-info">
             <h3>{property.location}</h3>
-            <p className="property-description">{property.description}</p> {/* Added description */}
+            <p className="property-description">{property.description}</p>
             <p>Price: £{property.price.toLocaleString()}</p>
             <p>Type: {property.type}</p>
             <a href={property.url} className="view-detail">
@@ -68,8 +54,8 @@ function PropertyList() {
             <div className="icon">
               <FontAwesomeIcon
                 icon={faHeart}
-                className={`favourite-icon ${favourites.includes(property.id) ? "active" : ""}`}
-                onClick={() => handleAddToFavourites(property.id)}
+                className={`favourite-icon ${isFavourite(property.id) ? "active" : ""}`}
+                onClick={() => handleToggleFavourite(property)}
               />
               <FontAwesomeIcon
                 icon={faShareAlt}
