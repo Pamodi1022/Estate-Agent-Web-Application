@@ -13,6 +13,7 @@ import PropertiesList from "./Components/PropertiesList";
 import ResultsPage from "./Components/ResultsPage";
 import FavList from "./Components/FavList";
 import Footer from "./Components/Footer";
+import PropertyDetails from "./Components/PropertyDetails";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/searchform" element={<SearchForm />} />
               <Route path="/result" element={<ResultsPage />} />
               <Route path="/favlist" element={<FavList />} />
+              <Route path="/property-details" element={<PropertyDetails />} />
             </Routes>
           </div>
           <Footer /> {/* Footer remains at the bottom */}
