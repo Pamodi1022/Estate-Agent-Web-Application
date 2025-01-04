@@ -1,7 +1,7 @@
 import React from "react";
 import { useDrop, useDrag } from "react-dnd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { useFavourites } from "../Context/FavouritesContext";
 import "../Styles/FavList.css";
 
@@ -29,7 +29,6 @@ const FavList = () => {
       }),
     }));
 
-
     return (
       <div
         ref={drag}
@@ -37,23 +36,23 @@ const FavList = () => {
         style={{ opacity: isDragging ? 0.5 : 1 }}
       >
         <img
-                src={property.picture}
-                alt={property.description || property.location}
-                className="fav-property-image"
-              />
+          src={property.picture}
+          alt={property.description || property.location}
+          className="fav-property-image"
+        />
         <div className="fav-property-info">
-                <h4>{property.location}</h4>
-                <p><strong>Price:</strong> €{property.price}</p>
-                <p>Type: {property.type}</p>
-                <a href={property.url} className="view-detail">
-                    View Details
-                  </a>
-                <FontAwesomeIcon
-                  icon={faHeart}
-                  className="fav-icon"
-                  onClick={() => removeFromFavourites(property.id)}
-                />
-              </div>
+          <h4>{property.location}</h4>
+          <p><strong>Price:</strong> €{property.price}</p>
+          <p>Type: {property.type}</p>
+          <a href={property.url} className="view-details">
+            View Details
+          </a>
+          <FontAwesomeIcon
+            icon={faTrashAlt}
+            className="fav-icon"
+            onClick={() => removeFromFavourites(property.id)}
+          />
+        </div>
       </div>
     );
   };
