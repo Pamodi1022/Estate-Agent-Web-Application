@@ -1,152 +1,57 @@
 {
-	"properties": [
-        {
-          "id":"prop1",
-			    "type":"House",
-          "search":"sale",
-          "bedrooms":3,
-			    "price":750000,
-			    "tenure":"Freehold",
-			    "description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory.",
-			    "location":"Petts Wood Road, Petts Wood, Orpington BR5",
-          "Area":"BR6",
-			    "picture":"images/prop1pic1small.jpeg",
-			    "url":"properties/property1.html",
-            "added": {
-                "month":"October",
-                "day":12,
-                "year":2022
-            }
-        },
-		    {
-          "id":"prop2",
-			    "type":"House",
-          "search":"sale",
-          "bedrooms":3,
-			    "price":399995,
-			    "tenure":"Freehold",
-			    "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine.",
-			    "location":"Crofton Road Orpington BR6",
-          "Area":"BR6",
-			    "picture":"images/prop2pic1small.jpeg",
-			    "url":"properties/property2.html",
-            "added": {
-                "month":"September",
-                "day":14,
-                "year":2022
-            }
-        },
-
-      {
-        "id":"prop3",
-        "type":"Flat",
-        "search":"rent",
-        "bedrooms":1,
-        "price":895,
-        "tenure":"Freehold",
-        "description":"A compact but bright top floor flat with an excellent outlook over Green Park in this very central location within an easy walk of the City centre. Offering one small double bedroom, bathroom and living area with kitchen off. The property is unfurnished but provided with white goods and available now. Available from 6th January 2025",
-        "location":"Green Park, Bath",
-        "Area":"Bath",
-        "picture":"images/prop3pic1small.jpg",
-        "url":"properties/property3.html",
-        "added": {
-          "month":"December",
-          "day":9,
-          "year":2024
-        }
+  "properties": [
+    {
+      "id": "1",
+      "type": "House",
+      "search": "sale",
+      "bedrooms": 3,
+      "price": 750000,
+      "tenure": "Freehold",
+      "description": "Attractive three bedroom semi-detached family home...",
+      "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "Area": "BR5",
+      "picture": "images/prop1pic1small.jpeg",
+      "url": "/property-details?id=1",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d0.08904545618127474!3d51.40278523448509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ad9a68053f3b%3A0x2c3c3efbcba1f5b7!2sPetts%20Wood%20Road%2C%20Petts%20Wood%2C%20Orpington%20BR5!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 12,
+        "year": 2022
       },
-
-      {
-        "id":"prop4",
-        "type":"House",
-        "search":"rent",
-        "bedrooms":1,
-        "price":500,
-        "tenure":"Freehold",
-        "description":"One room in a furnished student house share located in Combe Down. Available now. On the ground floor you enter into the open plan living room with kitchen. The kitchen is fitted with oven and hob, fridge freezer, washing machine and dishwasher. There are sliding doors out from the kitchen to the garden. The living room is open plan to kitchen space and has WC.",
-        "location":"Sedgemoor Road, Bath, Somerset, BA2",
-        "Area":"Bath",
-        "picture":"images/prop4pic1small.jpeg",
-        "url":"properties/property4.html",
-        "added": {
-          "month":"December",
-          "day":30,
-          "year":2024
-        }
+      "title": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "descriptionDetails": {
+        "short": "This charming three-bedroom semi-detached family home is the perfect blend of convenience, comfort, and character.",
+        "full": "Step inside, and you'll find a thoughtfully designed layout. The home boasts two welcoming reception rooms—ideal for hosting or relaxing—and an expansive 18'9 x 10'1 kitchen/breakfast room that inspires culinary creativity. A bright conservatory invites you to unwind while enjoying views of the garden, while the utility room and cloakroom add practicality and convenience. Upstairs, three spacious bedrooms provide restful retreats, complemented by a family bathroom with a separate WC for added functionality. Modern comforts such as double glazing and gas central heating are seamlessly integrated, ensuring the home is warm and energy-efficient year-round. Whether you're savoring the tranquility of the woodland nearby or enjoying the ease of urban connectivity, this home offers a lifestyle of balance and beauty—a haven ready to welcome its next family."
       },
-
-      {
-        "id":"prop5",
-        "type":"Flat",
-        "search":"rent",
-        "bedrooms":2,
-        "price":700,
-        "tenure":"Freehold",
-        "description":"Newly room available in 2 bedroom flat with spacious living room area and balcony, shared only with one professional female the property located in great residential area, easy access to public transport and shopping supermarket and restaurants",
-        "location":"Morant Place, London, N22",
-        "Area":"N22",
-        "picture":"images/prop5pic1small.jpeg",
-        "url":"properties/property5.html",
-        "added": {
-          "month":"January",
-          "day":1,
-          "year":2025
-        }
+      "images": [
+        "../images/prop1pic1small.jpeg",
+        "../images/prop1pic2.jpeg",
+        "../images/prop1pic3.jpeg",
+        "../images/prop1pic4.jpeg",
+        "../images/prop1pic5.jpeg",
+        "../images/prop1pic6.jpeg",
+        "../images/prop1pic7.jpeg",
+        "../images/prop1pic8.jpeg"
+      ],
+      "details": {
+        "propertyType": "Semi-Detached House",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "receptions": 2,
+        "tenure": "Freehold",
+        "councilTax": "Band: D",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "3,500 sq ft"
       },
-
-      {
-        "id":"prop6",
-        "type":"Flat",
-        "search":"rent",
-        "bedrooms":1,
-        "price":800,
-        "tenure":"Freehold",
-        "description":"Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House. This development is just off Regent Street, close to the city centre & the new Victoria Gate with all the new shops and bars.",
-        "location":"Skinner Lane, Leeds, West Yorkshire, LS7",
-        "Area":"Yorkshire",
-        "picture":"images/prop6pic1small.jpeg",
-        "url":"properties/property6.html",
-        "added": {
-          "month":"December",
-          "day":29,
-          "year":2024
-        }
-      },
-
-      {
-        "id":"prop7",
-        "type":"House",
-        "search":"sale",
-        "bedrooms":2,
-        "price":154000,
-        "tenure":"Freehold",
-        "description":"This charming 2-bedroom, 2-bathroom house, located at Trent House, Silverworks Close, London, NW9, is an ideal opportunity for those seeking a modern home in a sought-after area. Offered for sale with freehold tenure, this property provides a blend of comfort and convenience, making it perfect for first-time buyers or those looking for a hassle-free living experience.",
-        "location":"Trent House, Silverworks Close, London, NW9",
-        "Area":"London",
-        "picture":"images/prop7pic1small.jpeg",
-        "url":"properties/property7.html",
-        "added": {
-          "month":"December",
-          "day":24,
-          "year":2024
-        }
-      },
-
-      {
-        "id":"prop8",
-        "type":"Flat",
-        "bedrooms":2,
-        "price":136875,
-        "tenure":"Ask developer",
-        "description":"Welcome to a desirable collection of one and two bedroom apartments, perfectly placed for those who want all the advantages of living in the capital city, complemented by acres of idyllic green space and blue water.",
-        "location":"Perryfield Way, Hendon, London, NW9 7DL",
-        "Area":"Hendon",
-        "picture":"images/prop8pic1small.png",
-        "url":"properties/property8.html",
-        "added": {
-          "month":"December",
-          "day":28,
-          "year":2024
-        }
+      "area": "Petts Wood",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
       }
-]}
+    }
+  ]
+}
