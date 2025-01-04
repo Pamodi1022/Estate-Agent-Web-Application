@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import '../Styles/Property.css';
-import propertyData from '../properties.json'; 
-import { FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaShareAlt } from 'react-icons/fa';
+import propertyData from '../properties.json';
+import { FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaShareAlt, FaBed, FaBath, FaCar, FaRegBuilding, FaMapMarkerAlt } from 'react-icons/fa';
 
 const PropertyDetails = () => {
   const [isFullDescription, setIsFullDescription] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [activeTab, setActiveTab] = useState("description"); // Track the active tab
-  const property = propertyData.properties[0]; // Assuming there's only one property in the array
+  const [activeTab, setActiveTab] = useState("description");
+  const [isFavorite, setIsFavorite] = useState(false);
+  const property = propertyData.properties[0];
 
   const handleToggleDescription = () => {
     setIsFullDescription(!isFullDescription);
@@ -44,11 +45,32 @@ const PropertyDetails = () => {
   };
 
   const shareProperty = () => {
-    alert('Property shared!');
+    const shareUrl = window.location.href;
+    if (navigator.share) {
+      navigator
+        .share({
+          title: document.title,
+          url: shareUrl,
+        })
+        .then(() => {
+          console.log("Thanks for sharing!");
+        })
+        .catch((error) => {
+          console.error("Error sharing", error);
+        });
+    } else {
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = shareUrl;
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("URL copied to clipboard");
+    }
   };
 
   const toggleFavorite = () => {
-    alert('Property added to favorites!');
+    setIsFavorite(!isFavorite);
   };
 
   const renderTabContent = () => {
@@ -61,6 +83,7 @@ const PropertyDetails = () => {
             {isFullDescription ? (
               <div>
                 <p>{property.descriptionDetails.full}</p>
+                <button onClick={handleToggleDescription}>Read Less</button>
               </div>
             ) : (
               <button onClick={handleToggleDescription}>Read Full Description</button>
@@ -73,19 +96,19 @@ const PropertyDetails = () => {
             <img src="../images/floor-plan.jpg" alt="Floor Plan" />
           </div>
         );
-      case "map":
-        return (
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=..."
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        );
-      default:
-        return null;
+        case "map":
+          return (
+            <div className="map-container">
+              <iframe
+                src={property.mapLink} // Using the mapLink directly from the JSON data
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          );
+        default:
+          return null;
     }
   };
 
@@ -136,13 +159,11 @@ const PropertyDetails = () => {
           <h2>{property.title}</h2>
           <div className="price">£{property.price.toLocaleString()}</div>
           <div className="letting-details">
-            <div><strong>PROPERTY TYPE:</strong> {property.details.propertyType}</div>
-            <div><strong>BEDROOMS:</strong> {property.details.bedrooms}</div>
-            <div><strong>BATHROOMS:</strong> {property.details.bathrooms}</div>
-            <div><strong>RECEPTIONS:</strong> {property.details.receptions}</div>
-            <div><strong>TENURE:</strong> {property.details.tenure}</div>
-            <div><strong>COUNCIL TAX:</strong> {property.details.councilTax}</div>
-            <div><strong>PARKING:</strong> {property.details.parking}</div>
+            <div><FaRegBuilding /> <strong>PROPERTY TYPE:</strong> {property.details.propertyType}</div>
+            <div><FaBed /> <strong>BEDROOMS:</strong> {property.details.bedrooms}</div>
+            <div><FaBath /> <strong>BATHROOMS:</strong> {property.details.bathrooms}</div>
+            <div><FaRegBuilding /> <strong>RECEPTIONS:</strong> {property.details.receptions}</div>
+            <div><FaCar /> <strong>PARKING:</strong> {property.details.parking}</div>
             <div><strong>GARDEN:</strong> {property.details.garden}</div>
             <div><strong>ACCESSIBILITY:</strong> {property.details.accessibility}</div>
             <div><strong>SIZE:</strong> {property.details.size}</div>
@@ -172,7 +193,11 @@ const PropertyDetails = () => {
         {/* Favorite and Share Icons */}
         <div className="icons">
           <FaShareAlt id="share-icon" onClick={shareProperty} />
-          <FaHeart id="favorite-icon" onClick={toggleFavorite} />
+          <FaHeart
+            id="favorite-icon"
+            className={isFavorite ? 'fas' : 'far'}
+            onClick={toggleFavorite}
+          />
         </div>
       </div>
     </div>
