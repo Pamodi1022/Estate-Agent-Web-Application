@@ -1,8 +1,7 @@
 body {
   background-color: #f5f9c0; /* Default background color */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  position: relative; /* Position the body relative to the viewport */
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
 }
 
 /* HomePage.css */
@@ -84,6 +83,7 @@ body {
   width: 100%; /* Ensures the image fits within the container's width */
   height: 100%; /* Ensures the image stretches to fill the container */
   margin-left: 120px;
+  margin-top: 50px;
   object-fit: cover; /* Maintains the image aspect ratio while covering the container */
   animation: fadeInImage 2s ease-out forwards; /* Fade-in for the image */
 }
