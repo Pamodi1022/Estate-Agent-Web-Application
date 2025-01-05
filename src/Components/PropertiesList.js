@@ -4,7 +4,7 @@ import { faHeart, faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { useFavourites } from "../Context/FavouritesContext";
 import propertiesData from "../properties.json";
 import { Link } from "react-router-dom"; // Use Link for navigation
-import "../Styles/Properties.css";
+import "../Styles/PropertiesList.css";
 
 function PropertyList() {
   const { favourites, addToFavourites, removeFromFavourites } = useFavourites();
