@@ -101,19 +101,19 @@ body {
 }
 
 .favourite-icon {
-  color: #808080;
+  color: #8a8a8a;
 }
 
 .favourite-icon.active {
-  color: #e63946;
+  color: #a0020f;
 }
 
 .share-icon {
-  color: #3498db;
+  color: #000000;
 }
 
 .share-icon:hover {
-  color: #2c81ba;
+  color: #00426d;
 }
 
 /* Responsive design */
