@@ -1,11 +1,17 @@
-
-
+/* Property Details Container */
+.property-details-container {
+  margin-top: 70px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 /* Property Details Section */
-.property-details-container {
+.property-details {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  gap: 20px;
 }
 
 /* Image Gallery */
@@ -17,14 +23,22 @@
 
 .main-image img {
   width: 100%;
+  max-height: 500px;
+  object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+  transform: scale(1.05);
 }
 
 .thumbnail-container {
   display: flex;
   gap: 10px;
-  overflow-x: scroll;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .thumbnail-container img {
@@ -33,6 +47,7 @@
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .thumbnail-container img:hover {
@@ -57,9 +72,19 @@
   max-width: 80%;
   max-height: 80%;
   border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.arrow {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.arrows {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -69,11 +94,11 @@
   z-index: 101;
 }
 
-.arrow.left {
+.arrows.left {
   left: 10px;
 }
 
-.arrow.right {
+.arrows.right {
   right: 10px;
 }
 
@@ -86,58 +111,169 @@
   cursor: pointer;
 }
 
-/* Property Info Section */
+/* Property Info */
 .property-info {
   margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(142, 142, 142, 0.1);
 }
 
 .property-info h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .price {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #1a73e8;
   margin-bottom: 20px;
 }
 
-.letting-details div {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.separator {
+  border-top: 1px solid #9b9b9b;
+  margin: 20px 0;
 }
 
-.letting-details strong {
+
+/* Letting Container */
+.letting-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  color: #333;
+}
+
+/* Letting Details */
+.letting-details,
+.letting-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.letting-details div,
+.letting-detail div {
+  flex: 2 1 calc(50% - 10px); /* Flexible layout for responsiveness */
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.letting-details strong,
+.letting-detail strong {
+  display: flex;
   font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-.letting-details svg {
-  margin-right: 10px;
-  color: #1a73e8;
+/* Responsive adjustments for Letting Details */
+@media (max-width: 768px) {
+  .letting-details div,
+  .letting-detail div {
+    flex: 1 1 100%; /* Full width for smaller screens */
+
+  }
 }
+
+/* Agent Card */
+.agent-card-container {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.agent-card {
+  background-color: #f9f9f9;
+  margin-top: -35px;
+  max-width: 600px; /* Restrict max width for better readability */
+  height: 120px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text */
+}
+
+.agent-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+.agent-card p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.agent-contact {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.agent-contact button {
+  background-color: #04014c;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.agent-contact button:hover {
+  background-color: #ffcc00;
+}
+
+/* Responsive adjustments for Agent Card */
+@media (max-width: 768px) {
+  .agent-card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .agent-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .agent-contact button {
+    width: 100%; /* Full width buttons on smaller screens */
+  }
+}
+
 
 /* Tabs */
 .tabs {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-evenly;
-  background-color: #f4f4f4;
-  padding: 10px;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  background-color: #f9f9f9;
   border-radius: 5px;
 }
 
 .tabs button {
   background: none;
-  border: none;
+  border: 1px solid transparent;
   font-size: 1rem;
   color: #333;
-  padding: 10px 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .tabs button.active {
   background-color: #1a73e8;
-  color: white;
+  color: #fff;
+  border-color: #1a73e8;
 }
 
 .tabs button:hover {
@@ -145,17 +281,24 @@
 }
 
 /* Tab Content */
-.description, .floor-plan, .map-container {
-  margin-top: 20px;
+.description,
+.floor-plan,
+.map-container {
+  margin-top: 15px;
+  padding: 15px;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
 }
 
 .description p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .floor-plan img {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   display: block;
 }
@@ -163,52 +306,20 @@
 .map-container iframe {
   width: 100%;
   height: 400px;
-  border: 0;
-}
-
-/* Agent Card */
-.agent-card {
-  margin-top: 40px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.agent-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.agent-card p {
-  margin-bottom: 20px;
-}
-
-.agent-contact button {
-  background-color: #1a73e8;
-  color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
   border-radius: 5px;
-  margin-right: 10px;
 }
 
-.agent-contact button:hover {
-  background-color: #ffcc00;
-}
 
 /* Icons */
 .icons {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .icons svg {
-  font-size: 2rem;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -217,54 +328,3 @@
   color: #1a73e8;
 }
 
-.icons #favorite-icon.fas {
-  color: red;
-}
-
-.icons #favorite-icon.far {
-  color: grey;
-}
-
-.icons #share-icon {
-  color: #1a73e8;
-}
-
-.icons #favorite-icon {
-  cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .property-details-container {
-    padding: 20px;
-  }
-
-  .gallery-container {
-    flex-direction: column;
-  }
-
-  .thumbnail-container {
-    overflow-x: auto;
-  }
-
-  .tabs {
-    flex-direction: column;
-  }
-
-  .tabs button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .price {
-    font-size: 1.2rem;
-  }
-
-  .property-info {
-    margin-top: 20px;
-  }
-
-  .agent-card {
-    padding: 15px;
-  }
-}
