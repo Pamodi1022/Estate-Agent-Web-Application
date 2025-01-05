@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useFavourites } from '../Context/FavouritesContext';
+import { useLocation } from 'react-router-dom';
 import '../Styles/Property.css';
 import propertyData from '../properties.json';
 import { FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaShareAlt, FaBed, FaBath, FaCar, FaRegBuilding, FaTree, FaChair, FaDoorOpen, FaRulerCombined } from 'react-icons/fa';
@@ -9,8 +10,11 @@ const PropertyDetails = () => {
   const [isFullDescription, setIsFullDescription] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("description");
-  const property = propertyData.properties[0];
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const propertyId = queryParams.get('id'); 
 
+  const property = propertyData.properties.find(p => p.id === propertyId);
   const isFavorite = favourites.some((fav) => fav.id === property.id);
 
   const handleToggleDescription = () => {
@@ -95,7 +99,7 @@ const PropertyDetails = () => {
       case "floor-plan":
         return (
           <div className="floor-plan">
-            <img src="../images/floor-plan.jpg" alt="Floor Plan" />
+            <img src={property.floor} alt="Floor Plan" />
           </div>
         );
         case "map":
