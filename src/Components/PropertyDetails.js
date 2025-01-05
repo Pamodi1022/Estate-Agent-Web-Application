@@ -1,27 +1,31 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { useFavourites } from '../Context/FavouritesContext';
 import '../Styles/Property.css';
 import propertyData from '../properties.json';
-import { FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaShareAlt, FaBed, FaBath, FaCar, FaRegBuilding,FaTree, FaChair,FaDoorOpen,FaRulerCombined,FaMapMarkerAlt } from 'react-icons/fa';
+import { FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaShareAlt, FaBed, FaBath, FaCar, FaRegBuilding, FaTree, FaChair, FaDoorOpen, FaRulerCombined } from 'react-icons/fa';
 
 const PropertyDetails = () => {
+  const { addToFavourites, removeFromFavourites, favourites } = useFavourites();
   const [isFullDescription, setIsFullDescription] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState("description");
-  const [isFavorite, setIsFavorite] = useState(false);
   const property = propertyData.properties[0];
+
+  const isFavorite = favourites.some((fav) => fav.id === property.id);
 
   const handleToggleDescription = () => {
     setIsFullDescription(!isFullDescription);
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleFavoriteToggle = () => {
+    if (isFavorite) {
+      removeFromFavourites(property.id);
+    } else {
+      addToFavourites(property);
+    }
   };
+  
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
 
   const handleImageClick = (index) => {
     setCurrentImageIndex(index);
@@ -69,9 +73,7 @@ const PropertyDetails = () => {
     }
   };
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
+
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -149,7 +151,7 @@ const PropertyDetails = () => {
             <FaHeart
               id="favorite-icon"
               className={isFavorite ? 'fas' : 'far'}
-              onClick={toggleFavorite}
+              onClick={handleFavoriteToggle}
             />
           </div>
 
@@ -165,7 +167,7 @@ const PropertyDetails = () => {
                 <div><FaChair /> <strong>RECEPTIONS:</strong> {property.details.receptions}</div>
               </div>
 
-         
+              
 
               <div className="letting-detail">
                 <div><FaCar /> <strong>PARKING:</strong> {property.details.parking}</div>
