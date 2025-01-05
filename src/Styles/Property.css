@@ -189,7 +189,7 @@
   background-color: #f9f9f9;
   margin-top: -35px;
   max-width: 600px; /* Restrict max width for better readability */
-  height: 120px;
+  height: 150px;
   padding: 20px;
   border-radius: 8px;
   border: 1px dashed #ccc;
@@ -212,14 +212,14 @@
 .agent-contact {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .agent-contact button {
-  background-color: #04014c;
+  background-color: #1a73e8;
   color: white;
   border: none;
-  padding: 8px 18px;
+  padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
@@ -316,6 +316,14 @@
   display: flex;
   gap: 20px;
   justify-content: flex-end;
+}
+
+.icons #favorite-icon{
+  color: #fa9f9f;
+}
+
+.icons #favorite-icon:hover{
+  color: #660000;
 }
 
 .icons svg {
