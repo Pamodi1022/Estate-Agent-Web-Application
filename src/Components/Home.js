@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Home.css'; // Add your CSS file for styling
-import back from '../Components/background.png'; // Import the image
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -23,9 +22,9 @@ const HomePage = () => {
       <div className="circle-container"></div>
 
       <div className="image-container">
-        <img src={back} alt="Banner" className="home-image" />
+        <img src="/images/background.png" alt="Banner" className="home-image" />
           <div className="arrow-container" onClick={handleArrowClick}>
-            <span className="arrow">&#8594;</span> {/* You can use an arrow icon here */}
+            <span className="arrows">&#8594;</span> {/* You can use an arrow icon here */}
           </div>
       </div>
     </div>
