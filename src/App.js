@@ -13,7 +13,7 @@ import PropertiesList from "./Components/PropertiesList";
 import ResultsPage from "./Components/ResultsPage";
 import FavList from "./Components/FavList";
 import Footer from "./Components/Footer";
-import Login from "./Components/Login";
+import Login from "./Components/Login"
 import PropertyDetails from "./Components/PropertyDetails";
 
 function App() {
