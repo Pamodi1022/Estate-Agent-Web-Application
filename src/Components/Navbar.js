@@ -28,10 +28,10 @@ const Navbar = () => {
           <Link to="/ads" onClick={() => setMenuActive(false)}>Advertisements</Link>
         </li>
         <li>
-          <Link to="/signup" onClick={() => setMenuActive(false)}>Sign up</Link>
+          <Link to="/favlist" onClick={() => setMenuActive(false)}>Favourites</Link>
         </li>
         <li>
-          <Link to="/favlist" onClick={() => setMenuActive(false)}>Favourites</Link>
+          <Link to="/signup" onClick={() => setMenuActive(false)}>Sign up</Link>
         </li>
       </ul>
     </div>
