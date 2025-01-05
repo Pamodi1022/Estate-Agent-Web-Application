@@ -52,6 +52,386 @@
         "logo": "../images/agent.jpg",
         "phone": "0764022934"
       }
+    },
+
+    {
+      "id": "2",
+      "type": "House",
+      "search": "sale",
+      "bedrooms": 2,
+      "price": 399995,
+      "tenure": "Freehold",
+      "description": "Beautifully presented detached garden flat with modern finishes and exceptional features.",
+      "location": "Crofton Lane, Orpington, BR6",
+      "area": "BR6",
+      "picture": "../images/prop2pic1small.jpeg",
+      "url": "/property-details?id=2",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d0.0853911147969798!3d51.375671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ae1b915e5f5f%3A0x9f84f88ab4a54091!2sCrofton%20Lane%2C%20Orpington%2C%20BR6%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2025
+      },
+      "title": "Crofton Lane, Orpington, BR6",
+      "descriptionDetails": {
+        "short": "Step into this beautifully presented garden flat, thoughtfully designed with modern finishes.",
+        "full": "The property features three versatile living areas, including a living room with bi-fold doors opening to a private courtyard. A modern kitchen with integrated appliances and solid wood flooring complements the elegant design. Three spacious bedrooms and two well-appointed bathrooms offer luxury and comfort. Additional highlights include a spiral staircase leading to a roof terrace, a family bathroom, a wet room, and extensive storage."
+      },
+      "images": [
+        "../images/prop2pic1small.jpeg",
+        "../images/prop2pic2.jpeg",
+        "../images/prop2pic3.jpeg",
+        "../images/prop2pic4.jpeg",
+        "../images/prop2pic5.jpeg",
+        "../images/prop2pic6.jpeg",
+        "../images/prop2pic7.jpeg",
+        "../images/prop2pic8.jpeg",
+        "../images/prop2pic9.jpeg",
+        "../images/prop2pic10.jpeg",
+        "../images/prop2pic11.jpeg",
+        "../images/prop2pic12.jpeg",
+        "../images/prop2pic13.jpeg",
+        "../images/prop2pic14.jpeg",
+        "../images/prop2pic15.jpeg",
+        "../images/prop2pic16.jpeg",
+        "../images/prop2pic17.jpeg"
+      ],
+      "details": {
+        "propertyType": "Detached House",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "receptions": 3,
+        "tenure": "Freehold",
+        "councilTax": "Band: D",
+        "parking": "Yes",
+        "garden": "Yes",
+        "accessibility": "Ask agent",
+        "size": "2,798 sq ft"
+      },
+      "area": "Crofton Lane",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "3",
+      "type": "Flat",
+      "search": "rent",
+      "bedrooms": 1,
+      "price": 895,
+      "tenure": "Freehold",
+      "description": "A compact but bright top floor flat with an excellent outlook over Green Park in this very central location within an easy walk of the City centre.",
+      "location": "Green Park, Bath",
+      "Area": "Bath",
+      "picture": "../images/prop3pic1small.jpg",
+      "url": "/property-details?id=3",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-2.3593624!3d51.3818388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487742d8c582bf67%3A0x8d88c2d9c46970b2!2sGreen%20Park%2C%20Bath%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "January",
+        "day": 6,
+        "year": 2025
+      },
+      "title": "Green Park, Bath",
+      "descriptionDetails": {
+        "short": "A compact but bright top floor flat with an excellent outlook over Green Park in this very central location within an easy walk of the City centre.",
+        "full": "Offering one small double bedroom, bathroom and living area with kitchen off. The property is unfurnished but provided with white goods and available now. Green Park is a resident parking permit area."
+      },
+      "images": [
+        "../images/prop3pic1small.jpg",
+        "../images/prop3pic2.jpg",
+        "../images/prop3pic3.jpg",
+        "../images/prop3pic4.jpg",
+        "../images/prop3pic5.jpg"
+      ],
+      "details": {
+        "propertyType": "Flat",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "receptions": 1,
+        "tenure": "Freehold",
+        "councilTax": "Band: B",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "Ask agent"
+      },
+      "area": "Green Park",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "4",
+      "type": "House",
+      "search": "rent",
+      "bedrooms": 1,
+      "price": 500,
+      "tenure": "Furnished",
+      "description": "One room in a furnished student house share located in Combe Down. Available now.",
+      "location": "Sedgemoor Road, Bath, Somerset, BA2",
+      "Area": "BA2",
+      "picture": "../images/prop4pic1small.jpeg",
+      "url": "/property-details?id=4",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13188.438631439747!2d-2.3683275406315614!3d51.38051744227594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48723f9a5db91d0f%3A0xe2a7c6e3b322d529!2sSedgemoor%20Rd%2C%20Bath%2C%20Somerset%2C%20BA2%2C%20UK!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2025
+      },
+      "title": "Sedgemoor Road, Bath, Somerset, BA2",
+      "descriptionDetails": {
+        "short": "One room in a furnished student house share located in Combe Down. Available now.",
+        "full": "On the ground floor, you enter into the open-plan living room with a kitchen. The kitchen is fitted with an oven and hob, fridge freezer, washing machine, and dishwasher. Sliding doors from the kitchen lead to the garden. The living room is open to the kitchen space and has a WC. Also on the ground floor are two bedrooms, one of which benefits from access to a courtyard garden space sectioned off from the communal garden. On the first floor are three bedrooms and a bathroom. The bathroom comprises a shower over the bath, a washbasin vanity unit, an LED mirror, and a WC. The property has been fully renovated throughout with new flooring, a new kitchen, and a new bathroom and WC. Externally, there is a driveway at the front of the property."
+      },
+      "images": [
+        "../images/prop4pic1small.jpeg",
+        "../images/prop4pic2.jpeg",
+        "../images/prop4pic3.jpeg",
+        "../images/prop4pic4.jpeg",
+        "../images/prop4pic5.jpeg",
+        "../images/prop4pic6.jpeg",
+        "../images/prop4pic7.jpeg",
+        "../images/prop4pic8.jpeg",
+        "../images/prop4pic9.jpeg",
+        "../images/prop4pic10.jpeg"
+      ],
+      "details": {
+        "propertyType": "House",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "receptions": 1,
+        "tenure": "Furnished",
+        "letAvailableDate": "Now",
+        "councilTax": "Ask agent",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "Ask agent"
+      },
+      "area": "Combe Down",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "5",
+      "type": "Flat",
+      "search": "rent",
+      "bedrooms": 1,
+      "price": 700,
+      "tenure": "Freehold",
+      "description": "This room in a two-bedroom flat offers a comfortable and inviting living environment, featuring a spacious living room ideal for relaxation and a balcony for added charm. Shared exclusively with one professional female, it ensures a quiet and respectful atmosphere.",
+      "location": "Morant Place, London, N22",
+      "area": "N22",
+      "picture": "../images/prop5pic1small.jpeg",
+      "url": "/property-details?id=5",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.1853911147969798!3d51.550671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5f5c39cabb%3A0x5e703aba29936b72!2sMorant%20Place%2C%20London%2C%20N22!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 12,
+        "year": 2022
+      },
+      "title": "Morant Place, London, N22",
+      "descriptionDetails": {
+        "short": "This room in a two-bedroom flat offers a comfortable and inviting living environment, featuring a spacious living room ideal for relaxation and a balcony for added charm. Shared exclusively with one professional female, it ensures a quiet and respectful atmosphere.",
+        "full": "Situated in a desirable residential area, the property provides easy access to public transport, supermarkets, and restaurants, offering convenience and accessibility. It's an excellent opportunity for someone seeking a peaceful home with a well-connected location for a balanced lifestyle."
+      },
+      "images": [
+        "../images/prop5pic1small.jpeg",
+        "../images/prop5pic2.jpeg",
+        "../images/prop5pic3.jpeg",
+        "../images/prop5pic4.jpeg",
+        "../images/prop5pic5.jpeg"
+      ],
+      "details": {
+        "propertyType": "Flat",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "receptions": 0,
+        "tenure": "Freehold",
+        "councilTax": "Ask agent",
+        "parking": "Ask agent",
+        "garden": "Patio",
+        "accessibility": "Ask agent",
+        "size": "Ask agent"
+      },
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "6",
+      "type": "Flat",
+      "search": "rent",
+      "bedrooms": 1,
+      "price": 800,
+      "tenure": "Freehold",
+      "description": "Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House. This development is just off Regent Street, close to the city centre & the new Victoria Gate with all the new shops and bars.",
+      "location": "Skinner Lane, Leeds, West Yorkshire, LS7",
+      "Area": "LS7",
+      "picture": "../images/prop6pic1small.jpeg",
+      "url": "/property-details?id=6",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23924.983671244568!2d-1.544176946697074!3d53.806327947612195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b20a437a239ab%3A0x1f36d2c80b2fcb76!2sSkinner%20Lane%2C%20Leeds%2C%20West%20Yorkshire%2C%20LS7!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 12,
+        "year": 2022
+      },
+      "title": "Skinner Lane, Leeds, West Yorkshire, LS7",
+      "descriptionDetails": {
+        "short": "Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House.",
+        "full": "Victoria House is conveniently located to St James' Hospital and the Universities and also benefits from having an Aldi and Gym across the road. This modern 1 bed, 1 bathroom boasts a double bedroom, house bathroom and an open plan kitchen/lounge. The flat is fitted out to a very high specification with a neutral decor, a lovely contemporary feel, and high-quality appliances."
+      },
+      "images": [
+        "../images/prop6pic1small.jpeg",
+        "../images/prop6pic2.jpeg",
+        "../images/prop6pic3.jpeg",
+        "../images/prop6pic4.jpeg"
+      ],
+      "details": {
+        "propertyType": "Flat",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "receptions": 1,
+        "furnishType": "Furnished",
+        "tenure": "Freehold",
+        "councilTax": "Band: B",
+        "parking": "Ask agent",
+        "garden": "Ask agent",
+        "accessibility": "Lift access",
+        "size": "3500 sq ft"
+      },
+      "area": "Leeds",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "7",
+      "type": "House",
+      "search": "sale",
+      "bedrooms": 2,
+      "price": 154000,
+      "tenure": "Freehold",
+      "description": "This charming 2-bedroom, 2-bathroom house is an ideal opportunity for those seeking a modern home in a sought-after area.",
+      "location": "Trent House, Silverworks Close, London, NW9",
+      "Area": "NW9",
+      "picture": "../images/prop7pic1small.jpeg",
+      "url": "/property-details?id=7",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19808.385234269127!2d-0.2532561184701388!3d51.58917903535573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487610da9f40b5a9%3A0x99e6b8ff3aaeb52b!2sTrent%20House%2C%20Silverworks%20Close%2C%20London%2C%20NW9!5e0!3m2!1sen!2slk!4v1698363945134!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 15,
+        "year": 2022
+      },
+      "title": "Trent House, Silverworks Close, London, NW9",
+      "descriptionDetails": {
+        "short": "This charming 2-bedroom, 2-bathroom house is an ideal opportunity for those seeking a modern home in a sought-after area.",
+        "full": "Inside, the house offers well-designed living spaces, including a spacious living area that’s perfect for relaxation and entertainment. The property is thoughtfully furnished, allowing for a seamless transition into your new home without the need for additional investment in furniture. Both bedrooms are generously sized, offering ample space for comfortable living. The two well-appointed bathrooms ensure that both residents and guests enjoy privacy and convenience, with modern fixtures throughout. Located in the desirable Silverworks Close, this home benefits from excellent transport links and local amenities, ensuring that everything you need is within easy reach. With its freehold status, stylish interior, and prime location, this property is not to be missed."
+      },
+      "images": [
+        "../images/prop7pic1small.jpeg",
+        "../images/prop7pic2.jpeg",
+        "../images/prop7pic3.jpeg",
+        "../images/prop7pic4.jpeg",
+        "../images/prop7pic5.jpeg",
+        "../images/prop7pic6.jpeg",
+        "../images/prop7pic7.jpeg",
+        "../images/prop7pic8.jpeg",
+        "../images/prop7pic9.jpeg"
+      ],
+      "details": {
+        "propertyType": "House",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "receptions": 1,
+        "tenure": "Freehold",
+        "councilTax": "Band: D",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "3500 sq ft"
+      },
+      "area": "Silverworks Close",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
+    },
+
+    {
+      "id": "8",
+      "type": "Flat",
+      "search": "sale",
+      "bedrooms": 2,
+      "price": 136875,
+      "tenure": "Ask agent",
+      "description": "This well-appointed 2-bedroom, 2-bathroom flat is located in the sought-after area of Perryfield Way, Hendon, London, NW9 7DL.",
+      "location": "Perryfield Way, Hendon, London, NW9 7DL",
+      "area": "NW9",
+      "picture": "../images/prop8pic1small.png",
+      "url": "/property-details?id=8",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.2614477!3d51.5937004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d7160e0d99d%3A0x5e703aba29936b72!2sPerryfield%20Way%2C%20Hendon%2C%20London%2C%20NW9%207DL!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 12,
+        "year": 2022
+      },
+      "title": "Perryfield Way, Hendon, London, NW9 7DL",
+      "descriptionDetails": {
+        "short": "This well-appointed 2-bedroom, 2-bathroom flat is located in the sought-after area of Perryfield Way, Hendon, London, NW9 7DL.",
+        "full": "Inside, the flat boasts a spacious living area, perfect for relaxing and entertaining. The modern design ensures a comfortable and stylish living experience, with thoughtfully designed spaces that cater to your needs. Both bedrooms are generously sized, providing ample space for rest and relaxation, while the two bathrooms offer convenience and privacy. This flat is perfect for anyone seeking a peaceful retreat without sacrificing access to the best amenities the capital has to offer. The location provides excellent transport links to central London, ensuring easy access to work, leisure, and entertainment, while the surrounding green spaces and tranquil waters offer a serene environment to unwind after a busy day."
+      },
+      "images": [
+        "../images/prop8pic1small.png",
+        "../images/prop8pic2.png",
+        "../images/prop8pic3.png",
+        "../images/prop8pic4.png",
+        "../images/prop8pic5.png",
+        "../images/prop8pic6.png",
+        "../images/prop8pic7.png",
+        "../images/prop8pic8.png"
+      ],
+      "details": {
+        "propertyType": "Flat",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "receptions": 1,
+        "tenure": "Ask agent",
+        "councilTax": "Band: D",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "753 sq ft"
+      },
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
     }
   ]
 }
