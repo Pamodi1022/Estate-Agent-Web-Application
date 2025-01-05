@@ -145,9 +145,10 @@ const PropertyDetails = () => {
           <img id="viewer-image" src={property.images[currentImageIndex]} alt="Fullscreen Image" />
           <FaChevronRight className="arrow right" onClick={() => navigateImage(1)} />
         </div>
-      
 
+        
         <div className="property-info">
+        <div class="separator"></div>
           <h2>{property.title}</h2>
           {/* Favorite and Share Icons */}
           <div className="icons">
@@ -194,7 +195,9 @@ const PropertyDetails = () => {
       </div>
 
       </div>
-          
+      
+      
+      
 
         {/* Tabs */}
         <div className="tabs">
