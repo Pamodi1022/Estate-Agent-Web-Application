@@ -7,10 +7,10 @@
       "bedrooms": 3,
       "price": 750000,
       "tenure": "Freehold",
-      "description": "Attractive three bedroom semi-detached family home...",
+      "description": "This charming three-bedroom semi-detached home is more than just a house—it’s a perfect blend of modern convenience, cozy comfort, and timeless character. A true sanctuary, it balances practicality with a warm, inviting atmosphere. Sunlit mornings and laughter-filled evenings make it an ideal setting for life’s cherished moments.",
       "location": "Petts Wood Road, Petts Wood, Orpington BR5",
       "Area": "BR5",
-      "floor": "../images/plan2.png",
+      "floor": "../images/plan1.png",
       "picture": "images/prop1pic1small.jpeg",
       "url": "/property-details?id=1",
       "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d0.08904545618127474!3d51.40278523448509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ad9a68053f3b%3A0x2c3c3efbcba1f5b7!2sPetts%20Wood%20Road%2C%20Petts%20Wood%2C%20Orpington%20BR5!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
@@ -21,8 +21,8 @@
       },
       "title": "Petts Wood Road, Petts Wood, Orpington BR5",
       "descriptionDetails": {
-        "short": "This charming three-bedroom semi-detached family home is the perfect blend of convenience, comfort, and character.",
-        "full": "Step inside, and you'll find a thoughtfully designed layout. The home boasts two welcoming reception rooms—ideal for hosting or relaxing—and an expansive 18'9 x 10'1 kitchen/breakfast room that inspires culinary creativity. A bright conservatory invites you to unwind while enjoying views of the garden, while the utility room and cloakroom add practicality and convenience. Upstairs, three spacious bedrooms provide restful retreats, complemented by a family bathroom with a separate WC for added functionality. Modern comforts such as double glazing and gas central heating are seamlessly integrated, ensuring the home is warm and energy-efficient year-round. Whether you're savoring the tranquility of the woodland nearby or enjoying the ease of urban connectivity, this home offers a lifestyle of balance and beauty—a haven ready to welcome its next family."
+        "short": "This delightful three-bedroom semi-detached home is a harmonious fusion of modern amenities and timeless charm, where every corner tells a story of comfort and warmth. Picture stepping inside, where the soft morning light dances through the windows, casting a golden glow across inviting spaces. The home whispers with character, with each room thoughtfully designed to balance practicality and a sense of belonging. It’s not just a house—it’s a canvas for memories, where the laughter of loved ones echoes and the quiet moments of relaxation feel like a gentle embrace. A perfect sanctuary, this home isn’t just about walls and windows; it’s about creating the backdrop for life’s most treasured moments.",
+        "full": "The conservatory, bathed in natural light, offers a serene escape where you can relax while gazing out onto the lush garden. It’s an oasis of calm, perfect for quiet reflection or enjoying the changing seasons. Practicality meets style in the utility room and cloakroom, tucked away to keep everything organized and within reach, making day-to-day life easier. Upstairs, the three bedrooms serve as peaceful retreats, each offering space to relax and recharge. Whether it’s a restful night’s sleep or a cozy reading nook, these rooms are made for comfort. The family bathroom, with a separate WC, ensures functionality while keeping everything neatly in place for the busy family. Double glazing and gas central heating enhance the home’s warmth and energy efficiency, allowing you to enjoy all its comforts throughout the year. With the tranquility of nearby woodlands and the convenience of urban amenities within easy reach, this home strikes the perfect balance between nature and modern living."      
       },
       "images": [
         "../images/prop1pic1small.jpeg",
@@ -62,7 +62,7 @@
       "bedrooms": 2,
       "price": 399995,
       "tenure": "Freehold",
-      "description": "Beautifully presented detached garden flat with modern finishes and exceptional features.",
+      "description": "Picture yourself stepping into a tranquil retreat—a beautifully curated garden flat where every detail whispers modern elegance. This inviting space effortlessly blends thoughtful design with contemporary finishes, offering a sanctuary that feels as fresh and inspiring as the greenery just outside your window.",
       "location": "Crofton Lane, Orpington, BR6",
       "Area": "BR6",
       "floor": "../images/plan2.png",
@@ -76,8 +76,8 @@
       },
       "title": "Crofton Lane, Orpington, BR6",
       "descriptionDetails": {
-        "short": "Step into this beautifully presented garden flat, thoughtfully designed with modern finishes.",
-        "full": "The property features three versatile living areas, including a living room with bi-fold doors opening to a private courtyard. A modern kitchen with integrated appliances and solid wood flooring complements the elegant design. Three spacious bedrooms and two well-appointed bathrooms offer luxury and comfort. Additional highlights include a spiral staircase leading to a roof terrace, a family bathroom, a wet room, and extensive storage."
+        "short": "Imagine stepping into a serene oasis, where the gentle hum of the outside world fades away as you cross the threshold into a space that feels like a breath of fresh air. The garden flat, bathed in natural light, is a harmonious blend of modern luxury and nature’s beauty. Crisp, clean lines define the contemporary design, with every piece of furniture and decor thoughtfully placed to create a sense of calm. The finishes are sleek and elegant, reflecting a refined yet welcoming atmosphere. Outside the window, lush greenery peeks through, inviting the vibrant colors of nature to merge with the cool, sophisticated tones of the interior. It's a sanctuary—a place where every corner invites you to pause, relax, and breathe in the tranquility of your surroundings.",
+        "full": "The sleek, contemporary kitchen is a chef's dream, featuring integrated high-end appliances and finished with solid wood flooring that adds warmth and sophistication to the space. Three spacious bedrooms, each thoughtfully designed, offer a serene retreat, while two luxurious bathrooms elevate your daily experience with modern fixtures and finishes. A striking spiral staircase leads you to a roof terrace, an exceptional space to take in panoramic views and bask in the sun. Additional features include a beautifully appointed family bathroom, a stylish wet room, and ample storage space, ensuring you have room for everything that matters. This home is the ultimate combination of style, comfort, and function, offering a perfect balance of luxury living and practical convenience."
       },
       "images": [
         "../images/prop2pic1small.jpeg",
@@ -126,7 +126,7 @@
       "bedrooms": 1,
       "price": 895,
       "tenure": "Freehold",
-      "description": "A compact but bright top floor flat with an excellent outlook over Green Park in this very central location within an easy walk of the City centre.",
+      "description": "Perched on the top floor, this compact flat radiates charm and light, offering panoramic views over the lush Green Park. Its central location makes city living a breeze, with the heart of town just a leisurely stroll away. Despite its size, it’s a haven of brightness and warmth, perfect for cozy urban living. A gem nestled in the midst of convenience and nature’s beauty!",
       "location": "Green Park, Bath",
       "Area": "Bath",
       "floor": "../images/plan3.png",
@@ -140,8 +140,8 @@
       },
       "title": "Green Park, Bath",
       "descriptionDetails": {
-        "short": "A compact but bright top floor flat with an excellent outlook over Green Park in this very central location within an easy walk of the City centre.",
-        "full": "Offering one small double bedroom, bathroom and living area with kitchen off. The property is unfurnished but provided with white goods and available now. Green Park is a resident parking permit area."
+        "short": "Welcome to your dream urban sanctuary! Perched high on the top floor, this delightful flat boasts a perfect blend of style, comfort, and convenience, all wrapped up in a bright and airy package. Gaze out over the breathtaking panoramic views of the lush Green Park, where nature’s beauty meets the bustling city life. This charming flat offers more than just a place to stay; it’s a lifestyle. The central location places you just moments away from the vibrancy of town – a short, leisurely stroll and you’re immersed in the best dining, shopping, and entertainment the city has to offer. And when you need a peaceful escape, step into your own slice of tranquility, where natural light floods every corner, creating a welcoming and cozy atmosphere.",
+        "full": "Upon entering, you'll find a compact yet inviting double bedroom, offering enough space for a comfortable bed and personal belongings. The bathroom is functional, designed for ease of use and modern living. The open-plan living area is bright and airy, with a kitchen conveniently tucked to one side, featuring all essential white goods—fridge, washing machine, and oven—so you can move in without a hitch. While the property comes unfurnished, it offers the perfect blank canvas to showcase your style and create a space that truly feels like home. Whether you're looking to relax in the living room or cook up a storm in the kitchen, the layout supports all your daily needs. The apartment is situated within the peaceful Green Park area, offering an added benefit of a resident parking permit area. If you're someone who enjoys a hassle-free commute, or simply prefers the ease of a designated parking space, this is a great perk. Available immediately, this charming apartment is a must-see for anyone looking to embrace a comfortable and low-maintenance lifestyle. Don't miss the opportunity—contact us today to arrange a viewing!"
       },
       "images": [
         "../images/prop3pic1small.jpg",
@@ -178,7 +178,7 @@
       "bedrooms": 1,
       "price": 500,
       "tenure": "Furnished",
-      "description": "One room in a furnished student house share located in Combe Down. Available now.",
+      "description": "Fully furnished house in the vibrant student house share, nestled in the charming Combe Down area. Perfect for those seeking a comfortable and convenient living space with easy access to all essentials. This home is ready to welcome you now, offering a cozy and inviting atmosphere with a strong community vibe. Whether you're studying, socializing, or unwinding, this house provides the perfect backdrop for it all. Don’t miss the chance to experience life in this delightful, fully equipped home!",
       "location": "Sedgemoor Road, Bath, Somerset, BA2",
       "Area": "BA2",
       "floor": "../images/plan4.png",
@@ -192,7 +192,7 @@
       },
       "title": "Sedgemoor Road, Bath, Somerset, BA2",
       "descriptionDetails": {
-        "short": "One room in a furnished student house share located in Combe Down. Available now.",
+        "short": "Fully furnished house in the vibrant student house share, nestled in the charming Combe Down area. Perfect for those seeking a comfortable and convenient living space with easy access to all essentials. This home is ready to welcome you now, offering a cozy and inviting atmosphere with a strong community vibe. Whether you're studying, socializing, or unwinding, this house provides the perfect backdrop for it all. Don’t miss the chance to experience life in this delightful, fully equipped home!",
         "full": "On the ground floor, you enter into the open-plan living room with a kitchen. The kitchen is fitted with an oven and hob, fridge freezer, washing machine, and dishwasher. Sliding doors from the kitchen lead to the garden. The living room is open to the kitchen space and has a WC. Also on the ground floor are two bedrooms, one of which benefits from access to a courtyard garden space sectioned off from the communal garden. On the first floor are three bedrooms and a bathroom. The bathroom comprises a shower over the bath, a washbasin vanity unit, an LED mirror, and a WC. The property has been fully renovated throughout with new flooring, a new kitchen, and a new bathroom and WC. Externally, there is a driveway at the front of the property."
       },
       "images": [
@@ -236,9 +236,10 @@
       "bedrooms": 1,
       "price": 700,
       "tenure": "Freehold",
-      "description": "This room in a two-bedroom flat offers a comfortable and inviting living environment, featuring a spacious living room ideal for relaxation and a balcony for added charm. Shared exclusively with one professional female, it ensures a quiet and respectful atmosphere.",
+      "description": "This two-bedroom flat provides a cozy and welcoming space, perfect for those seeking comfort and tranquility. The spacious living room is ideal for unwinding, while the balcony offers a delightful touch of outdoor charm. Shared only with one professional female, it ensures a calm and respectful environment. Whether you enjoy quiet evenings or light socializing, this flat caters to your needs. It's a perfect blend of relaxation, privacy, and warmth",
       "location": "Morant Place, London, N22",
       "Area": "N22",
+      "floor": "../images/plan5.png",
       "picture": "../images/prop5pic1small.jpeg",
       "url": "/property-details?id=5",
       "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.1853911147969798!3d51.550671416296585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b5f5c39cabb%3A0x5e703aba29936b72!2sMorant%20Place%2C%20London%2C%20N22!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
@@ -249,8 +250,8 @@
       },
       "title": "Morant Place, London, N22",
       "descriptionDetails": {
-        "short": "This room in a two-bedroom flat offers a comfortable and inviting living environment, featuring a spacious living room ideal for relaxation and a balcony for added charm. Shared exclusively with one professional female, it ensures a quiet and respectful atmosphere.",
-        "full": "Situated in a desirable residential area, the property provides easy access to public transport, supermarkets, and restaurants, offering convenience and accessibility. It's an excellent opportunity for someone seeking a peaceful home with a well-connected location for a balanced lifestyle."
+        "short": "Discover your perfect home in this charming two-bedroom flat, where comfort meets convenience in a beautifully serene setting. Whether you're unwinding after a busy day or hosting a few friends for a relaxed evening, this inviting space adapts to your lifestyle. The spacious living room is designed for comfort, with plenty of natural light flowing through the large windows, creating an atmosphere of tranquility. Step outside onto the balcony for a breath of fresh air, adding a delightful touch of nature to your everyday routine.",
+        "full": "Shared with just one professional female, the flat ensures a peaceful and respectful environment—ideal for anyone who values privacy without sacrificing social opportunities. Whether you're looking to enjoy quiet evenings in solitude or engage in light socializing, this flat offers the perfect balance. Nestled in a sought-after residential neighborhood, this flat is conveniently located with easy access to public transport, local supermarkets, and an array of restaurants, giving you the freedom to explore your surroundings with ease. Enjoy a lifestyle that combines privacy, comfort, and accessibility, with everything you need just moments away. With its warm atmosphere, superb location, and inviting ambiance, this flat is a true gem—ready to become your new home. Don't miss out on the opportunity to experience this unique living space. Make it yours today!"
       },
       "images": [
         "../images/prop5pic1small.jpeg",
@@ -263,7 +264,7 @@
         "propertyType": "Flat",
         "bedrooms": 1,
         "bathrooms": 1,
-        "receptions": 0,
+        "receptions": 1,
         "tenure": "Freehold",
         "councilTax": "Ask agent",
         "parking": "Ask agent",
@@ -286,9 +287,10 @@
       "bedrooms": 1,
       "price": 800,
       "tenure": "Freehold",
-      "description": "Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House. This development is just off Regent Street, close to the city centre & the new Victoria Gate with all the new shops and bars.",
+      "description": "This stylish 1-bedroom, 1-bathroom flat in Victoria House is the perfect blend of contemporary design and comfort. With its modern finishes, every corner feels fresh and inviting. The space is meticulously maintained, offering a cozy yet spacious atmosphere. The flat’s sleek layout is ideal for both relaxation and entertaining. Move-in ready, it promises a hassle-free living experience in one of the most sought-after locations.",
       "location": "Skinner Lane, Leeds, West Yorkshire, LS7",
       "Area": "LS7",
+      "floor": "../images/plan6.png",
       "picture": "../images/prop6pic1small.jpeg",
       "url": "/property-details?id=6",
       "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23924.983671244568!2d-1.544176946697074!3d53.806327947612195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b20a437a239ab%3A0x1f36d2c80b2fcb76!2sSkinner%20Lane%2C%20Leeds%2C%20West%20Yorkshire%2C%20LS7!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
@@ -299,8 +301,8 @@
       },
       "title": "Skinner Lane, Leeds, West Yorkshire, LS7",
       "descriptionDetails": {
-        "short": "Modern, and in excellent condition 1 BEDROOM, 1 BATHROOM flat in Victoria House.",
-        "full": "Victoria House is conveniently located to St James' Hospital and the Universities and also benefits from having an Aldi and Gym across the road. This modern 1 bed, 1 bathroom boasts a double bedroom, house bathroom and an open plan kitchen/lounge. The flat is fitted out to a very high specification with a neutral decor, a lovely contemporary feel, and high-quality appliances."
+        "short": "Welcome to your perfect urban retreat at Victoria House—where modern living meets ultimate convenience. This beautifully appointed 1-bedroom, 1-bathroom flat is an oasis of style, designed to suit the needs of today’s dynamic lifestyle. Step into a space filled with natural light, showcasing contemporary finishes that create a warm and inviting atmosphere. Whether you're unwinding after a busy day or hosting friends, the open-plan kitchen and lounge area offers the perfect setting for both relaxation and entertainment.",
+        "full": "With a spacious double bedroom and a sleek, well-appointed bathroom, every inch of this flat exudes sophistication. The neutral décor enhances the feeling of space, providing a blank canvas to personalize with your own touches. The high-quality appliances and finishes make daily life feel effortless and luxurious. Move-in ready, this flat promises a hassle-free living experience, allowing you to settle in and enjoy your new home right away. Beyond the flat’s stunning interiors, Victoria House offers an unbeatable location. Just moments from St James' Hospital and the Universities, your daily commute has never been easier. Plus, the Aldi supermarket and gym across the street ensure you have everything you need just a few steps away. Whether you’re looking for convenience, comfort, or a touch of luxury, this flat delivers it all. Experience the best of modern living in one of the most sought-after locations. Make Victoria House your home today and enjoy a living experience like no other!"
       },
       "images": [
         "../images/prop6pic1small.jpeg",
@@ -337,9 +339,10 @@
       "bedrooms": 2,
       "price": 154000,
       "tenure": "Freehold",
-      "description": "This charming 2-bedroom, 2-bathroom house is an ideal opportunity for those seeking a modern home in a sought-after area.",
+      "description": "Nestled in a desirable neighborhood, this delightful 2-bedroom, 2-bathroom home offers the perfect blend of comfort and style. Its modern design creates a welcoming space, ideal for both relaxation and entertaining. With spacious rooms and bright, airy interiors, it provides a cozy retreat. The well-appointed bathrooms enhance convenience and luxury. This home is a rare find for those looking for a contemporary haven in a prime location.",
       "location": "Trent House, Silverworks Close, London, NW9",
       "Area": "NW9",
+      "floor": "../images/plan7.png",
       "picture": "../images/prop7pic1small.jpeg",
       "url": "/property-details?id=7",
       "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19808.385234269127!2d-0.2532561184701388!3d51.58917903535573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487610da9f40b5a9%3A0x99e6b8ff3aaeb52b!2sTrent%20House%2C%20Silverworks%20Close%2C%20London%2C%20NW9!5e0!3m2!1sen!2slk!4v1698363945134!5m2!1sen!2slk",
@@ -350,7 +353,7 @@
       },
       "title": "Trent House, Silverworks Close, London, NW9",
       "descriptionDetails": {
-        "short": "This charming 2-bedroom, 2-bathroom house is an ideal opportunity for those seeking a modern home in a sought-after area.",
+        "short": "Nestled in a desirable neighborhood, this delightful 2-bedroom, 2-bathroom home offers the perfect blend of comfort and style. Its modern design creates a welcoming space, ideal for both relaxation and entertaining. With spacious rooms and bright, airy interiors, it provides a cozy retreat. The well-appointed bathrooms enhance convenience and luxury. This home is a rare find for those looking for a contemporary haven in a prime location.",
         "full": "Inside, the house offers well-designed living spaces, including a spacious living area that’s perfect for relaxation and entertainment. The property is thoughtfully furnished, allowing for a seamless transition into your new home without the need for additional investment in furniture. Both bedrooms are generously sized, offering ample space for comfortable living. The two well-appointed bathrooms ensure that both residents and guests enjoy privacy and convenience, with modern fixtures throughout. Located in the desirable Silverworks Close, this home benefits from excellent transport links and local amenities, ensuring that everything you need is within easy reach. With its freehold status, stylish interior, and prime location, this property is not to be missed."
       },
       "images": [
@@ -392,9 +395,10 @@
       "bedrooms": 2,
       "price": 136875,
       "tenure": "Ask agent",
-      "description": "This well-appointed 2-bedroom, 2-bathroom flat is located in the sought-after area of Perryfield Way, Hendon, London, NW9 7DL.",
+      "description": "Nestled in the desirable Perryfield Way, Hendon, this charming 2-bedroom, 2-bathroom flat offers modern living with a touch of elegance. With a spacious layout and stylish finishes, it’s the perfect blend of comfort and convenience. Just a stone's throw from local amenities, this home is a hidden gem. Ideal for those seeking a peaceful yet connected lifestyle in London.",
       "location": "Perryfield Way, Hendon, London, NW9 7DL",
       "Area": "NW9",
+      "floor": "../images/plan8.png",
       "picture": "../images/prop8pic1small.png",
       "url": "/property-details?id=8",
       "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d-0.2614477!3d51.5937004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d7160e0d99d%3A0x5e703aba29936b72!2sPerryfield%20Way%2C%20Hendon%2C%20London%2C%20NW9%207DL!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
@@ -405,10 +409,10 @@
       },
       "title": "Perryfield Way, Hendon, London, NW9 7DL",
       "descriptionDetails": {
-        "short": "This well-appointed 2-bedroom, 2-bathroom flat is located in the sought-after area of Perryfield Way, Hendon, London, NW9 7DL.",
-        "full": "Inside, the flat boasts a spacious living area, perfect for relaxing and entertaining. The modern design ensures a comfortable and stylish living experience, with thoughtfully designed spaces that cater to your needs. Both bedrooms are generously sized, providing ample space for rest and relaxation, while the two bathrooms offer convenience and privacy. This flat is perfect for anyone seeking a peaceful retreat without sacrificing access to the best amenities the capital has to offer. The location provides excellent transport links to central London, ensuring easy access to work, leisure, and entertainment, while the surrounding green spaces and tranquil waters offer a serene environment to unwind after a busy day."
+        "short": "Welcome to your next home on Perryfield Way, Hendon – a hidden treasure that blends modern luxury with tranquil charm. This exquisite 2-bedroom, 2-bathroom flat offers the perfect space for those looking for a serene retreat without compromising on convenience. Step inside to discover a thoughtfully designed living space, where contemporary elegance meets everyday comfort. The spacious living area provides an ideal setting for both relaxation and social gatherings, with an open layout that invites natural light to flood in. The sleek, modern finishes throughout the flat give it a timeless appeal, making it the perfect backdrop for any lifestyle.",
+        "full": "The two generously sized bedrooms are your personal sanctuary, offering plenty of room for restful nights and peaceful mornings. Whether you're winding down with a good book or enjoying the calm of the surroundings, each bedroom is designed to provide the ultimate in comfort. The two stylish bathrooms are equally luxurious, offering both privacy and functionality – a true retreat within your home. But it’s not just about the interior – step outside and you’ll find yourself in one of London’s most desirable locations. Just moments away from local shops, cafes, and restaurants, everything you need is at your doorstep. Perryfield Way provides the perfect balance of quiet residential living with easy access to the vibrant pulse of central London, making this flat ideal for anyone who wants the best of both worlds. From superb transport links that connect you to the heart of the city to peaceful parks and scenic waters nearby, this flat offers a lifestyle of convenience and serenity. Whether you're commuting to work, exploring the city’s cultural offerings, or enjoying a day out in the green spaces, this home will always be your peaceful haven at the end of the day."
       },
-      "images": [
+        "images": [
         "../images/prop8pic1small.png",
         "../images/prop8pic2.png",
         "../images/prop8pic3.png",
