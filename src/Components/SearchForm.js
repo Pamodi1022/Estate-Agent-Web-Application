@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import propertiesData from '../properties.json';
+import { TextField, Select, MenuItem, InputLabel, FormControl, Checkbox, FormControlLabel, Button, Grid, FormHelperText } from '@mui/material';
 import '../Styles/SearchForm.css';
 
 const SearchForm = () => {
@@ -8,7 +9,7 @@ const SearchForm = () => {
   const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   const type = queryParams.get('type');
-  const area = queryParams.get('Area');
+  const area = queryParams.get('Area');  // Extract the Area parameter from the URL
 
   const [formData, setFormData] = useState({
     searchRadius: 'This area only',
@@ -37,7 +38,6 @@ const SearchForm = () => {
   
     setFilteredProperties(initialFilteredProperties);
   }, [type, area]);
-  
 
   const validate = () => {
     const newErrors = {};
@@ -88,7 +88,6 @@ const SearchForm = () => {
       navigate('/result', { state: { results: furtherFiltered } });
     }
   };
-  
 
   const checkDateMatch = (added) => {
     const currentDate = new Date();
@@ -116,110 +115,163 @@ const SearchForm = () => {
 
   const generatePriceOptions = () => {
     const options = [];
-    for (let i = 500; i <= 10000; i += 500) {
-      options.push(<option key={i} value={i}>€{i.toLocaleString()}</option>);
+    let minPrice = type === 'rent' ? 500 : 50000;  // Rent starts from 500, sale starts from 50,000
+    let step = type === 'rent' ? 1000 : 50000;     // Rent steps by 1000, sale steps by 50,000
+    let maxPrice = type === 'rent' ? 10000 : 1000000;  // Max price for rent is 10,000, for sale is 1,000,000
+    
+    for (let i = minPrice; i <= maxPrice; i += step) {
+      options.push(<MenuItem key={i} value={i}>€{i.toLocaleString()}</MenuItem>);
     }
+    
     return options;
   };
+  
+  
+  
 
   return (
     <div className="container">
-      <h2>Properties to {type === 'rent' ? 'rent' : 'buy'} in Bathgate, West Lothian</h2>
+      <h2>Properties to {type === 'rent' ? 'rent' : 'buy'} in {area ? area : 'Bathgate, West Lothian'}</h2> {/* Dynamically display area */}
       <form onSubmit={handleSubmit} className="search-form">
-        <div className="form-group">
-          <label htmlFor="searchRadius">Search Radius:</label>
-          <select name="searchRadius" id="searchRadius" value={formData.searchRadius} onChange={handleChange}>
-            <option value="This area only">This area only</option>
-            <option value="1 mile">1 mile</option>
-            <option value="5 miles">5 miles</option>
-            <option value="10 miles">10 miles</option>
-          </select>
-        </div>
+        <Grid container spacing={2}>
+          {/* Search Radius Select */}
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel>Search Radius</InputLabel>
+              <Select
+                name="searchRadius"
+                value={formData.searchRadius}
+                onChange={handleChange}
+                label="Search Radius"
+              >
+                <MenuItem value="This area only">This area only</MenuItem>
+                <MenuItem value="1 mile">1 mile</MenuItem>
+                <MenuItem value="5 miles">5 miles</MenuItem>
+                <MenuItem value="10 miles">10 miles</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
 
-        <div className="form-group">
-          <label htmlFor="propertyType">Property Type:</label>
-          <select name="propertyType" id="propertyType" value={formData.propertyType} onChange={handleChange}>
-            <option value="Any">Any</option>
-            <option value="House">House</option>
-            <option value="Flat">Flat</option>
-            <option value="Bungalow">Bungalow</option>
-          </select>
-        </div>
+          {/* Property Type Select */}
+          <Grid item xs={12} sm={6}>
+            <FormControl fullWidth>
+              <InputLabel>Property Type</InputLabel>
+              <Select
+                name="propertyType"
+                value={formData.propertyType}
+                onChange={handleChange}
+                label="Property Type"
+              >
+                <MenuItem value="Any">Any</MenuItem>
+                <MenuItem value="House">House</MenuItem>
+                <MenuItem value="Flat">Flat</MenuItem>
+                <MenuItem value="Bungalow">Bungalow</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
 
-        <div className="form-group">
-          <label>Price range (€)</label>
-          <div className="price-range">
-            <select
-              name="priceMin"
-              value={formData.priceMin}
-              onChange={handleChange}
-            >
-              <option value="">Min Price</option>
-              {generatePriceOptions()}
-            </select>
-            <select
-              name="priceMax"
-              value={formData.priceMax}
-              onChange={handleChange}
-            >
-              <option value="">Max Price</option>
-              {generatePriceOptions()}
-            </select>
-            {errors.priceRange && <span className="error">{errors.priceRange}</span>}
-          </div>
-        </div>
+          {/* Price Range Select */}
+          <Grid item xs={12} sm={6}>
+            <div className="price-range">
+              <FormControl fullWidth>
+                <InputLabel>Min Price (€)</InputLabel>
+                <Select
+                  name="priceMin"
+                  value={formData.priceMin}
+                  onChange={handleChange}
+                  label="Min Price"
+                >
+                  <MenuItem value="">Min Price</MenuItem>
+                  {generatePriceOptions()}
+                </Select>
+              </FormControl>
+            </div>
+          </Grid>
 
-        <div className="form-group">
-          <label>No. of bedrooms</label>
-          <div className="bedrooms-range">
-            <input
+          <Grid item xs={12} sm={6}>
+            <div className="price-range">
+              <FormControl fullWidth>
+                <InputLabel>Max Price (€)</InputLabel>
+                <Select
+                  name="priceMax"
+                  value={formData.priceMax}
+                  onChange={handleChange}
+                  label="Max Price"
+                >
+                  <MenuItem value="">Max Price</MenuItem>
+                  {generatePriceOptions()}
+                </Select>
+              </FormControl>
+            </div>
+          </Grid>
+
+          {/* Bedrooms Range */}
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="Min Bedrooms"
               type="number"
               name="bedroomsMin"
-              placeholder="Min No"
               value={formData.bedroomsMin}
               onChange={handleChange}
+              error={!!errors.bedrooms}
+              helperText={errors.bedrooms}
             />
-            <span> - </span>
-            <input
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <TextField
+              fullWidth
+              label="Max Bedrooms"
               type="number"
               name="bedroomsMax"
-              placeholder="Max No"
               value={formData.bedroomsMax}
               onChange={handleChange}
+              error={!!errors.bedrooms}
+              helperText={errors.bedrooms}
             />
-            {errors.bedrooms && <span className="error">{errors.bedrooms}</span>}
-          </div>
-        </div>
+          </Grid>
 
-        <div className="form-group">
-          <label>Added to site</label>
-          <select name="addedToSite" value={formData.addedToSite} onChange={handleChange}>
-            <option value="Anytime">Anytime</option>
-            <option value="Last 24 hours">Last 24 hours</option>
-            <option value="Last 3 days">Last 3 days</option>
-            <option value="Last 7 days">Last 7 days</option>
-            <option value="Last 14 days">Last 14 days</option>
-          </select>
-        </div>
+          {/* Added to Site Select */}
+          <Grid item xs={12}>
+            <FormControl fullWidth>
+              <InputLabel>Added to site</InputLabel>
+              <Select
+                name="addedToSite"
+                value={formData.addedToSite}
+                onChange={handleChange}
+                label="Added to site"
+              >
+                <MenuItem value="Anytime">Anytime</MenuItem>
+                <MenuItem value="Last 24 hours">Last 24 hours</MenuItem>
+                <MenuItem value="Last 3 days">Last 3 days</MenuItem>
+                <MenuItem value="Last 7 days">Last 7 days</MenuItem>
+                <MenuItem value="Last 14 days">Last 14 days</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
 
-        <div className="form-group">
-          <label>
-            <input
-              type="checkbox"
-              name="includeLetAgreed"
-              checked={formData.includeLetAgreed}
-              onChange={handleChange}
+          {/* Include Let Agreed Checkbox */}
+          <Grid item xs={12}>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="includeLetAgreed"
+                  checked={formData.includeLetAgreed}
+                  onChange={handleChange}
+                />
+              }
+              label="Include Let Agreed"
             />
-            Include Let Agreed
-          </label>
-        </div>
-
-        {errors.priceRange && <p className="error">{errors.priceRange}</p>}
-        {errors.bedrooms && <p className="error">{errors.bedrooms}</p>}
-
-        <button type="submit" className="btnt">
-          Search
-        </button>
+          </Grid>
+          
+          {/* Submit Button */}
+          <Grid item xs={12}>
+            <Button type="submit" fullWidth variant="contained" color="primary">
+              Search
+            </Button>
+          </Grid>
+        </Grid>
       </form>
     </div>
   );
