@@ -22,7 +22,7 @@ function App() {
       <FavouritesProvider>
         <Router>
           <Navbar /> {/* Navbar will remain on top of all pages */}
-          <div style={{ flex: 1 }}> {/* Main content area */}
+          <div > {/* Main content area */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
