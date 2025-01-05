@@ -1,0 +1,137 @@
+/* Overall container styling */
+.login-container {
+    max-width: 500px;
+    margin: 40px auto;
+    margin-top: 120px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header styling */
+  .login-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form container styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Input group styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Input field styling */
+  .form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Focus styling for input fields */
+  .form-group input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+  }
+  
+  /* Error state for inputs */
+  .form-group input.error {
+    border-color: #e74c3c;
+    background-color: #fde6e6;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    display: block;
+    margin-top: 5px;
+    padding-left: 5px;
+  }
+  
+  /* Submit button styling */
+  .submit-button {
+    padding: 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect for the submit button */
+  .submit-button:hover {
+    background-color: #1666b3;
+    transform: scale(1.05);
+  }
+  
+  /* Disabled state for the submit button */
+  .submit-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Form message styling (success/error) */
+  .form-message {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  /* Styling for the signup link */
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Styling for the loading state */
+  .loading-indicator {
+    font-size: 1rem;
+    color: #1a73e8;
+    text-align: center;
+    margin-top: 10px;
+    display: inline-block;
+    padding-top: 5px;
+  }
+  
+  
