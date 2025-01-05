@@ -1,0 +1,142 @@
+body {
+  margin-top: 65px;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the property lists container */
+.property-lists {
+  padding: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px; /* Limit the width for better design */
+}
+
+/* Styling for individual property cards */
+.property-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: #fff;
+  width: 100%;
+  text-align: justify;
+  
+}
+
+.property-cards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.property-image {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  height: 100%;
+}
+
+/* Styling for property info section */
+.property-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.property-info h3 {
+  font-size: 1.5rem;
+  color: #2d3a3a;
+  margin: 0;
+}
+
+.property-description {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.property-info p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Styling for the View Details link */
+.view-detail {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.view-detail:hover {
+  color: #2c81ba;
+}
+
+/* Styling for icons */
+.icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: 600px;
+}
+
+.favourite-icon,
+.share-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favourite-icon {
+  color: #808080;
+}
+
+.favourite-icon.active {
+  color: #e63946;
+}
+
+.share-icon {
+  color: #3498db;
+}
+
+.share-icon:hover {
+  color: #2c81ba;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .property-cards {
+    flex-direction: column;
+  }
+
+  .property-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .property-info {
+    padding: 10px;
+  }
+
+  .icon {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+  }
+
+
+}
+

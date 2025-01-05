@@ -1,10 +1,12 @@
 /* Property Details Container */
 .property-details-container {
   margin-top: 70px;
-  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #f9f9f9;
+  box-sizing: border-box; /* Ensures padding doesn't overflow the container */
 }
 
 /* Property Details Section */
@@ -19,12 +21,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .main-image img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+  width: 80%;
+  max-height: 800px;
+  max-width: 1000px;
+  margin: 0 auto;  /* Centers the image */
+  display: block;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -42,8 +51,8 @@
 }
 
 .thumbnail-container img {
-  width: 80px;
-  height: 60px;
+  width: 100px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
@@ -66,15 +75,143 @@
   justify-content: center;
   align-items: center;
   z-index: 100;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #image-viewer img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 20px;
   border-radius: 10px;
-  animation: fadeIn 0.3s ease-in-out;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;  /* Centers the image */
+  display: block;
 }
 
+/* Navigation Arrows (Prev and Next) */
+#prev-btn, #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  font-size: 40px; /* Increased button size */
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 101;
+}
+
+#prev-btn {
+  left: 10px; /* Increased left margin */
+}
+
+#next-btn {
+  right: 10px; /* Increased right margin */
+}
+
+#prev-btn:hover, #next-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Close Button */
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#close-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Close Button */
+#close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#close-btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+/* Additional Navigation Arrows for fallback layout */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;  /* Larger size */
+  color: white;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive adjustments for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  #prev-btn, #next-btn {
+    font-size: 30px;  
+    padding: 10px;  
+  }
+
+  #close-btn {
+    font-size: 25px; 
+    padding: 10px;
+  }
+
+  /* Adjust image size for smaller screens */
+  #image-viewer img {
+    max-width: 100%; 
+    max-height: 100%; 
+    margin-top: 100px;
+  }
+  
+  /* Adjust arrow size on smaller screens */
+  .arrow {
+    font-size: 30px; 
+    margin-top: -20px;
+  }
+}
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -84,37 +221,36 @@
   }
 }
 
-.arrows {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  z-index: 101;
-}
+/* For optimal responsiveness */
+@media (max-width: 768px) {
+  /* Adjust main image */
+  .main-image img {
+    width: 90%;  /* Adjust for smaller screens */
+    max-height: 400px;
+  }
+  
+  /* Adjust thumbnail size */
+  .thumbnail-container img {
+    width: 80px;
+    height: 60px;
+  }
+  
+  /* Adjust prev/next and close button sizes */
+  #prev-btn, #next-btn {
+    font-size: 30px;  /* Smaller button size */
+    padding: 10px;
+  }
 
-.arrows.left {
-  left: 10px;
-}
-
-.arrows.right {
-  right: 10px;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+  #close-btn {
+    font-size: 25px;
+    padding: 10px;
+  }
 }
 
 /* Property Info */
 .property-info {
   margin-top: 20px;
-  background-color: white;
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(142, 142, 142, 0.1);
@@ -128,7 +264,7 @@
 .price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1a73e8;
+  color: #033c87;
   margin-bottom: 20px;
 }
 
@@ -136,7 +272,6 @@
   border-top: 1px solid #9b9b9b;
   margin: 20px 0;
 }
-
 
 /* Letting Container */
 .letting-container {
@@ -174,8 +309,7 @@
 @media (max-width: 768px) {
   .letting-details div,
   .letting-detail div {
-    flex: 1 1 100%; /* Full width for smaller screens */
-
+    flex: 1 1 100%; 
   }
 }
 
@@ -189,10 +323,10 @@
   background-color: #f9f9f9;
   margin-top: -35px;
   max-width: 600px; /* Restrict max width for better readability */
-  height: 150px;
+  height: 120px;
   padding: 20px;
   border-radius: 8px;
-  border: 1px dashed #ccc;
+  border: 2px dashed #777777;
   color: #333;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center; /* Center text */
@@ -201,7 +335,7 @@
 .agent-card h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  margin-top: -10px;
+  margin-top: 8px;
 }
 
 .agent-card p {
@@ -216,46 +350,48 @@
 }
 
 .agent-contact button {
-  background-color: #1a73e8;
+  background-color: #00214d;
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .agent-contact button:hover {
-  background-color: #ffcc00;
+  background-color: #770020;
 }
 
-/* Responsive adjustments for Agent Card */
+/* Responsive adjustments for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
   .agent-card {
-    padding: 15px;
-    text-align: center;
+    height: auto; /* Allow card height to grow for small screens */
+    padding: 20px;
   }
 
-  .agent-contact {
-    flex-direction: column;
-    gap: 10px;
+  .agent-card h2 {
+    font-size: 1rem; /* Smaller text on small screens */
+  }
+
+  .agent-card p {
+    font-size: 0.9rem; /* Smaller text for better readability */
   }
 
   .agent-contact button {
-    width: 100%; /* Full width buttons on smaller screens */
+    padding: 8px 16px; /* Smaller buttons */
+    font-size: 0.9rem;
+    flex: 1 1 100%; /* Buttons take full width on small screens */
   }
 }
-
 
 /* Tabs */
 .tabs {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
   gap: 10px;
   padding: 10px 0;
-  background-color: #f9f9f9;
   border-radius: 5px;
 }
 
@@ -271,9 +407,11 @@
 }
 
 .tabs button.active {
-  background-color: #1a73e8;
-  color: #fff;
-  border-color: #1a73e8;
+  background-color: #ffffff;
+  color: #060606;
+  border-color: #770020;
+  background-color: #cfcfcf;
+  border-width: 3px;
 }
 
 .tabs button:hover {
@@ -288,7 +426,10 @@
   padding: 15px;
   background: transparent;
   border-radius: 5px;
-  border: 1px solid #e0e0e0;
+  border-style: dashed;
+  border-width: 1.5px;
+  border-color: #555;
+
 }
 
 .description p {
@@ -302,14 +443,15 @@
   margin: 0 auto;
   display: block;
 }
+  
 
 .map-container iframe {
   width: 100%;
   height: 400px;
   border: none;
   border-radius: 5px;
-}
 
+}
 
 /* Icons */
 .icons {
@@ -333,6 +475,17 @@
 }
 
 .icons svg:hover {
-  color: #1a73e8;
+  color: #00214d;
 }
 
+/* Responsive adjustments for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .icons {
+    justify-content: center;
+    gap: 15px; 
+  }
+
+  .icons svg {
+    font-size: 1.4rem; 
+  }
+}
