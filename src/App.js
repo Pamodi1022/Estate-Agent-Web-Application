@@ -13,6 +13,7 @@ import PropertiesList from "./Components/PropertiesList";
 import ResultsPage from "./Components/ResultsPage";
 import FavList from "./Components/FavList";
 import Footer from "./Components/Footer";
+import Login from "./Components/Login";
 import PropertyDetails from "./Components/PropertyDetails";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/search" element={<SearchBar />} />
               <Route path="/ads" element={<PropertiesList />} />
               <Route path="/searchform" element={<SearchForm />} />
