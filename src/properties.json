@@ -433,6 +433,61 @@
         "logo": "../images/agent.jpg",
         "phone": "0764022934"
       }
+    },
+
+    {
+      "id": "9",
+      "type": "House",
+      "search": "sale",
+      "bedrooms": 3,
+      "price": 750000,
+      "tenure": "Freehold",
+      "description": "This charming three-bedroom semi-detached home is more than just a house—it’s a perfect blend of modern convenience, cozy comfort, and timeless character. A true sanctuary, it balances practicality with a warm, inviting atmosphere. Sunlit mornings and laughter-filled evenings make it an ideal setting for life’s cherished moments.",
+      "location": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "Area": "Orpington",
+      "floor": "../images/plan1.png",
+      "picture": "images/prop1pic1small.jpeg",
+      "url": "/property-details?id=1",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19821.646786420514!2d0.08904545618127474!3d51.40278523448509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ad9a68053f3b%3A0x2c3c3efbcba1f5b7!2sPetts%20Wood%20Road%2C%20Petts%20Wood%2C%20Orpington%20BR5!5e0!3m2!1sen!2slk!4v1698363549287!5m2!1sen!2slk",
+      "added": {
+        "month": "October",
+        "day": 22,
+        "year": 2024
+      },
+      "title": "Petts Wood Road, Petts Wood, Orpington BR5",
+      "descriptionDetails": {
+        "short": "This delightful three-bedroom semi-detached home is a harmonious fusion of modern amenities and timeless charm, where every corner tells a story of comfort and warmth. Picture stepping inside, where the soft morning light dances through the windows, casting a golden glow across inviting spaces. The home whispers with character, with each room thoughtfully designed to balance practicality and a sense of belonging. It’s not just a house—it’s a canvas for memories, where the laughter of loved ones echoes and the quiet moments of relaxation feel like a gentle embrace. A perfect sanctuary, this home isn’t just about walls and windows; it’s about creating the backdrop for life’s most treasured moments.",
+        "full": "The conservatory, bathed in natural light, offers a serene escape where you can relax while gazing out onto the lush garden. It’s an oasis of calm, perfect for quiet reflection or enjoying the changing seasons. Practicality meets style in the utility room and cloakroom, tucked away to keep everything organized and within reach, making day-to-day life easier. Upstairs, the three bedrooms serve as peaceful retreats, each offering space to relax and recharge. Whether it’s a restful night’s sleep or a cozy reading nook, these rooms are made for comfort. The family bathroom, with a separate WC, ensures functionality while keeping everything neatly in place for the busy family. Double glazing and gas central heating enhance the home’s warmth and energy efficiency, allowing you to enjoy all its comforts throughout the year. With the tranquility of nearby woodlands and the convenience of urban amenities within easy reach, this home strikes the perfect balance between nature and modern living."      
+      },
+      "images": [
+        "../images/prop9pic1small.jpeg",
+        "../images/prop9pic2.jpeg",
+        "../images/prop9pic3.jpeg",
+        "../images/prop9pic4.jpeg",
+        "../images/prop9pic5.jpeg",
+        "../images/prop9pic6.jpeg",
+        "../images/prop9pic7.jpeg",
+        "../images/prop9pic8.jpeg"
+      ],
+      "details": {
+        "propertyType": "Semi-Detached House",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "receptions": 2,
+        "tenure": "Freehold",
+        "councilTax": "Band: D",
+        "parking": "Yes",
+        "garden": "Ask agent",
+        "accessibility": "Ask agent",
+        "size": "3,500 sq ft"
+      },
+      "area": "Petts Wood",
+      "agent": {
+        "name": "Parkheath, Belsize Park",
+        "address": "208 Haverstock Hill, London, NW3 2AG",
+        "logo": "../images/agent.jpg",
+        "phone": "0764022934"
+      }
     }
   ]
 }
