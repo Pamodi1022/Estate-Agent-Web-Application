@@ -46,10 +46,3 @@ With a rich set of features and a user-friendly interface, this app lets you sea
 - **Google Maps API**: For showing property locations on the map
 - **Drag-and-Drop**: For adding/removing properties to/from the favorites list
 
----
-
-## 🚀 Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Pamodi1022/Estate-Agent-Web-Application
