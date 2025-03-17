@@ -35,9 +35,7 @@ With a rich set of features and a user-friendly interface, this app lets you sea
 ### Enhanced Aesthetics 🎨
 - **Visual Clues**: Group related items, separate unrelated ones, and use appropriate font sizes, bold, and italics to create a visually pleasant experience
 - **Images & Icons**: Use high-quality images and custom icons for visual appeal
-
 ---
-
 ## 🔧 Technologies Used
 - **ReactJS**: Main framework for building the user interface
 - **CSS3**: For styling and creating a responsive layout
